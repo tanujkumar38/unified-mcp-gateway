@@ -106,7 +106,7 @@ export function createGatewayHttpApp() {
         return;
       }
 
-      await transport.handlePostMessage(req, res);
+      await transport.handlePostMessage(req, res, req.body);
     } catch (err: any) {
       logger.error(`Error processing message post: ${err.message}`, { stack: err.stack });
       if (!res.headersSent) {
