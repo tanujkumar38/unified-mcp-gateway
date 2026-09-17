@@ -1,4 +1,4 @@
-﻿import dotenv from "dotenv";
+import dotenv from "dotenv";
 import path from "node:path";
 import fs from "node:fs";
 
@@ -88,6 +88,9 @@ async function main() {
   const repoArgIdx = process.argv.indexOf("--repo");
   if (repoArgIdx !== -1 && process.argv[repoArgIdx + 1]) {
     repoUrl = process.argv[repoArgIdx + 1];
+  } else {
+    const urlArg = process.argv.find((a) => a.includes("github.com") || a.startsWith("http"));
+    repoUrl = urlArg || "https://github.com/tanujkumar38/unified-mcp-gateway";
   }
 
   const serviceName = "unified-mcp-gateway";
@@ -126,7 +129,7 @@ async function main() {
   }
 
   console.log(`🔗 Connecting repository: ${repoUrl}`);
-  const branch = "master";
+  const branch = "main";
 
   const createPayload = {
     type: "web_service",
@@ -139,9 +142,11 @@ async function main() {
       env: "node",
       plan: "free",
       region: "oregon",
-      buildCommand: "npm install && npm run build",
-      startCommand: "npm start",
       healthCheckPath: "/health",
+      envSpecificDetails: {
+        buildCommand: "npm install && npm run build",
+        startCommand: "npm start",
+      },
       envVars: [
         { key: "NODE_ENV", value: "production" },
         { key: "PORT", value: "10000" },
@@ -155,14 +160,17 @@ async function main() {
       body: JSON.stringify(createPayload),
     });
 
-    console.log(`✅ Web Service created successfully! Service ID: ${created.id}`);
-    console.log(`🌐 Assigned URL: ${created.serviceDetails?.url || `https://${serviceName}.onrender.com`}`);
+    const serviceId = created.service?.id || created.id;
+    const assignedUrl = created.service?.serviceDetails?.url || created.serviceDetails?.url || `https://${serviceName}.onrender.com`;
+    console.log(`✅ Web Service created successfully! Service ID: ${serviceId}`);
+    console.log(`🌐 Assigned URL: ${assignedUrl}`);
     console.log("⚡ Initial build and deployment started...");
 
     // Fetch initial deploy ID
-    const deploys = await renderRequest(`/services/${created.id}/deploys?limit=1`, apiKey);
+    const deploys = await renderRequest(`/services/${serviceId}/deploys?limit=1`, apiKey);
     if (deploys && deploys[0]) {
-      await monitorDeploy(created.id, deploys[0].deploy.id, apiKey);
+      const deployId = deploys[0].deploy?.id || deploys[0].id;
+      await monitorDeploy(serviceId, deployId, apiKey);
     }
   } catch (err: any) {
     console.error(`❌ Failed to create web service: ${err.message}`);
