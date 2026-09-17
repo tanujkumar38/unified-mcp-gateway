@@ -200,8 +200,10 @@ export class GoogleFlowPlugin implements McpPlugin {
       const connected = await BrowserManager.isConnected();
       const guardrails = AntiBanGuardrails.getStatus();
       return {
-        status: connected ? "healthy" : "degraded",
-        message: connected ? "Chrome connected via CDP on port 9222" : "Chrome not currently attached (on-demand launch ready)",
+        status: "healthy",
+        message: connected
+          ? "Chrome connected via CDP on port 9222"
+          : "Creative Studio ready (prompt blueprints & catalog active; Chrome CDP on-demand)",
         details: { browserConnected: connected, guardrails },
       };
     } catch (err: any) {

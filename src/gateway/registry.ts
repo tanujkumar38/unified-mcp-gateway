@@ -96,15 +96,20 @@ export class PluginRegistry {
         id: upstream.id,
         name: upstream.name,
         category: upstream.category || "external",
-        transport,
+        transport: (upstream.transport as any) || transport,
         url: upstream.url,
         command: upstream.command,
         args: upstream.args,
         headers: resolvedHeaders,
         originalLink: upstream.url || `${upstream.command} ${upstream.args?.join(" ")}`,
       };
-      const upstreamPlugin = new UpstreamMcpPlugin(descriptor);
+      const upstreamPlugin = new UpstreamMcpPlugin(descriptor as any);
       this.registerPlugin(upstreamPlugin);
+
+      // Asynchronously connect to upstream to discover tools on startup
+      upstreamPlugin.connect().catch((err: any) => {
+        logger.warn(`Could not connect immediately to upstream [${upstream.id}], will retry on-demand: ${err.message}`);
+      });
     }
   }
 

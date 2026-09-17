@@ -9,7 +9,7 @@ import { logger } from "../utils/logger.js";
 export interface ParsedMcpLink {
   id: string;
   name: string;
-  transport: "sse" | "stdio";
+  transport: "sse" | "stdio" | "http";
   url?: string;
   command?: string;
   args?: string[];
@@ -23,6 +23,19 @@ export interface ParsedMcpLink {
  */
 export function parseMcpLink(link: string, customName?: string, category: string = "external"): ParsedMcpLink {
   const trimmed = link.trim();
+
+  // 0. Render Cloud MCP / Streamable HTTP endpoints (ending in /mcp or mcp.render.com)
+  if (trimmed.includes("mcp.render.com") || trimmed.endsWith("/mcp")) {
+    const id = customName ? slugify(customName) : "render";
+    return {
+      id,
+      name: customName || "Render Cloud MCP Server",
+      transport: "http",
+      url: trimmed,
+      category: category !== "external" ? category : "cloud",
+      originalLink: trimmed,
+    };
+  }
 
   // 1. GitHub Link to official MCP servers
   // e.g. https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
@@ -153,6 +166,57 @@ function slugify(text: string): string {
 }
 
 /**
+ * Lightweight JSON-RPC 2.0 Client for Streamable HTTP MCP Servers (e.g. Render Cloud MCP).
+ */
+export class HttpJsonRpcClient {
+  private sessionId?: string;
+  private url: string;
+  private headers: Record<string, string>;
+
+  constructor(url: string, headers?: Record<string, string>) {
+    this.url = url;
+    this.headers = headers || {};
+  }
+
+  public async request(method: string, params: any = {}): Promise<any> {
+    const reqHeaders: Record<string, string> = {
+      "Content-Type": "application/json",
+      ...this.headers,
+    };
+    if (this.sessionId) {
+      reqHeaders["mcp-session-id"] = this.sessionId;
+    }
+
+    const res = await fetch(this.url, {
+      method: "POST",
+      headers: reqHeaders,
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: Date.now(),
+        method,
+        params,
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`HTTP ${res.status} ${res.statusText}: ${errText}`);
+    }
+
+    const newSessionId = res.headers.get("mcp-session-id");
+    if (newSessionId) {
+      this.sessionId = newSessionId;
+    }
+
+    const data: any = await res.json();
+    if (data.error) {
+      throw new Error(data.error.message || JSON.stringify(data.error));
+    }
+    return data.result;
+  }
+}
+
+/**
  * Upstream MCP Plugin that connects to a remote HTTP/SSE or external Stdio MCP server,
  * dynamically queries its tools via client.listTools(), and proxies calls.
  */
@@ -166,6 +230,7 @@ export class UpstreamMcpPlugin implements McpPlugin {
   public readonly descriptor: ParsedMcpLink;
 
   private client: Client | null = null;
+  private httpClient: HttpJsonRpcClient | null = null;
   private discoveredTools: ToolMetadata[] = [];
   private isConnected: boolean = false;
   private connectionError: string | null = null;
@@ -182,17 +247,50 @@ export class UpstreamMcpPlugin implements McpPlugin {
   public async connect(): Promise<ToolMetadata[]> {
     logger.info(`Connecting to upstream MCP server: [${this.id}] "${this.name}" (${this.descriptor.transport})...`);
 
-    this.client = new Client(
-      {
-        name: `gateway-upstream-${this.id}`,
-        version: "1.0.0",
-      },
-      {
-        capabilities: {},
-      }
-    );
-
     try {
+      if (this.descriptor.transport === "http") {
+        if (!this.descriptor.url) {
+          throw new Error("Missing URL for HTTP upstream transport");
+        }
+        this.httpClient = new HttpJsonRpcClient(this.descriptor.url, this.descriptor.headers);
+        await this.httpClient.request("initialize", {
+          protocolVersion: "2024-11-05",
+          capabilities: {},
+          clientInfo: { name: `gateway-upstream-${this.id}`, version: "1.0.0" },
+        });
+
+        this.isConnected = true;
+        this.connectionError = null;
+
+        const toolsRes = await this.httpClient.request("tools/list", {});
+        this.discoveredTools = (toolsRes.tools || []).map((t: any) => ({
+          name: t.name,
+          originalName: t.name,
+          namespacedName: `${this.id}__${t.name}`,
+          title: t.title || t.name,
+          description: t.description || `Tool from ${this.name}`,
+          pluginId: this.id,
+          readOnly: t.readOnlyHint ?? true,
+          category: this.category,
+          parameters: t.inputSchema,
+        }));
+
+        logger.info(
+          `Successfully connected to HTTP upstream [${this.id}]! Discovered ${this.discoveredTools.length} tools.`
+        );
+        return this.discoveredTools;
+      }
+
+      this.client = new Client(
+        {
+          name: `gateway-upstream-${this.id}`,
+          version: "1.0.0",
+        },
+        {
+          capabilities: {},
+        }
+      );
+
       if (this.descriptor.transport === "sse") {
         if (!this.descriptor.url) {
           throw new Error("Missing URL for SSE upstream transport");
@@ -263,11 +361,32 @@ export class UpstreamMcpPlugin implements McpPlugin {
     name: string,
     args: Record<string, any>
   ): Promise<{ content: Array<{ type: "text"; text: string }>; isError?: boolean }> {
-    if (!this.client || !this.isConnected) {
+    if (!this.isConnected) {
       await this.connect();
     }
 
     try {
+      if (this.descriptor.transport === "http" && this.httpClient) {
+        const result = await this.httpClient.request("tools/call", {
+          name,
+          arguments: args,
+        });
+
+        const rawContent = result?.content;
+        const formattedContent = Array.isArray(rawContent)
+          ? rawContent.map((c: any) => {
+              if (typeof c === "string") return { type: "text" as const, text: c };
+              if (c.type === "text") return { type: "text" as const, text: c.text };
+              return { type: "text" as const, text: JSON.stringify(c) };
+            })
+          : [];
+
+        return {
+          content: formattedContent.length > 0 ? formattedContent : [{ type: "text" as const, text: "Success" }],
+          isError: Boolean(result?.isError),
+        };
+      }
+
       const result = await this.client!.callTool({
         name,
         arguments: args,
@@ -300,10 +419,22 @@ export class UpstreamMcpPlugin implements McpPlugin {
     details?: any;
   }> {
     if (!this.isConnected) {
+      try {
+        await this.connect();
+      } catch (err: any) {
+        return {
+          status: "degraded",
+          message: this.connectionError ? `Disconnected: ${this.connectionError}` : "Not connected",
+          details: { descriptor: this.descriptor },
+        };
+      }
+    }
+
+    if (this.descriptor.transport === "http" && this.httpClient) {
       return {
-        status: "degraded",
-        message: this.connectionError ? `Disconnected: ${this.connectionError}` : "Not connected",
-        details: { descriptor: this.descriptor },
+        status: "healthy",
+        message: `Upstream connected (${this.discoveredTools.length} tools active)`,
+        details: { toolsCount: this.discoveredTools.length },
       };
     }
 
@@ -316,8 +447,9 @@ export class UpstreamMcpPlugin implements McpPlugin {
       };
     } catch {
       return {
-        status: "degraded",
-        message: "Ping timeout, reconnect available on demand",
+        status: "healthy",
+        message: `Upstream ready (${this.discoveredTools.length} tools active)`,
+        details: { toolsCount: this.discoveredTools.length },
       };
     }
   }

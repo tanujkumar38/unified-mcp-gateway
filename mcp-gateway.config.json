@@ -43,7 +43,7 @@
       "name": "Render Cloud MCP Server",
       "description": "Deploy, manage, and monitor web services, databases, and infrastructure on Render Cloud",
       "category": "cloud",
-      "transport": "sse",
+      "transport": "http",
       "url": "https://mcp.render.com/mcp",
       "headers": {
         "Authorization": "Bearer ${RENDER_API_KEY}"
