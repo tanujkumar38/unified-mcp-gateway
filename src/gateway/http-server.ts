@@ -70,35 +70,49 @@ export function createGatewayHttpApp() {
   // 2. MCP STREAMABLE HTTP / SSE TRANSPORT (Claude API, ChatGPT Dev Mode)
   // -------------------------------------------------------------------------
   app.get("/sse", authMiddleware, async (req: Request, res: Response) => {
-    logger.info("New SSE client connection initiating on Unified Gateway...");
-    const server = createGatewayMcpServer();
-    const transport = new SSEServerTransport("/messages", res);
-    const sessionId = transport.sessionId;
-    activeTransports.set(sessionId, transport);
+    try {
+      logger.info("New SSE client connection initiating on Unified Gateway...");
+      const server = createGatewayMcpServer();
+      const transport = new SSEServerTransport("/messages", res);
+      const sessionId = transport.sessionId;
+      activeTransports.set(sessionId, transport);
 
-    res.on("close", () => {
-      logger.info(`Unified Gateway SSE session closed: ${sessionId}`);
-      activeTransports.delete(sessionId);
-    });
+      res.on("close", () => {
+        logger.info(`Unified Gateway SSE session closed: ${sessionId}`);
+        activeTransports.delete(sessionId);
+      });
 
-    await server.connect(transport);
-    logger.info(`Unified Gateway bound to SSE session: ${sessionId}`);
+      await server.connect(transport);
+      logger.info(`Unified Gateway bound to SSE session: ${sessionId}`);
+    } catch (err: any) {
+      logger.error(`Error initiating SSE connection: ${err.message}`, { stack: err.stack });
+      if (!res.headersSent) {
+        res.status(500).json({ error: "Failed to establish SSE session", message: err.message });
+      }
+    }
   });
 
   app.post("/messages", async (req: Request, res: Response) => {
-    const sessionId = req.query.sessionId as string;
-    if (!sessionId) {
-      res.status(400).json({ error: "Missing required 'sessionId' query parameter" });
-      return;
-    }
+    try {
+      const sessionId = req.query.sessionId as string;
+      if (!sessionId) {
+        res.status(400).json({ error: "Missing required 'sessionId' query parameter" });
+        return;
+      }
 
-    const transport = activeTransports.get(sessionId);
-    if (!transport) {
-      res.status(404).json({ error: `Session '${sessionId}' not found or expired` });
-      return;
-    }
+      const transport = activeTransports.get(sessionId);
+      if (!transport) {
+        res.status(404).json({ error: `Session '${sessionId}' not found or expired` });
+        return;
+      }
 
-    await transport.handlePostMessage(req, res);
+      await transport.handlePostMessage(req, res);
+    } catch (err: any) {
+      logger.error(`Error processing message post: ${err.message}`, { stack: err.stack });
+      if (!res.headersSent) {
+        res.status(500).json({ error: "Failed to process message", message: err.message });
+      }
+    }
   });
 
   // -------------------------------------------------------------------------

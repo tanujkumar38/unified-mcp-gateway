@@ -33,6 +33,16 @@ export function createGatewayMcpServer(options?: CreateServerOptions): McpServer
     }
   );
 
+  // Safe tool registration wrapper to prevent duplicate tool collisions across plugins
+  const originalTool = server.tool.bind(server);
+  (server as any).tool = (name: string, ...args: any[]) => {
+    if ((server as any)._registeredTools && (server as any)._registeredTools[name]) {
+      logger.warn(`[GATEWAY] Skipping duplicate tool '${name}' to prevent namespace collision.`);
+      return;
+    }
+    return (originalTool as any)(name, ...args);
+  };
+
   // 1. In 'meta' or 'hybrid' mode: Register context-saving meta-tools
   if (mode === "meta" || mode === "hybrid") {
     logger.info("Registering Gateway Meta-Tools & ChatGPT Connectors (search/fetch)...");
