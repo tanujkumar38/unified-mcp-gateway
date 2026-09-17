@@ -340,16 +340,23 @@ export class UpstreamMcpPlugin implements McpPlugin {
   public register(server: any, _options?: { prefix?: string }): void {
     // In hybrid/direct mode, register each discovered tool as a proxy
     for (const tool of this.discoveredTools) {
-      server.tool(
-        tool.namespacedName,
-        tool.description,
-        tool.parameters || {},
-        {
-          title: tool.title,
-          readOnlyHint: tool.readOnly,
-        },
-        async (args: any) => this.callTool(tool.originalName, args)
-      );
+      try {
+        const registered = server.tool(
+          tool.namespacedName,
+          tool.description,
+          {}, // empty raw shape {} is valid for McpServer and avoids Zod validation crash on raw JSON schemas
+          {
+            title: tool.title,
+            readOnlyHint: tool.readOnly,
+          },
+          async (args: any) => this.callTool(tool.originalName, args)
+        );
+        if (registered) {
+          (registered as any).rawInputSchema = tool.parameters || { type: "object", properties: {} };
+        }
+      } catch (err: any) {
+        logger.warn(`[UPSTREAM] Could not register tool '${tool.namespacedName}': ${err.message}`);
+      }
     }
   }
 

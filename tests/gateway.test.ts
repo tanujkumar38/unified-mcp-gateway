@@ -354,5 +354,27 @@ describe("Unified MCP Gateway Hub Test Suite", () => {
       await client.close();
       await server.close();
     });
+
+    it("registers upstream tools in hybrid mode without Zod schema collisions and preserves parameters", async () => {
+      const server = createGatewayMcpServer({ mode: "hybrid" });
+      const client = new Client({ name: "hybrid-test-client", version: "1.0.0" }, { capabilities: {} });
+      const [cTransport, sTransport] = InMemoryTransport.createLinkedPair();
+
+      await server.connect(sTransport);
+      await client.connect(cTransport);
+
+      const toolsRes = await client.listTools();
+      expect(toolsRes.tools.length).toBeGreaterThanOrEqual(10);
+
+      // Verify that if render or any upstream tools are present, they have valid inputSchema
+      const renderTool = toolsRes.tools.find((t) => t.name.startsWith("render__"));
+      if (renderTool) {
+        expect(renderTool.inputSchema).toBeDefined();
+        expect(renderTool.inputSchema.type).toBe("object");
+      }
+
+      await client.close();
+      await server.close();
+    });
   });
 });

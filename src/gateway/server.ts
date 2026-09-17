@@ -1,4 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { ListToolsRequestSchema, CallToolRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 import { PluginRegistry } from "./registry.js";
 import { registerGatewayMetaTools } from "./meta-tools.js";
 import { logger } from "../utils/logger.js";
@@ -38,7 +39,7 @@ export function createGatewayMcpServer(options?: CreateServerOptions): McpServer
   (server as any).tool = (name: string, ...args: any[]) => {
     if ((server as any)._registeredTools && (server as any)._registeredTools[name]) {
       logger.warn(`[GATEWAY] Skipping duplicate tool '${name}' to prevent namespace collision.`);
-      return;
+      return (server as any)._registeredTools[name];
     }
     return (originalTool as any)(name, ...args);
   };
@@ -56,6 +57,35 @@ export function createGatewayMcpServer(options?: CreateServerOptions): McpServer
       logger.info(`Mounting plugin tools into Unified Gateway: [${plugin.id}] "${plugin.name}"`);
       plugin.register(server, { prefix: plugin.id });
     }
+  }
+
+  // 3. Intercept ListTools & CallTool to preserve raw JSON schemas and arguments for upstream tools
+  const originalListHandler = (server.server as any)._requestHandlers?.get("tools/list");
+  if (originalListHandler) {
+    server.server.setRequestHandler(ListToolsRequestSchema, async (request: any, extra: any) => {
+      const result = await originalListHandler(request, extra);
+      if (result?.tools) {
+        for (const t of result.tools) {
+          const reg = (server as any)._registeredTools?.[t.name];
+          if (reg?.rawInputSchema) {
+            t.inputSchema = reg.rawInputSchema;
+          }
+        }
+      }
+      return result;
+    });
+  }
+
+  const originalCallHandler = (server.server as any)._requestHandlers?.get("tools/call");
+  if (originalCallHandler) {
+    server.server.setRequestHandler(CallToolRequestSchema, async (request: any, extra: any) => {
+      const tool = (server as any)._registeredTools?.[request.params.name];
+      if (tool?.rawInputSchema) {
+        // Direct invocation with full raw arguments without Zod stripping
+        return await tool.handler(request.params.arguments || {}, extra);
+      }
+      return await originalCallHandler(request, extra);
+    });
   }
 
   logger.info(`Unified MCP Gateway Server created successfully with mode='${mode}'`);
