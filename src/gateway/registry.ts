@@ -83,6 +83,15 @@ export class PluginRegistry {
       }
       logger.info(`Configuring external MCP upstream: '${upstream.name}' (${upstream.transport})`);
       const transport: "sse" | "stdio" = upstream.transport === "stdio" ? "stdio" : "sse";
+      const resolvedHeaders: Record<string, string> | undefined = upstream.headers
+        ? Object.fromEntries(
+            Object.entries(upstream.headers).map(([k, v]) => [
+              k,
+              v.replace(/\$\{([a-zA-Z0-9_]+)\}/g, (_, varName) => process.env[varName] || ""),
+            ])
+          )
+        : undefined;
+
       const descriptor = {
         id: upstream.id,
         name: upstream.name,
@@ -91,7 +100,7 @@ export class PluginRegistry {
         url: upstream.url,
         command: upstream.command,
         args: upstream.args,
-        headers: upstream.headers,
+        headers: resolvedHeaders,
         originalLink: upstream.url || `${upstream.command} ${upstream.args?.join(" ")}`,
       };
       const upstreamPlugin = new UpstreamMcpPlugin(descriptor);
