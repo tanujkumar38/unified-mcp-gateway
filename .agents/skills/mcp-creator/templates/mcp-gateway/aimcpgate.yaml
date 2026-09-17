@@ -1,0 +1,42 @@
+# aiMCPGate Multi-Server Aggregator Configuration
+version: "1.0"
+
+server:
+  host: "127.0.0.1"
+  port: 8080
+  transport: sse
+  auth:
+    type: bearer
+    token: "${GATEWAY_AUTH_TOKEN:-secret-gateway-token}"
+
+# Upstream MCP Servers to Aggregate
+upstreams:
+  github:
+    transport: stdio
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-github"]
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: "${GITHUB_PAT}"
+    namespace: "github__"
+    restart_policy: always
+    max_restarts: 5
+
+  filesystem:
+    transport: stdio
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "/workspace"]
+    namespace: "fs__"
+    restart_policy: on_failure
+
+  database:
+    transport: sse
+    url: "https://mcp.internal.company.com/postgres/sse"
+    namespace: "db__"
+    auth:
+      bearer: "${DB_MCP_TOKEN}"
+
+# Performance & Context Protection
+settings:
+  tool_cache_ttl_seconds: 300
+  timeout_seconds: 30
+  max_concurrent_requests: 50

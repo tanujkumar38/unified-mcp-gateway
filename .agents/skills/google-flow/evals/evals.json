@@ -1,0 +1,66 @@
+{
+  "skill_name": "google-flow",
+  "evals": [
+    {
+      "id": 1,
+      "name": "model-selection-and-cost-estimation",
+      "prompt": "Estimate credits for a 15-second pre-vis test shot versus a 15-second final cinema master shot, and determine whether off-peak discount applies.",
+      "expected_output": "Selects veo-3.1-lite for pre-vis (30 credits) and veo-3.1-quality for final master (150 credits), citing peak/off-peak conditions.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "model-selection-rule",
+          "description": "Checks that the agent used veo-3.1-lite for pre-vis and veo-3.1-quality for mastering",
+          "type": "semantic"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "5-element-prompt-construction",
+      "prompt": "Create a production prompt for a cyberpunk neo-noir detective scene under rain.",
+      "expected_output": "A 5-element prompt containing subject & action, setting & atmosphere, cinematography & lens, lighting & palette, and render style/texture.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "five-elements-present",
+          "description": "Verifies all 5 elements are specified without vague buzzwords",
+          "type": "semantic"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "character-rig-8-angle-validation",
+      "prompt": "Validate a character turnaround rig definition and ensure all 8 canonical camera angles are present.",
+      "files": ["assets/character_rig_template.json"],
+      "expected_output": "Confirms presence of front, three_quarter_left, profile_left, back_left, back, back_right, profile_right, three_quarter_right.",
+      "assertions": [
+        {
+          "name": "canonical-angles-verified",
+          "description": "Ensures all 8 angles are verified",
+          "type": "structural"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "video-qc-and-hallucination-remediation",
+      "prompt": "Audit a generated video shot that exhibits micro-strobe flickering and melting facial features, calculate the composite QC score, and prescribe corrective remediations.",
+      "files": ["references/video_qc_and_hallucination_engine.md"],
+      "expected_output": "Performs 5-dimensional QC audit, detects Class A and Class B defects, prescribes optical flow de-flickering and action isolation with negative prompt tokens.",
+      "assertions": [
+        {
+          "name": "defect-classification-accurate",
+          "description": "Correctly classifies anatomical hallucination and temporal flickering",
+          "type": "semantic"
+        },
+        {
+          "name": "prescriptive-fix-provided",
+          "description": "Prescribes targeted negative tokens and flow_upscale_media de-flicker pass",
+          "type": "semantic"
+        }
+      ]
+    }
+  ]
+}

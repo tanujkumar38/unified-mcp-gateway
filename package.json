@@ -1,0 +1,55 @@
+{
+  "name": "google-flow-mcp-server",
+  "version": "1.0.0",
+  "description": "Zero-Ban No-API Model Context Protocol (MCP) Server for Google Flow (flow.google) Creative Studio & Veo 3.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-gateway": "dist/gateway/index.js",
+    "google-flow-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "npm --prefix tickertape-mcp run build && tsc",
+    "start": "node dist/gateway/index.js",
+    "gateway": "node dist/gateway/index.js",
+    "gateway:stdio": "node dist/gateway/index.js --stdio",
+    "flow:http": "node dist/index.js --http",
+    "flow:stdio": "node dist/index.js",
+    "tickertape:http": "npm --prefix tickertape-mcp start -- --http",
+    "tickertape:stdio": "npm --prefix tickertape-mcp start",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy:render": "tsx scripts/render-deploy.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-flow",
+    "veo",
+    "veo-3",
+    "imagen",
+    "video-generation",
+    "ai-agent",
+    "claude",
+    "cursor"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "prom-client": "^15.1.3",
+    "puppeteer-core": "^25.11.0",
+    "tickertape-mcp": "file:tickertape-mcp",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}

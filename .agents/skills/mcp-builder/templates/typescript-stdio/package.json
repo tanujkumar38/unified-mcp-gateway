@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-template-stdio",
+  "version": "1.0.0",
+  "description": "Production-ready Model Context Protocol (MCP) Server using TypeScript and Stdio transport",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "mcp-server": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
+}

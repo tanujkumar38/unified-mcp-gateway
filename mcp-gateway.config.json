@@ -1,0 +1,54 @@
+{
+  "name": "Unified MCP Gateway Hub",
+  "port": 8080,
+  "host": "0.0.0.0",
+  "toolMode": "hybrid",
+  "activeProfile": "all",
+  "auth": {
+    "enabled": false,
+    "apiKey": ""
+  },
+  "builtins": {
+    "google-flow": {
+      "enabled": true,
+      "description": "Google Flow Creative Studio & Veo 3.1"
+    },
+    "tickertape": {
+      "enabled": true,
+      "description": "Tickertape Indian Equities & Market Mood Index (MMI)"
+    }
+  },
+  "upstreams": [
+    {
+      "id": "sample-external-stdio",
+      "name": "Sample External Stdio MCP Server",
+      "description": "Example demonstrating how to plug any future external MCP server into this gateway",
+      "category": "development",
+      "transport": "stdio",
+      "command": "node",
+      "args": ["path/to/future/server.js"],
+      "enabled": false
+    },
+    {
+      "id": "sample-remote-http",
+      "name": "Sample Remote HTTP MCP Server",
+      "description": "Example demonstrating how to federate an external remote MCP server into this single endpoint",
+      "category": "remote",
+      "transport": "sse",
+      "url": "https://mcp.example.com/sse",
+      "enabled": false
+    },
+    {
+      "id": "render",
+      "name": "Render Cloud MCP Server",
+      "description": "Deploy, manage, and monitor web services, databases, and infrastructure on Render Cloud",
+      "category": "cloud",
+      "transport": "sse",
+      "url": "https://mcp.render.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${RENDER_API_KEY}"
+      },
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "storyboard_id": "sb_chronograph_commercial_v1",
+  "project_name": "Aethelgard Chronograph Commercial",
+  "target_aspect_ratio": "16:9",
+  "shots": [
+    {
+      "shot_number": 1,
+      "prompt": "Extreme macro close-up of sapphire crystal timepiece escapement wheel ticking smoothly. Luxury watchmaking workshop background. Low-angle slow rotational push-in. Precision tungsten spotlight at 3200K. Cinematic commercial photorealism 8k.",
+      "camera_movement": "slow push-in with 15-degree clockwise roll",
+      "duration_seconds": 5.0,
+      "model": "veo-3.1-quality",
+      "character_rig_id": null
+    },
+    {
+      "shot_number": 2,
+      "prompt": "Medium close-up of master watchmaker in dark apron examining watch through brass loupe. Moody boutique workshop. Eye-level lateral slider tracking left. Soft Rembrandt diffused lighting. Cinematic 35mm film aesthetic.",
+      "camera_movement": "lateral slider tracking left",
+      "duration_seconds": 6.0,
+      "model": "veo-3.1-quality",
+      "anchor_frame": "https://flow.google.com/assets/projects/sb_chronograph/shot1_final.png",
+      "character_rig_id": "crig_elena_vanguard_v1"
+    },
+    {
+      "shot_number": 3,
+      "prompt": "Wide cinematic hero shot of completed luxury chronograph resting on dark granite pedestal. Subtle atmospheric smoke swirling. Steady low-angle crane rise. Dramatic dual rim lighting with golden edge illumination. Premium commercial grade.",
+      "camera_movement": "pedestal crane rise",
+      "duration_seconds": 4.0,
+      "model": "veo-3.1-fast",
+      "character_rig_id": null
+    }
+  ]
+}

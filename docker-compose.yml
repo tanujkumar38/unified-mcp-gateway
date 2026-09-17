@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  qikink-mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qikink-mcp-server
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - MCP_TRANSPORT=http
+      - PORT=8080
+      - HOST=0.0.0.0
+      - QIKINK_ENVIRONMENT=sandbox
+      - QIKINK_CLIENT_ID=${QIKINK_CLIENT_ID:-}
+      - QIKINK_CLIENT_SECRET=${QIKINK_CLIENT_SECRET:-}
+      - QIKINK_API_KEY=${QIKINK_API_KEY:-}
+      - MCP_LOG_LEVEL=info
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
+        reservations:
+          cpus: "0.10"
+          memory: 128M

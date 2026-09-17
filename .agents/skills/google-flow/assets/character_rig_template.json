@@ -1,0 +1,17 @@
+{
+  "rig_id": "crig_elena_vanguard_v1",
+  "name": "Elena Vance",
+  "description": "A 32-year-old cyber-investigator with sharp hazel eyes, asymmetrical silver-streaked bob haircut, wearing a matte-black weatherproof tactical trench coat.",
+  "art_style": "cinematic photorealism, anamorphic lens, 8k",
+  "seed": 894710492,
+  "angles": {
+    "front": "https://flow.google.com/assets/characters/elena/front.png",
+    "three_quarter_left": "https://flow.google.com/assets/characters/elena/three_quarter_left.png",
+    "profile_left": "https://flow.google.com/assets/characters/elena/profile_left.png",
+    "back_left": "https://flow.google.com/assets/characters/elena/back_left.png",
+    "back": "https://flow.google.com/assets/characters/elena/back.png",
+    "back_right": "https://flow.google.com/assets/characters/elena/back_right.png",
+    "profile_right": "https://flow.google.com/assets/characters/elena/profile_right.png",
+    "three_quarter_right": "https://flow.google.com/assets/characters/elena/three_quarter_right.png"
+  }
+}
