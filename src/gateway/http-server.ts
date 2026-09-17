@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
+import { randomUUID } from "crypto";
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
+import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { PluginRegistry } from "./registry.js";
 import { createGatewayMcpServer } from "./server.js";
 import { logger } from "../utils/logger.js";
@@ -15,8 +17,12 @@ export function createGatewayHttpApp() {
   // Global CORS Middleware for ChatGPT, Claude Web, and IDE browsers
   app.use((req: Request, res: Response, next: NextFunction) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, x-session-id");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization, x-session-id, mcp-session-id, accept"
+    );
+    res.setHeader("Access-Control-Expose-Headers", "mcp-session-id");
     if (req.method === "OPTIONS") {
       res.sendStatus(204);
       return;
@@ -113,6 +119,40 @@ export function createGatewayHttpApp() {
         res.status(500).json({ error: "Failed to process message", message: err.message });
       }
     }
+  });
+
+  // -------------------------------------------------------------------------
+  // 2B. STREAMABLE HTTP TRANSPORT (Claude.ai Custom Connectors /modern MCP)
+  // -------------------------------------------------------------------------
+  const streamableTransport = new StreamableHTTPServerTransport({
+    sessionIdGenerator: () => randomUUID(),
+  });
+  const streamableServer = createGatewayMcpServer();
+  streamableServer.connect(streamableTransport).catch((err) => {
+    logger.warn(`Failed to connect Streamable HTTP transport: ${err.message}`);
+  });
+
+  const handleStreamableRequest = async (req: Request, res: Response) => {
+    try {
+      await streamableTransport.handleRequest(req, res, req.body);
+    } catch (err: any) {
+      logger.error(`Error in Streamable HTTP request: ${err.message}`, { stack: err.stack });
+      if (!res.headersSent) {
+        res.status(500).json({ error: "Streamable HTTP error", message: err.message });
+      }
+    }
+  };
+
+  app.all("/mcp", authMiddleware, handleStreamableRequest);
+  app.post("/mcp", authMiddleware, handleStreamableRequest);
+  app.get("/mcp", authMiddleware, handleStreamableRequest);
+
+  // Fallback for root POST requests (Claude.ai root discovery)
+  app.post("/", (req: Request, res: Response, next: NextFunction) => {
+    if (req.body?.jsonrpc || req.headers["mcp-session-id"]) {
+      return handleStreamableRequest(req, res);
+    }
+    next();
   });
 
   // -------------------------------------------------------------------------
