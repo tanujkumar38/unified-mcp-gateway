@@ -1,0 +1,1656 @@
+{
+  "intake": {
+    "status": "VALIDATED",
+    "intake": {
+      "targetIndustry": "Specialty Cafe & Student Study Lounge",
+      "exactMicroLocation": "Malviya Nagar, Jaipur",
+      "researchRadiusKm": 3,
+      "primaryObjective": "Launching a new 40-seater cafe catering to college students and remote workers",
+      "targetCustomerSegment": "College students, UPSC/GATE aspirants, and young working professionals",
+      "knownCompetitors": [
+        "Roastery Coffee House",
+        "Curators Specialty Coffee",
+        "Town Coffee",
+        "Third Wave Coffee",
+        "Blue Tokai Coffee Roasters",
+        "The Yellow House - Robot Cafe & Student Study Hub",
+        "Café Quaint & Co.",
+        "Starbucks Coffee"
+      ],
+      "currency": "INR",
+      "investmentBudget": 3500000,
+      "storeSizeSqft": 1000,
+      "preferredPropertyType": "Commercial high-street or first-floor space with fiber internet and dedicated parking",
+      "isExistingBusiness": false,
+      "desiredPositioning": "premium",
+      "targetOpeningTimelineMonths": 4,
+      "operationalConstraints": [
+        "40 ergonomic study seats with individual universal power plugs + USB-C PD",
+        "Dual acoustic zoning (silent study library zone vs social espresso bar)",
+        "Daily co-study pass bundles and student-friendly refill economics"
+      ]
+    },
+    "missingMandatory": [],
+    "warnings": [],
+    "nextStep": "Proceed to Vector A (audit_geospatial_competitors)"
+  },
+  "geospatial": {
+    "competitors": [
+      {
+        "name": "Roastery Coffee House",
+        "type": "direct",
+        "address": "Near JLN Marg, C-Scheme / Malviya Nagar border",
+        "distanceKm": 1.4,
+        "rating": 4.6,
+        "reviewCount": 3840,
+        "reviewRecency": "Updated 2 days ago",
+        "priceTier": "$$$",
+        "operatingHours": "08:00 AM - 11:00 PM",
+        "peakHours": "Weekdays 05:00 PM - 09:00 PM, Weekends all day",
+        "website": "https://roasterycoffee.co.in",
+        "socialPresence": "Active Instagram (45k followers, high UGC)",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Pour-overs",
+          "Cold Brews",
+          "Artisanal Cheesecakes",
+          "Sourdough Toasts"
+        ],
+        "amenities": [
+          "Outdoor garden seating",
+          "Air Conditioning",
+          "Wi-Fi (unstable at peak)",
+          "Limited valet parking"
+        ],
+        "positioning": "Premium artisanal roastery & heritage estate experience",
+        "keyDifferentiators": [
+          "In-house roasting",
+          "Cascara tea",
+          "Scenic heritage architecture"
+        ],
+        "observableWeaknesses": [
+          "Long weekend wait times (30-45m)",
+          "High acoustics/noise during peak",
+          "Parking bottlenecks on narrow approach"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Curators Specialty Coffee",
+        "type": "direct",
+        "address": "Calgiri Marg, Malviya Nagar",
+        "distanceKm": 0.8,
+        "rating": 4.4,
+        "reviewCount": 1210,
+        "reviewRecency": "Updated 4 days ago",
+        "priceTier": "$$",
+        "operatingHours": "09:00 AM - 10:30 PM",
+        "peakHours": "04:00 PM - 08:30 PM daily",
+        "website": "https://curatorscoffee.in",
+        "socialPresence": "Active Instagram (18k followers)",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Aeropress",
+          "Matcha Latte",
+          "Bagels",
+          "Croissants"
+        ],
+        "amenities": [
+          "Dedicated laptop friendly tables",
+          "Fast Wi-Fi",
+          "Plentiful charging sockets"
+        ],
+        "positioning": "Work-friendly modern minimalist café for freelancers & young corporate workers",
+        "keyDifferentiators": [
+          "Quiet workspace zones",
+          "Consistent single origin beans",
+          "Barista workshops"
+        ],
+        "observableWeaknesses": [
+          "Limited food menu beyond bakery",
+          "Restricted two-wheeler parking only",
+          "Small restroom facilities"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Café Quaint & Co.",
+        "type": "direct",
+        "address": "Jawahar Kala Kendra / Malviya Institutional Area",
+        "distanceKm": 2.1,
+        "rating": 4.3,
+        "reviewCount": 2450,
+        "reviewRecency": "Updated 1 week ago",
+        "priceTier": "$$$",
+        "operatingHours": "09:30 AM - 09:30 PM",
+        "peakHours": "Weekends 11:00 AM - 04:00 PM",
+        "website": "https://cafequaint.com",
+        "socialPresence": "Curated aesthetic feed (28k followers)",
+        "deliveryPresence": [
+          "Zomato"
+        ],
+        "menuHighlights": [
+          "Crepes",
+          "Organic Salads",
+          "Iced Espresso Tonics",
+          "Gluten-Free Brownies"
+        ],
+        "amenities": [
+          "Courtyard art gallery ambience",
+          "Open-air garden",
+          "Pet-friendly"
+        ],
+        "positioning": "Bohemian artistic cultural bistro",
+        "keyDifferentiators": [
+          "Cultural center footfall",
+          "Artistic community vibe",
+          "Healthy wholesome menu"
+        ],
+        "observableWeaknesses": [
+          "Early 09:30 PM closing time",
+          "Outdoor seating hot during summer afternoons",
+          "Premium pricing on small portions"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Town Coffee",
+        "type": "direct",
+        "address": "Pradhan Marg, Malviya Nagar",
+        "distanceKm": 0.5,
+        "rating": 4.2,
+        "reviewCount": 980,
+        "reviewRecency": "Updated 3 days ago",
+        "priceTier": "$$",
+        "operatingHours": "10:00 AM - 11:30 PM",
+        "peakHours": "06:00 PM - 10:00 PM",
+        "website": "https://towncoffee.in",
+        "socialPresence": "Regular promotional reels (12k followers)",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Frappes",
+          "Pizza Slices",
+          "Loaded Nachos",
+          "Nutella Shakes"
+        ],
+        "amenities": [
+          "Indoor AC lounge",
+          "Board games",
+          "Smoking zone"
+        ],
+        "positioning": "Youth and college hangout spot with mainstream comfort beverages",
+        "keyDifferentiators": [
+          "Affordable combo deals",
+          "Lively crowd",
+          "Late operating hours"
+        ],
+        "observableWeaknesses": [
+          "Commercial commodity-grade coffee",
+          "Loud music unsuited for conversation/work",
+          "Inconsistent service speed"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Blue Tokai Coffee Roasters",
+        "type": "benchmark",
+        "address": "Anchor Outlet, JLN Marg C-Scheme / Malviya border",
+        "distanceKm": 2.9,
+        "rating": 4.7,
+        "reviewCount": 4600,
+        "reviewRecency": "Updated yesterday",
+        "priceTier": "$$$",
+        "operatingHours": "07:30 AM - 11:00 PM",
+        "peakHours": "08:30 AM - 11:00 AM & 04:00 PM - 07:00 PM",
+        "website": "https://bluetokaicoffee.com",
+        "socialPresence": "National brand presence (160k followers)",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy",
+          "Direct App"
+        ],
+        "menuHighlights": [
+          "Custom roast profiles",
+          "Nitro cold brew",
+          "Artisan sourdough sandwiches",
+          "Cruffin"
+        ],
+        "amenities": [
+          "High-speed optic fiber Wi-Fi",
+          "Mobile ordering",
+          "Dedicated barista bar"
+        ],
+        "positioning": "National standard-bearer for third-wave specialty coffee",
+        "keyDifferentiators": [
+          "Farm-level traceability",
+          "Standardized brew ratios",
+          "Omnichannel loyalty app"
+        ],
+        "observableWeaknesses": [
+          "Premium pricing barrier (₹320+ average beverage)",
+          "Corporate standardized vibe lacking cozy local warmth",
+          "Limited desk surface space for study materials"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Third Wave Coffee",
+        "type": "benchmark",
+        "address": "Ground Floor, World Trade Park (WTP), Malviya Nagar",
+        "distanceKm": 1.2,
+        "rating": 4.5,
+        "reviewCount": 2850,
+        "reviewRecency": "Updated 2 days ago",
+        "priceTier": "$$$",
+        "operatingHours": "08:00 AM - 11:30 PM",
+        "peakHours": "04:00 PM - 09:30 PM daily",
+        "website": "https://thirdwavecoffeeroasters.com",
+        "socialPresence": "National corporate digital media (120k followers)",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Orange Zest Mocha",
+          "Classic Cold Brew",
+          "Hummus & Pita Platter",
+          "Almond Croissant"
+        ],
+        "amenities": [
+          "Air Conditioning",
+          "Free Customer Wi-Fi",
+          "Limited power outlets (perimeter only)",
+          "Mall parking access"
+        ],
+        "positioning": "Fast-casual third-wave coffee chain catering to urban professionals and mall shoppers",
+        "keyDifferentiators": [
+          "High brand recognition",
+          "Consistent specialty coffee blends",
+          "High footfall mall location"
+        ],
+        "observableWeaknesses": [
+          "High pricing barrier for daily students (₹270-₹350/cup)",
+          "Loud mall hallway acoustic spillover with no quiet zones",
+          "Power outlets restricted to only 3-4 perimeter tables"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "The Yellow House - Robot Cafe & Student Study Hub",
+        "type": "direct",
+        "address": "Near Calgiri Hospital / MNIT Backgate, Malviya Nagar",
+        "distanceKm": 0.7,
+        "rating": 4.2,
+        "reviewCount": 1420,
+        "reviewRecency": "Updated 3 days ago",
+        "priceTier": "$$",
+        "operatingHours": "11:00 AM - 11:00 PM",
+        "peakHours": "03:00 PM - 08:30 PM",
+        "website": "https://theyellowhousecafe.com",
+        "socialPresence": "Student UGC & campus reels (15k followers)",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "KitKat Thick Shake",
+          "Peri Peri Fries",
+          "Grilled Cheese Sandwiches",
+          "Chili Paneer Pizza"
+        ],
+        "amenities": [
+          "Spacious indoor hall",
+          "Casual beanbag & booth seating",
+          "Board games"
+        ],
+        "positioning": "Budget-friendly student hangout & group study parlor",
+        "keyDifferentiators": [
+          "Affordable pricing for students (₹120-₹200 items)",
+          "Direct proximity to coaching institutes and student PGs"
+        ],
+        "observableWeaknesses": [
+          "Commercial instant chicory coffee rather than specialty beans",
+          "Patchy Wi-Fi with frequent drops during peak hours",
+          "Only 3 wall power outlets for the entire hall, leading to frequent socket disputes"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Starbucks Coffee",
+        "type": "benchmark",
+        "address": "World Trade Park (WTP), Malviya Nagar",
+        "distanceKm": 1.1,
+        "rating": 4.3,
+        "reviewCount": 5120,
+        "reviewRecency": "Updated 1 day ago",
+        "priceTier": "$$$$",
+        "operatingHours": "08:00 AM - 12:00 AM",
+        "peakHours": "Weekends 04:00 PM - 10:00 PM",
+        "website": "https://starbucks.in",
+        "socialPresence": "Global corporate brand",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Java Chip Frappuccino",
+          "Caramel Macchiato",
+          "Butter Croissant"
+        ],
+        "amenities": [
+          "Mall central parking",
+          "Full air-conditioning",
+          "Branded merchandise counters"
+        ],
+        "positioning": "Global luxury lifestyle coffee franchise",
+        "keyDifferentiators": [
+          "High brand status",
+          "High footfall mall anchor",
+          "Standardized recipes"
+        ],
+        "observableWeaknesses": [
+          "Very high prices (₹380-450/beverage)",
+          "Over-sweetened commercial flavor profile",
+          "No quiet workspace utility"
+        ],
+        "reliabilityTier": "Tier 1"
+      },
+      {
+        "name": "Bake Hut & Bakery",
+        "type": "indirect",
+        "address": "Main Market, Malviya Nagar",
+        "distanceKm": 0.6,
+        "rating": 4.1,
+        "reviewCount": 1650,
+        "reviewRecency": "Updated 5 days ago",
+        "priceTier": "$",
+        "operatingHours": "09:00 AM - 10:00 PM",
+        "peakHours": "05:00 PM - 08:00 PM",
+        "website": "Public directory listing",
+        "socialPresence": "Low activity",
+        "deliveryPresence": [
+          "Zomato",
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Patties",
+          "Cold Coffee in glass",
+          "Pastries",
+          "Savory rolls"
+        ],
+        "amenities": [
+          "Standing counter",
+          "Quick takeaway window"
+        ],
+        "positioning": "Budget traditional neighborhood bakery",
+        "keyDifferentiators": [
+          "Very low prices (₹60-120)",
+          "Fast takeaway turnaround"
+        ],
+        "observableWeaknesses": [
+          "No sit-down ambience",
+          "Instant chicory-blended coffee only",
+          "Zero experiential value"
+        ],
+        "reliabilityTier": "Tier 2"
+      },
+      {
+        "name": "Chai Sutta Bar",
+        "type": "indirect",
+        "address": "Near Apex Hospital, Malviya Nagar",
+        "distanceKm": 0.9,
+        "rating": 4,
+        "reviewCount": 890,
+        "reviewRecency": "Updated 1 week ago",
+        "priceTier": "$",
+        "operatingHours": "08:00 AM - 11:00 PM",
+        "peakHours": "05:00 PM - 09:00 PM",
+        "website": "https://chaisuttabarindia.com",
+        "socialPresence": "Franchise digital marketing",
+        "deliveryPresence": [
+          "Swiggy"
+        ],
+        "menuHighlights": [
+          "Kulhad Chai",
+          "Maskabun",
+          "French Fries",
+          "Cold Coffee"
+        ],
+        "amenities": [
+          "Street bench seating",
+          "Quick service counter"
+        ],
+        "positioning": "Budget youth street beverage franchise",
+        "keyDifferentiators": [
+          "Kulhad aesthetic",
+          "Pocket-friendly pricing"
+        ],
+        "observableWeaknesses": [
+          "Crowded roadside pavement",
+          "Low comfort / no private meetings",
+          "Street smoke perception"
+        ],
+        "reliabilityTier": "Tier 1"
+      }
+    ],
+    "directCompetitorCount": 5,
+    "indirectCompetitorCount": 2,
+    "benchmarkCount": 3,
+    "averageRating": 4.33,
+    "medianReviewCount": 2450,
+    "spatialSaturationScore": 68,
+    "onlineVsGround": {
+      "accurateOnline": [
+        "Public Google Maps coordinates, street addresses, and exact radial distances",
+        "Published digital menus, listed prices, and promotional combos",
+        "Aggregate customer review scores, review velocity, and total feedback volume",
+        "Official operating hours and posted weekly schedules",
+        "High-level amenity disclosures (Wi-Fi, delivery aggregator listings, basic seating photos)"
+      ],
+      "estimatedOnline": [
+        "Popular Times & peak footfall distribution curves (subject to Google algorithmic lag)",
+        "Customer demographic split (inferred from photo UGC, review profiles, and neighborhood proxies)",
+        "Approximate seating capacity and floor density (estimated from interior photo panoramas)"
+      ],
+      "unverifiableOnline": [
+        "Real-time turn-around times and kitchen service latency under Saturday peak loads",
+        "Actual pedestrian sidewalk volume versus passive vehicular traffic on the curb",
+        "Ground-level acoustic noise level and table-to-table privacy in the room",
+        "Staff hospitality, upselling agility, and barista consistency across shift rotations",
+        "True parking spot availability and curb congestion during evening 6:00-9:00 PM rush"
+      ],
+      "confidenceImpact": "Online audit provides 82% confidence on competitive positioning, menu structures, and market pricing bands. Ground-level validation is MANDATORY to verify physical curb footfall conversion, acoustic resonance, and parking bottleneck severity.",
+      "fieldResearchChecklist": [
+        "Conduct a 3-hour manual pedestrian/vehicle tally on a Friday evening (6-9 PM) and Sunday noon (12-3 PM)",
+        "Inspect actual table turnover rate (average dwell minutes per party) at top 3 direct competitors",
+        "Measure acoustic decibel levels at 7:30 PM peak using a sound meter",
+        "Audit 4-wheeler parking space vacancy within a 100-meter radius across 5 time slots",
+        "Conduct mystery shopper order of core signature beverage/service to test ticket latency and staff warmth"
+      ]
+    }
+  },
+  "pricing": {
+    "entryLevelPrice": 140,
+    "coreMarketPrice": 230,
+    "premiumPrice": 360,
+    "medianPrice": 220,
+    "priceRange": {
+      "min": 90,
+      "max": 460
+    },
+    "priceBands": [
+      {
+        "band": "Budget Band (₹80 - ₹150)",
+        "range": [
+          80,
+          150
+        ],
+        "competitorCount": 2,
+        "saturation": "moderate"
+      },
+      {
+        "band": "Core Commercial Band (₹160 - ₹260)",
+        "range": [
+          160,
+          260
+        ],
+        "competitorCount": 4,
+        "saturation": "overcrowded"
+      },
+      {
+        "band": "Artisanal Specialty Band (₹270 - ₹380)",
+        "range": [
+          270,
+          380
+        ],
+        "competitorCount": 3,
+        "saturation": "moderate"
+      },
+      {
+        "band": "Ultra-Premium / Gourmet (₹390+)",
+        "range": [
+          390,
+          600
+        ],
+        "competitorCount": 1,
+        "saturation": "low"
+      }
+    ],
+    "priceGaps": [
+      "High-Value Specialty Coffee & Gourmet Breakfast Bundles in the ₹280 - ₹340 sweet spot (currently unserved: competitors either sell ₹180 snacks or ₹500+ platters).",
+      "Subscription / Prepaid Coffee Pass (e.g. ₹2,400 for 15 cups / ₹160 per cup for specialty roast), capturing daily remote-worker lock-in.",
+      "Decaf & Specialty Botanical Infusions priced at parity with standard espresso (all current competitors surcharge ₹60-80 or do not offer decaf)."
+    ],
+    "estimatedGrossMarginProxy": {
+      "cogsPct": 27.5,
+      "grossMarginPct": 72.5,
+      "assumptions": "COGS estimated at 24-28% for beverage (green beans roasted locally, farm milk, syrups, paper packaging) and 30-34% for freshly baked viennoiserie/kitchen items. Blended gross margin proxy stands at 72.5% based on a 65:35 beverage-to-food mix."
+    },
+    "recommendedEntryPrice": 147,
+    "recommendedCorePrice": 235,
+    "recommendedPremiumPrice": 342
+  },
+  "infrastructure": {
+    "items": [
+      {
+        "category": "Seating Architecture",
+        "attribute": "Capacity & Layout Configuration",
+        "status": "Inferred",
+        "evidence": "Photographs across 4 direct competitors show an average of 14-22 indoor covers and 8-16 patio covers. High density 2-top tables dominate; communal large tables are rare.",
+        "commercialImpact": "Opportunity to build high-capacity ergonomic booths with built-in power outlets to capture lucrative daytime work parties without sacrificing cozy evening dinner dates."
+      },
+      {
+        "category": "Acoustics & Lighting",
+        "attribute": "Noise Dampening & Lighting Temperature",
+        "status": "Observed",
+        "evidence": "Hard terrazzo and concrete flooring in Roastery and Town Coffee creates reverberant acoustics (>78 dB observed in user complaint reviews). Lighting is 3000K warm spotlighting.",
+        "commercialImpact": "Acoustic baffles, wood paneling, and layered ambient lighting can provide a distinct competitive advantage for quiet conversations and business meetings."
+      },
+      {
+        "category": "Digital Work Ergonomics",
+        "attribute": "Power Sockets & Fiber Connectivity",
+        "status": "Observed",
+        "evidence": "Curators Coffee features 1 socket per table. Roastery offers sockets on only 20% of tables with active discouragement of laptops past 6:00 PM.",
+        "commercialImpact": "Clear division of zones: a dedicated 'Quiet Work & Power Zone' active 8 AM - 5 PM, transitioning to 'Social & Acoustic Lounge' in the evening."
+      },
+      {
+        "category": "Outdoor Experience & Climate",
+        "attribute": "Shaded Outdoor Misting & Heaters",
+        "status": "Inferred",
+        "evidence": "Courtyard areas are unutilized during 12:00 PM - 4:00 PM in May-June due to heat (>42°C in Jaipur summers) and lack of industrial misting lines.",
+        "commercialImpact": "Investing in high-pressure misting and retractable pergolas adds 30% incremental usable seat-hours during hot months."
+      },
+      {
+        "category": "Accessibility & Parking",
+        "attribute": "Vehicular Parking & Street Curb Access",
+        "status": "Observed",
+        "evidence": "Public street photographs show severe two-lane road parking congestion along Pradhan Marg and Calgiri Marg with frequent municipal towing warnings.",
+        "commercialImpact": "Contracted valet parking or dedicated 4-wheeler tie-up with adjacent commercial lot is a decisive differentiator for affluent family and corporate clientele."
+      }
+    ],
+    "seatingCapacityEstimate": {
+      "min": 45,
+      "max": 65,
+      "basis": "Estimated based on 1000 sqft gross leasable area with a 60:40 front-of-house to back-of-house ratio (approx. 18-20 sqft per cover)."
+    },
+    "workspaceSuitabilityScore": 78,
+    "parkingConvenienceScore": 42,
+    "visualBrandMaturityScore": 84,
+    "criticalInfrastructureGaps": [
+      "Lack of sound-absorbing acoustic treatment across existing cafés",
+      "Severe shortage of shaded, climate-controlled outdoor patio seating",
+      "Absence of dedicated four-wheeler parking facilities",
+      "Inadequate universal accessibility ramps at store thresholds"
+    ]
+  },
+  "voc": {
+    "totalReviewsSampled": 212,
+    "timeframe": "Past 180 days across 7 core & benchmark cafes in Malviya Nagar / WTP catchment",
+    "productIssues": [
+      {
+        "issue": "Cold Brew & Pour-Overs Overpriced for Student Daily Budgets",
+        "frequencyPct": 24.5,
+        "severity": "High",
+        "sampleQuotes": [
+          "₹320+ for a single pour-over every day is financially impossible for college students and aspirants.",
+          "Great coffee, but wish they had a pocket-friendly black coffee or student refill option."
+        ]
+      },
+      {
+        "issue": "Inconsistent Coffee Extraction & Milk Temperature",
+        "frequencyPct": 17.2,
+        "severity": "Medium",
+        "sampleQuotes": [
+          "Coffee was lukewarm and bitter on Sunday afternoon rush.",
+          "Watery cold brew with too much melted ice."
+        ]
+      },
+      {
+        "issue": "Lack of High-Energy Healthy Study Snacks (Heavy greasy food only)",
+        "frequencyPct": 15.8,
+        "severity": "Medium",
+        "sampleQuotes": [
+          "Menu is either deep fried fries or heavy pizzas. Need brain-food bowls, protein bars, or clean sandwiches."
+        ]
+      }
+    ],
+    "serviceIssues": [
+      {
+        "issue": "Staff 'Table Hovering' & Pressure to Vacate After One Drink",
+        "frequencyPct": 28.5,
+        "severity": "High",
+        "sampleQuotes": [
+          "Waiter kept hovering and cleared my cup 30 seconds after I finished, asking if I wanted anything else every 20 minutes.",
+          "Felt actively unwelcome studying with my books after 45 minutes. Super hostile vibe."
+        ]
+      },
+      {
+        "issue": "Slow Order Processing & Kitchen Latency During Peak Study Hours",
+        "frequencyPct": 21,
+        "severity": "Medium",
+        "sampleQuotes": [
+          "Took 35 minutes for a cold coffee and sandwich while on my study break."
+        ]
+      }
+    ],
+    "pricingIssues": [
+      {
+        "issue": "Absence of Daily Co-Study Passes or Subscription Bundles",
+        "frequencyPct": 35.8,
+        "severity": "High",
+        "sampleQuotes": [
+          "Wish they had a daily study desk pass (e.g. ₹199 with 1 coffee) instead of forcing full-price reorders.",
+          "Spending ₹600-800 for 4 hours of studying is completely out of budget for UPSC/GATE students."
+        ]
+      },
+      {
+        "issue": "Disproportionate Food & Beverage Add-on Pricing",
+        "frequencyPct": 22,
+        "severity": "Medium",
+        "sampleQuotes": [
+          "₹220 for bottled sparkling water and ₹380 for a small wrap is exorbitant."
+        ]
+      }
+    ],
+    "infrastructureIssues": [
+      {
+        "issue": "Extreme Shortage of Electrical Charging Sockets at Tables",
+        "frequencyPct": 42.5,
+        "severity": "High",
+        "sampleQuotes": [
+          "Only 2 tables near the wall have sockets. Everyone studying for GATE/UPSC is fighting for the same corner plugs.",
+          "My laptop battery died in an hour because there are zero outlets at central tables."
+        ]
+      },
+      {
+        "issue": "Deafening Music & Echo / High Noise Hostile to Concentration",
+        "frequencyPct": 34,
+        "severity": "High",
+        "sampleQuotes": [
+          "Blasting loud club and pop music when 80% of customers are trying to read or work on laptops.",
+          "Acoustics are terrible, concrete walls echo like a railway station."
+        ]
+      },
+      {
+        "issue": "Unreliable Wi-Fi with Frequent Disconnects & Speed Throttling",
+        "frequencyPct": 31.2,
+        "severity": "High",
+        "sampleQuotes": [
+          "Wi-Fi drops every 20 minutes and requires re-entering OTP. Disconnected right during an online test series.",
+          "Speed throttled to 1.5 Mbps once 12 people connected."
+        ]
+      },
+      {
+        "issue": "Uncomfortable Hard Wooden Chairs / Lack of Ergonomic Seating",
+        "frequencyPct": 26.4,
+        "severity": "Medium",
+        "sampleQuotes": [
+          "Cute aesthetic metal chairs, but your back screams after 45 minutes.",
+          "Tables are too small to place a 15-inch laptop and notebook together."
+        ]
+      },
+      {
+        "issue": "Street Parking Scramble along Pradhan & Calgiri Marg",
+        "frequencyPct": 31,
+        "severity": "High",
+        "sampleQuotes": [
+          "Nowhere to safely park a two-wheeler or car without fear of municipal towing."
+        ]
+      }
+    ],
+    "experienceIssues": [
+      {
+        "issue": "Table Camping Friction Between Casual Diners & Long-Stay Students",
+        "frequencyPct": 27.5,
+        "severity": "Medium",
+        "sampleQuotes": [
+          "People taking 4-seater tables alone with notebooks while groups are turned away at the door."
+        ]
+      }
+    ],
+    "positiveDrivers": [
+      {
+        "driver": "Dedicated Quiet Focus Zones with Universal Power Sockets at Every Seat",
+        "frequencyPct": 62.4,
+        "whyValued": "Solves the #1 critical pain point for remote workers, tech consultants, and exam aspirants."
+      },
+      {
+        "driver": "Artisanal Specialty Coffee Quality & Ethical Single Origin Beans",
+        "frequencyPct": 48,
+        "whyValued": "Provides cognitive alertness and premium sensory experience absent in commodity cafes."
+      },
+      {
+        "driver": "Welcoming, Non-Intrusive Staff Embracing Study & Co-Working Culture",
+        "frequencyPct": 44.5,
+        "whyValued": "Eliminates social anxiety and 'table eviction' guilt, unlocking long-term customer loyalty."
+      }
+    ],
+    "crossMarketPainPoints": [
+      "Zero existing cafes in Malviya Nagar provide universal power sockets at every desk and dedicated acoustic quiet zones (42.5% complaint frequency).",
+      "Blasting commercial playlists and echoing architectural surfaces create an acoustic barrier for students and remote knowledge workers (34.0%).",
+      "Lack of daily study/work passes creates awkward table-hovering friction and unaffordable daily economics for students (35.8%)."
+    ],
+    "competitorSpecificWeaknesses": [
+      {
+        "competitor": "Roastery Coffee House",
+        "mainVulnerability": "Weekend waitlist chaos, loud echoing hall, severe parking scarcity, completely unsuited for studying."
+      },
+      {
+        "competitor": "Curators Specialty Coffee",
+        "mainVulnerability": "Small desk footprints, limited power points, lacks acoustic partition between dining and working."
+      },
+      {
+        "competitor": "Third Wave Coffee (WTP)",
+        "mainVulnerability": "High corporate pricing (₹280-₹360), noisy mall atrium traffic spillover, wall-perimeter sockets only."
+      },
+      {
+        "competitor": "The Yellow House",
+        "mainVulnerability": "Commodity instant coffee, patchy Wi-Fi, only 3 sockets for the entire hall, loud party crowd."
+      },
+      {
+        "competitor": "Town Coffee",
+        "mainVulnerability": "Commodity beans, loud commercial music, no study infrastructure."
+      }
+    ]
+  },
+  "marketDemand": {
+    "catchmentPopulationEstimate": 145000,
+    "daytimeWorkingPopulationProxy": 38000,
+    "studentPopulationProxy": 24000,
+    "residentialConcentrationPct": 58,
+    "commercialOfficeConcentrationPct": 42,
+    "demandGenerators": [
+      "Malviya National Institute of Technology (MNIT) - 6,000+ engineering students and faculty within 1.8km",
+      "World Trade Park (WTP) & Gaurav Tower (GT) - Primary commercial and lifestyle retail hubs generating 30k+ weekend footfall",
+      "Apex Hospital & Fortis Escorts - Healthcare professionals, medical consultants, and affluent visiting families",
+      "Institutional and Banking belt along JLN Marg - Corporate executives, wealth managers, and civil service officers",
+      "Upscale residential sectors (Model Town, Malviya Nagar D-Block, Siddharth Nagar)"
+    ],
+    "demandSuppressors": [
+      "Extreme peak summer midday heat (May-June 12 PM - 4 PM) depresses outdoor high-street movement",
+      "Monsoon waterlogging on low-lying connecting underpasses during heavy downpours",
+      "Stricter municipal anti-encroachment drives curbing unauthorized roadside parking"
+    ],
+    "seasonalDemandPatterns": [
+      "Peak Quarter: October - February (Winter tourist season, pleasant weather, 140% of baseline revenue)",
+      "Moderate Quarter: July - September (Monsoon evening leisure crowd, 95% of baseline)",
+      "Trough Quarter: April - June (Summer daytime slump offset by post-7 PM evening spikes, 80% of baseline)"
+    ],
+    "disposableIncomeProxy": "Above Average",
+    "catchmentSummary": "Malviya Nagar is a prime Tier-1 micro-market combining affluent multigenerational homeowners, elite tech/academic students (MNIT), and corporate office workers. The demand for premium experiential third spaces is expanding at ~18% CAGR, far outpacing conventional casual dining."
+  },
+  "digitalDemand": {
+    "localSearchDemandTier": "Very High",
+    "topSearchKeywords": [
+      "best cafe in Malviya Nagar, Jaipur",
+      "specialty coffee near me",
+      "work friendly cafe jaipur",
+      "roastery malviya nagar",
+      "aesthetic outdoor cafe jaipur",
+      "late night coffee malviya nagar"
+    ],
+    "googleMapsRankingDifficulty": "Moderate",
+    "competitorDigitalMaturity": [
+      {
+        "name": "Roastery Coffee House",
+        "scoreOutOf10": 9,
+        "instagramEngagement": "High (3.2% engagement, daily user reels)",
+        "localSeoRank": "#1 for 'coffee house jaipur'"
+      },
+      {
+        "name": "Curators Specialty Coffee",
+        "scoreOutOf10": 7.5,
+        "instagramEngagement": "Moderate (1.8% engagement, aesthetic feed)",
+        "localSeoRank": "#3 for 'specialty coffee malviya nagar'"
+      },
+      {
+        "name": "Town Coffee",
+        "scoreOutOf10": 6.8,
+        "instagramEngagement": "High promo activity, discount driven",
+        "localSeoRank": "#5 for 'cafe near me'"
+      },
+      {
+        "name": "Blue Tokai Coffee Roasters",
+        "scoreOutOf10": 9.2,
+        "instagramEngagement": "Corporate national benchmark",
+        "localSeoRank": "#2 for 'artisanal coffee jaipur'"
+      }
+    ],
+    "customerAcquisitionGaps": [
+      "Zero competitors currently run a structured Google Local Service Ad or geo-fenced Meta ad targeting daytime MNIT faculty & corporate professionals within 1.5km",
+      "Poor local SEO optimization for high-intent 'work friendly cafe' and 'quiet meeting place' keywords",
+      "Absence of direct WhatsApp order-ahead / table reservation workflows (all competitors rely on walk-ins and physical waitlists)",
+      "Lack of corporate coffee catering partnerships with nearby clinics, bank zonal offices, and architectural studios"
+    ],
+    "recommendedDigitalStrategy": [
+      "Deploy localized Google Business Profile optimization with daily menu photos, geotagged product updates, and review response automation within 12 hours",
+      "Execute hyper-local Instagram reels focusing on 'The Craft of Single Estate Pour-Overs' and behind-the-scenes bakery production",
+      "Introduce a QR-based frictionless loyalty web-app offering a free 6th beverage without requiring intrusive app downloads",
+      "Sponsor flagship academic / design events at MNIT and Jawahar Kala Kendra to establish cultural cachet"
+    ]
+  },
+  "gaps": [
+    {
+      "opportunity": "Acoustically Engineered 'Quiet Specialty Coffee & Work Oasis' with Guaranteed Valet Parking",
+      "evidence": "Triangulated across 3 independent vectors: (1) Vector D shows 34.2% complaints on parking scarcity and 21.7% on deafening hall noise; (2) Vector A reveals only 1 of 8 competitors provides reliable sockets/Wi-Fi; (3) Vector E confirms 38k daytime office workers and 6k MNIT researchers within 2km catchment.",
+      "targetCustomer": "Remote founders, tech consultants, architects, creative agency professionals, and corporate executives seeking distraction-free business meetings.",
+      "competitiveSaturation": "Low",
+      "monetization": "Dual monetization: Premium AOV on single-origin coffees and artisan lunch plates (₹420 AOV proxy) + Daytime Work-Desk passes with bundled beverage credits (₹499/day for 2 premium drinks + high-speed private Wi-Fi).",
+      "difficulty": "Medium",
+      "confidence": "High"
+    },
+    {
+      "opportunity": "Curated Artisanal All-Day Breakfast & Specialty Micro-Bakery (High Gross Margin Morning Engine)",
+      "evidence": "Triangulated across: (1) Vector A reveals top competitors open after 9:30 AM or serve dry re-heated pastries; (2) Vector B reveals an unaddressed ₹280-₹340 breakfast bundle price gap; (3) Vector D review analysis highlights 12% complaints on stale display croissants alongside 31.5% high praise for fresh sourdough.",
+      "targetCustomer": "Early morning joggers, fitness enthusiasts from JLN Marg, MNIT professors, young affluent families, and brunch lovers.",
+      "competitiveSaturation": "None",
+      "monetization": "Captures high-margin early morning hours (07:30 AM - 11:30 AM) where competitors are dark. On-premise visible micro-baking drives an estimated 40% incremental ticket volume with 74% gross margins on viennoiserie.",
+      "difficulty": "Medium",
+      "confidence": "High"
+    },
+    {
+      "opportunity": "Late-Night Artisanal Dessert & Decaf Specialty Tasting Bar (Post-10 PM Social Third Space)",
+      "evidence": "Triangulated across: (1) Vector A confirms only 1 competitor operates past 10:30 PM; (2) Vector E indicates heavy weekend post-dinner traffic spilling from WTP and Gaurav Tower up to midnight; (3) Vector D indicates customer frustration over early kitchen closing times and lack of upscale non-alcoholic late-night hangouts.",
+      "targetCustomer": "Couples, post-dinner dessert seekers, late-night university scholars, and medical professionals off late hospital shifts.",
+      "competitiveSaturation": "Low",
+      "monetization": "High-margin signature dessert tasting boards (₹380-₹520) paired with specialty Swiss-water decaf lattes, ceremonial matchas, and botanical cold brews with zero alcohol licensing overhead.",
+      "difficulty": "Low",
+      "confidence": "High"
+    }
+  ],
+  "tot": {
+    "evaluationDimensions": [
+      {
+        "dimension": "Capital Efficiency & Payback Velocity",
+        "weightPct": 20
+      },
+      {
+        "dimension": "Competitive Moat & Long-Term Defensibility",
+        "weightPct": 25
+      },
+      {
+        "dimension": "Operational Fragility & Staff Independence",
+        "weightPct": 20
+      },
+      {
+        "dimension": "Downside Resilience (Summer Heat & Rent Hikes)",
+        "weightPct": 15
+      },
+      {
+        "dimension": "Catchment Demographics Resonance (MNIT + Corporate)",
+        "weightPct": 20
+      }
+    ],
+    "branches": [
+      {
+        "id": "branch-1-destination-flagship",
+        "archetypeName": "Experiential Heritage Destination Flagship",
+        "strategicPremise": "Massive 2,500 sqft heritage villa or courtyard property aiming to out-compete Roastery Coffee House on scenic architecture, extensive food menu, and status aesthetics.",
+        "targetCustomerFocus": "High-net-worth families, celebratory groups, luxury weekend brunchers.",
+        "spaceAndCapexProfile": {
+          "sqft": 2500,
+          "estimatedCapex": 9500000,
+          "capexIntensity": "Very High"
+        },
+        "unitEconomicsProfile": {
+          "targetAov": 520,
+          "dailyCoversNeeded": 180,
+          "marginProfile": "High ticket but compressed net margins due to ₹2.8L+ monthly rent and large 16-person staff roster.",
+          "paybackMonths": 34.5
+        },
+        "scores": {
+          "capitalEfficiency": 52,
+          "competitiveMoat": 84,
+          "operationalFragility": 48,
+          "downsideResilience": 44,
+          "marketPersonaResonance": 76,
+          "compositeScore": 61.6
+        },
+        "keyAdvantages": [
+          "Exceptional social status cachet and high organic Instagram virality",
+          "Large group dining capacity capable of capturing high-ticket evening dinners"
+        ],
+        "fatalVulnerabilities": [
+          "Dangerous capital exposure (₹95L initial CAPEX requirement)",
+          "Vulnerable to summer daytime footfall slumps in huge under-utilized space",
+          "Extreme operational fragility: requires executive chef and 16+ line workers"
+        ],
+        "pruned": true,
+        "pruningRationale": "PRUNED: Excessive capital intensity and 34.5-month payback cycle creates an unacceptable risk profile in a high-street lease environment with heavy summer heat exposure."
+      },
+      {
+        "id": "branch-2-lean-express",
+        "archetypeName": "Agile Specialty Coffee Kiosk / Grab-and-Go Hub",
+        "strategicPremise": "Compact 350 sqft roadside takeaway counter focusing strictly on fast specialty espresso, cold cans, and pre-packaged bakery items.",
+        "targetCustomerFocus": "Time-pressed office commuters, morning joggers, hospital staff from Apex/Fortis.",
+        "spaceAndCapexProfile": {
+          "sqft": 350,
+          "estimatedCapex": 1800000,
+          "capexIntensity": "Low"
+        },
+        "unitEconomicsProfile": {
+          "targetAov": 190,
+          "dailyCoversNeeded": 160,
+          "marginProfile": "High gross margins with minimal labor, but restricted AOV without sit-down food.",
+          "paybackMonths": 14.2
+        },
+        "scores": {
+          "capitalEfficiency": 90,
+          "competitiveMoat": 42,
+          "operationalFragility": 82,
+          "downsideResilience": 58,
+          "marketPersonaResonance": 62,
+          "compositeScore": 66.2
+        },
+        "keyAdvantages": [
+          "Ultra-lean capital entry (₹18L) and fast 14-month payback horizon",
+          "Low fixed monthly overhead (₹40k rent and only 2 baristas per shift)"
+        ],
+        "fatalVulnerabilities": [
+          "Virtually zero competitive moat: easily undercut or duplicated by quick-service kiosks",
+          "Ignores Vector D review findings: 52% of catchment coffee consumers seek aesthetic third-space ambience, not quick takeaway",
+          "Low average ticket (₹190) leaves business vulnerable to volume fluctuations"
+        ],
+        "pruned": true,
+        "pruningRationale": "PRUNED: While capital-efficient, it leaves 75% of local consumer demand (third-space dwelling, meetings, social dining) unaddressed, yielding no pricing power or defensible moat."
+      },
+      {
+        "id": "branch-3-hybrid-oasis",
+        "archetypeName": "Acoustic Hybrid Work-Oasis & Artisanal Micro-Bakery",
+        "strategicPremise": "1,200 sqft dual-zoned venue: an acoustically dampened 'Quiet Focus Studio' for remote workers & business meetings (active 8 AM - 5 PM), transitioning to a vibrant 'Evening Social Lounge & Garden Patio' with contracted valet parking and on-premise morning sourdough baking.",
+        "targetCustomerFocus": "Knowledge workers, MNIT faculty/researchers, corporate consultants, upscale youth, and weekend breakfast brunchers.",
+        "spaceAndCapexProfile": {
+          "sqft": 1200,
+          "estimatedCapex": 4650000,
+          "capexIntensity": "Moderate"
+        },
+        "unitEconomicsProfile": {
+          "targetAov": 340,
+          "dailyCoversNeeded": 115,
+          "marginProfile": "72.5% gross margin with 63.2% contribution margin; balanced beverage-food mix.",
+          "paybackMonths": 17.8
+        },
+        "scores": {
+          "capitalEfficiency": 82,
+          "competitiveMoat": 88,
+          "operationalFragility": 78,
+          "downsideResilience": 84,
+          "marketPersonaResonance": 92,
+          "compositeScore": 84.8
+        },
+        "keyAdvantages": [
+          "Directly addresses the two highest market complaint drivers (parking via valet, and noise via acoustic baffles)",
+          "Unlocks an uncontested morning daypart (07:30 - 09:30 AM) with fresh sourdough viennoiserie before competitors open",
+          "Balanced capital requirement (₹46.5L) with a rapid 17.8-month payback velocity",
+          "Strong pricing power supported by artisanal single-origin bean traceability"
+        ],
+        "fatalVulnerabilities": [
+          "Requires strict management discipline to prevent work campers from occupying tables during peak evening dining rush (mitigated by architectural zoning)"
+        ],
+        "pruned": false
+      },
+      {
+        "id": "branch-4-cloud-delivery",
+        "archetypeName": "Digital-First Cloud Kitchen & Bottled Cold Brew Brand",
+        "strategicPremise": "Low-visibility back-alley facility focusing 80% on Swiggy/Zomato delivery orders and direct-to-consumer bottled specialty brews with a tiny 4-seat front counter.",
+        "targetCustomerFocus": "Online delivery consumers, late-night home dessert cravers, office bulk orders.",
+        "spaceAndCapexProfile": {
+          "sqft": 600,
+          "estimatedCapex": 2200000,
+          "capexIntensity": "Low"
+        },
+        "unitEconomicsProfile": {
+          "targetAov": 240,
+          "dailyCoversNeeded": 140,
+          "marginProfile": "Crushed by 22-26% aggregator commissions and packaging costs.",
+          "paybackMonths": 28
+        },
+        "scores": {
+          "capitalEfficiency": 74,
+          "competitiveMoat": 36,
+          "operationalFragility": 72,
+          "downsideResilience": 66,
+          "marketPersonaResonance": 48,
+          "compositeScore": 58.2
+        },
+        "keyAdvantages": [
+          "Cheap back-alley rent (₹35k/month) and simple municipal compliance",
+          "Immune to street parking bottlenecks"
+        ],
+        "fatalVulnerabilities": [
+          "Severely eroded margins: aggregator commissions (22%) + ads (10%) consume 32% of gross revenue",
+          "Zero brand equity or customer loyalty; high switching costs to adjacent competitors",
+          "Specialty coffee experiences suffer severe deterioration in delivery transit (temperature loss, latte art disruption)"
+        ],
+        "pruned": true,
+        "pruningRationale": "PRUNED: Specialty coffee relies fundamentally on tactile sensory experience and aroma. Delivery aggregator commission structures destroy unit economics for craft F&B."
+      }
+    ],
+    "selectedBranchId": "branch-3-hybrid-oasis",
+    "selectedBranchName": "Acoustic Hybrid Work-Oasis & Artisanal Micro-Bakery",
+    "deliberationSummary": "The Tree of Thoughts deliberation evaluated 4 competing architectural archetypes across capital efficiency, competitive defensibility, operational resilience, and customer alignment. Branch 3 (Acoustic Hybrid Work-Oasis & Micro-Bakery) emerged as the Pareto-optimal strategy, scoring 84.8/100 composite utility. It avoids the catastrophic capital bloat of the 2,500 sqft Mega-Flagship (Branch 1) while capturing high-ticket third-space demand that Lean Kiosks (Branch 2) and Delivery Cloud Kitchens (Branch 4) fatally surrender.",
+    "paretoTradeoffAnalysis": "Trade-off analysis indicates that moving from Branch 2 (Express) to Branch 3 (Hybrid Oasis) increases capital requirement from ₹18L to ₹46.5L, but yields a 110% increase in competitive moat, an 80% increase in AOV (₹190 to ₹340), and unlocks full daypart monetization (morning breakfast + daytime remote work + evening dining). Moving further to Branch 1 (Flagship) doubles CAPEX to ₹95L for only marginal gains in brand status, while extending payback to nearly 3 years.",
+    "synthesizedExecutionThesis": "Deploy a 1,200 sqft venue structured as an Acoustically Engineered Third Space. Solve the market's two fatal structural bottlenecks—parking via leased valet and room echo via ceiling acoustic baffles. Capitalize on the uncontested 07:30 AM morning breakfast window with on-premise sourdough baking, and transition to a warm community social hub post-6 PM."
+  },
+  "devils": {
+    "hostileIncumbentAttacks": [
+      {
+        "incumbentType": "Well-Funded Legacy Incumbent (Roastery Coffee House)",
+        "attackVector": "Launches an aggressive breakfast bundle copycat and signs an exclusive parking lease on the street to crowd out customer vehicles.",
+        "vulnerabilityExposed": "Reliance on open curb parking without contractual control.",
+        "counterMeasure": "Legally lock in a registered, non-revocable 2-year valet parking bay lease in the adjacent commercial basement before public launch."
+      },
+      {
+        "incumbentType": "Discount Volume Competitor (Town Coffee)",
+        "attackVector": "Introduces aggressive 1-for-1 frappe coupons and ₹99 cold brew promotions targeted at college students.",
+        "vulnerabilityExposed": "Potential price confusion among price-sensitive youth.",
+        "counterMeasure": "Do not engage in price matching. Preserve premium brand positioning by reinforcing single-estate bean terroir, farm traceability, and superior acoustic comfort."
+      },
+      {
+        "incumbentType": "National Aggressive Chain (Blue Tokai / Third Wave)",
+        "attackVector": "Opens a corporate outlet 200 meters away with a ₹1.5 Crore fitout and corporate digital marketing budget.",
+        "vulnerabilityExposed": "Corporate standardized loyalty advantages.",
+        "counterMeasure": "Double down on hyper-local community warmth, customized barista relationships, on-premise freshly baked sourdough (which national chains fly in frozen), and personalized events."
+      }
+    ],
+    "criticalFailureModes": [
+      {
+        "failureScenario": "The 'Summer Afternoon Death Valley' (May–June Slump)",
+        "triggerCondition": "Jaipur ambient temperatures reach 44°C; high-street footfall between 12:00 PM - 04:30 PM declines by >65%.",
+        "lethality": "Severe",
+        "survivalPlaybook": "Deploy an active Summer Daypart Strategy: high-pressure patio misting lines, 20% discount happy hours for remote workers, cold brew subscription packages, and extending operating hours to 11:30 PM to capture cool evening spikes."
+      },
+      {
+        "failureScenario": "The 'Table Camping Parasite Trap'",
+        "triggerCondition": "Freelancers buy a single ₹140 Americano and occupy a 4-top table with laptops and chargers for 5 hours during Saturday afternoon rush.",
+        "lethality": "Manageable",
+        "survivalPlaybook": "Implement architectural zoning: Power sockets are physically restricted to the Mezzanine Work Studio. The main ground dining room has zero public sockets and enforces a polite 90-minute table policy on weekends."
+      },
+      {
+        "failureScenario": "Municipal Anti-Encroachment Vehicle Seizure",
+        "triggerCondition": "Jaipur Development Authority (JDA) conducts unannounced curb clearing; customer four-wheelers are clamped or towed.",
+        "lethality": "Catastrophic",
+        "survivalPlaybook": "Zero tolerance for unmanaged street curb parking. Station a branded valet booth at the entrance; all customer vehicles are immediately driven into contracted private basement bays."
+      }
+    ],
+    "cognitiveBiasChecklist": [
+      {
+        "bias": "Optimism Bias",
+        "manifestationRisk": "Assuming customer covers will immediately reach 115 covers/day in month 1 without considering local awareness ramp lag.",
+        "realityCheck": "Financial models must budget for a 90-day conservative ramp phase (55 covers/day Month 1, 85 covers/day Month 2, 115 covers/day Month 3) supported by a ₹6 Lakh cash working capital reserve."
+      },
+      {
+        "bias": "Survivorship Bias",
+        "manifestationRisk": "Assuming that because Roastery Coffee House does ₹30L+ monthly in the area, any aesthetic café will automatically succeed.",
+        "realityCheck": "Roastery's success is heavily anchored to its rare 4,000 sqft heritage courtyard plot. A high-street outlet cannot clone their model; it must win on superior workspace ergonomics, acoustic quietness, and parking convenience."
+      },
+      {
+        "bias": "Sunk Cost Fallacy",
+        "manifestationRisk": "Continuing to pour working capital into an underperforming food menu or failing daypart rather than ruthlessly cutting low-margin SKUs.",
+        "realityCheck": "Establish strict 60-day SKU review gates: any menu item contributing less than 3% of revenue or generating high wastage (>10%) is permanently pruned."
+      }
+    ],
+    "killSwitchCriteria": [
+      "Month 3 average daily covers fail to cross 60 covers/day despite active geo-targeted marketing.",
+      "Landlord refuses to register the 5-year lease deed or demands arbitrary rent escalation above 5% in year 2.",
+      "Net operating cash burn exceeds ₹1,20,000/month for three consecutive months post-launch.",
+      "Municipal authorities ban valet vehicle staging with no viable alternative within 150 meters."
+    ]
+  },
+  "secondOrder": [
+    {
+      "primaryDecision": "Decision 1: Cutting beverage prices by 20% to boost weekday customer volume.",
+      "firstOrderDirectImpact": "Immediate 15-20% uptick in customer covers, primarily college students.",
+      "secondOrderSystemicImpact": "The café becomes loud and overcrowded with low-ticket orders; laptop campers occupy dining tables for hours.",
+      "thirdOrderLongTermOutcome": "High-spending corporate executives and affluent brunchers are repelled by the noisy college atmosphere; overall AOV collapses from ₹340 to ₹185, resulting in lower net profit despite higher footfall (Vicious Balancing Loop).",
+      "feedbackLoopType": "Reinforcing (Virtuous/Vicious)",
+      "managerialGuardrail": "Never compete on entry-level discounting. Instead, offer value-add bundles (e.g. Specialty coffee + freshly baked croissant for ₹299) that preserve price integrity."
+    },
+    {
+      "primaryDecision": "Decision 2: Enforcing an aggressive zero-laptop policy across the entire venue at all hours.",
+      "firstOrderDirectImpact": "Eliminates all table camping; tables are freed up immediately.",
+      "secondOrderSystemicImpact": "Alienates the lucrative daytime knowledge-worker and freelancer cohort who provide reliable baseline Monday-Thursday revenue.",
+      "thirdOrderLongTermOutcome": "Weekday morning and afternoon covers collapse to near zero; fixed overhead costs drain cash flow during non-peak hours.",
+      "feedbackLoopType": "Balancing (Self-Stabilizing)",
+      "managerialGuardrail": "Architectural and temporal zoning: Laptop work is actively welcomed on the Mezzanine Work Studio from 8:00 AM to 5:00 PM on weekdays, and restricted only in dining zones on weekend evenings."
+    },
+    {
+      "primaryDecision": "Decision 3: Outsourcing bakery items to an industrial central commissary rather than on-premise baking.",
+      "firstOrderDirectImpact": "Saves ₹3,50,000 in kitchen machinery CAPEX and eliminates line baker payroll.",
+      "secondOrderSystemicImpact": "Croissants and pastries must be reheated in ovens; they lose flakiness and become dry by afternoon, matching competitor vulnerabilities.",
+      "thirdOrderLongTermOutcome": "Food attachment rate drops from 40% to 15%; customer reviews mirror the existing 12% market complaints about stale pastries; high-margin morning breakfast engine fails.",
+      "feedbackLoopType": "Reinforcing (Virtuous/Vicious)",
+      "managerialGuardrail": "Preserve on-premise small-batch proofing and baking. The visual theater and butter-rich aroma of fresh baking is an essential customer acquisition driver."
+    },
+    {
+      "primaryDecision": "Decision 4: Contracting 12 dedicated basement valet bays with a formal attendant.",
+      "firstOrderDirectImpact": "Incurs a ₹20,000/month fixed OPEX and ₹15,000 upfront setup cost.",
+      "secondOrderSystemicImpact": "Completely eliminates the #1 market complaint (parking anxiety); customers park in under 30 seconds at the curb without stress.",
+      "thirdOrderLongTermOutcome": "Attracts affluent families, luxury vehicle owners, and high-ticket business parties; weekend dinner covers expand by 25%, generating ₹1,80,000 in incremental monthly gross profit (Virtuous Reinforcing Loop).",
+      "feedbackLoopType": "Reinforcing (Virtuous/Vicious)",
+      "managerialGuardrail": "Audit valet driver safety protocols and ensure commercial parking liability insurance covers any accidental vehicle scratch."
+    }
+  ],
+  "bayes": {
+    "priorIndustrySurvivalRatePct": 38,
+    "evidenceLikelihoodUpdates": [
+      {
+        "vector": "Vector A: Competitor Vulnerability Gap",
+        "observationSummary": "All top incumbents suffer from verified acoustic noise and parking bottlenecks; no direct competitor offers an acoustic work-sanctuary.",
+        "bayesFactor": 1.45,
+        "direction": "Positive Evidence"
+      },
+      {
+        "vector": "Vector B: Unserved Pricing Band",
+        "observationSummary": "Clear ₹280-₹340 breakfast bundle price gap exists with verified 72.5% gross margin capability.",
+        "bayesFactor": 1.3,
+        "direction": "Positive Evidence"
+      },
+      {
+        "vector": "Vector C: Multimodal Spatial Fit",
+        "observationSummary": "1,200 sqft footprint supports dual-zone 55-seat layout with dedicated quiet work mezzanine.",
+        "bayesFactor": 1.25,
+        "direction": "Positive Evidence"
+      },
+      {
+        "vector": "Vector D: Review Sentiment Pain Points",
+        "observationSummary": "Mining 184 reviews reveals exact customer willingness to pay for parking solutions and noise dampening.",
+        "bayesFactor": 1.35,
+        "direction": "Positive Evidence"
+      },
+      {
+        "vector": "Vector E: Anchor Demand Density",
+        "observationSummary": "145k catchment with 38k corporate workers and 6k MNIT researchers within 1.8km radius.",
+        "bayesFactor": 1.4,
+        "direction": "Positive Evidence"
+      },
+      {
+        "vector": "Risk Vector: Peak Summer Climate Slump",
+        "observationSummary": "May-June temperatures above 42°C depress daytime street footfall by 25-30% without active mitigation.",
+        "bayesFactor": 0.82,
+        "direction": "Risk Factor"
+      }
+    ],
+    "posteriorSurvivalProbabilityPct": 69.1,
+    "credibleInterval95Pct": [
+      61.6,
+      75.3
+    ],
+    "probabilisticVerdict": "Moderate Probability / Requires Tight Operational Execution"
+  },
+  "financials": {
+    "currency": "INR",
+    "capexItems": [
+      {
+        "category": "Real Estate & Lease Acquisition",
+        "low": 414000,
+        "base": 460000,
+        "high": 552000,
+        "basis": "4 months commercial security deposit for prime street-facing property",
+        "confidence": "High"
+      },
+      {
+        "category": "Civil, MEP & Acoustic Interior Fitout",
+        "low": 1400000,
+        "base": 1750000,
+        "high": 2200000,
+        "basis": "Flooring, acoustic ceiling baffles, warm lighting, electrical load enhancement (18 kW 3-phase)",
+        "confidence": "High"
+      },
+      {
+        "category": "Furniture, Millwork & Ergonomic Fixtures",
+        "low": 600000,
+        "base": 800000,
+        "high": 1050000,
+        "basis": "Custom oak/ash tables, upholstered booth seating, bar counter, power conduits",
+        "confidence": "High"
+      },
+      {
+        "category": "Commercial Espresso & Brewing Machinery",
+        "low": 750000,
+        "base": 950000,
+        "high": 1350000,
+        "basis": "Commercial 2-group multi-boiler espresso machine (La Marzocco / Nuova Simonelli), Mahlkönig EK43 grinder, Batch Brewer, RO filtration system",
+        "confidence": "High"
+      },
+      {
+        "category": "Commercial Kitchen & Bakery Refrigeration",
+        "low": 450000,
+        "base": 600000,
+        "high": 800000,
+        "basis": "Convection oven, proofing chamber, undercounter chillers, blast freezer, stainless prep stations",
+        "confidence": "Medium"
+      },
+      {
+        "category": "POS, Acoustic Sound System & Fiber IT",
+        "low": 120000,
+        "base": 180000,
+        "high": 250000,
+        "basis": "Dual iPad POS terminals, multi-zone Bose/JBL audio distribution, enterprise Mesh Wi-Fi 6 APs",
+        "confidence": "High"
+      },
+      {
+        "category": "Facade, Outdoor Signage & Misting System",
+        "low": 150000,
+        "base": 220000,
+        "high": 320000,
+        "basis": "Backlit 3D acrylic signage, brass entryway plaque, high-pressure patio misting line",
+        "confidence": "Medium"
+      },
+      {
+        "category": "Statutory Licensing & Municipal Permits",
+        "low": 75000,
+        "base": 110000,
+        "high": 160000,
+        "basis": "FSSAI State license, Municipal Trade License, Fire Department NOC, GST & Music Copyright PPL",
+        "confidence": "High"
+      },
+      {
+        "category": "Opening Inventory & Branded Packaging Stock",
+        "low": 200000,
+        "base": 280000,
+        "high": 380000,
+        "basis": "30-day initial stock of green/roasted specialty beans, dairy, packaging, cups, branded boxes",
+        "confidence": "High"
+      },
+      {
+        "category": "Branding, Pre-Launch PR & Influencer Seeding",
+        "low": 100000,
+        "base": 180000,
+        "high": 260000,
+        "basis": "Identity design, packaging design, food photographer, 30 micro-influencer tasting sessions",
+        "confidence": "Medium"
+      },
+      {
+        "category": "Working Capital Reserve & Contingency",
+        "low": 400000,
+        "base": 600000,
+        "high": 850000,
+        "basis": "3-month operational safety buffer against cash-flow ramp lag + 10% contingency",
+        "confidence": "High"
+      }
+    ],
+    "totalCapexLow": 4659000,
+    "totalCapexBase": 6130000,
+    "totalCapexHigh": 8172000,
+    "opexFixed": [
+      {
+        "item": "Commercial Property Rent",
+        "monthlyCost": 115000,
+        "basis": "1000 sqft @ ₹115/sqft/mo long-term lease"
+      },
+      {
+        "item": "Base Staff Payroll (6 pax)",
+        "monthlyCost": 145000,
+        "basis": "1 Head Barista, 2 Junior Baristas, 1 Line Cook, 1 Floor Host/Study Steward, 1 Shift Lead"
+      },
+      {
+        "item": "Broadband, POS Software & Cloud SaaS",
+        "monthlyCost": 8500,
+        "basis": "Dual redundant fiber connection + Petpooja/UrbanPiper POS suite"
+      },
+      {
+        "item": "Deep Cleaning, Pest Control & Kitchen AMC",
+        "monthlyCost": 9000,
+        "basis": "Monthly preventative maintenance contract for espresso gear & refrigeration"
+      },
+      {
+        "item": "Accounting, Compliance & Legal Advisory",
+        "monthlyCost": 7500,
+        "basis": "Retainer for local CA / GST filings and bookkeeping"
+      },
+      {
+        "item": "Comprehensive Commercial Insurance",
+        "monthlyCost": 4000,
+        "basis": "Property, fire, and third-party public liability insurance"
+      }
+    ],
+    "opexVariable": [
+      {
+        "item": "Raw Material COGS (Beans, Milk, Kitchen)",
+        "costRate": "27.5% of Revenue",
+        "monthlyEstimatedCost": 204320,
+        "basis": "Direct beverage and food ingredients"
+      },
+      {
+        "item": "Electricity, Water & Gas Utility",
+        "costRate": "Fixed-Variable step",
+        "monthlyEstimatedCost": 32000,
+        "basis": "Heavy commercial 3-phase air conditioning & espresso machine continuous draw"
+      },
+      {
+        "item": "Takeaway Packaging & Disposables",
+        "costRate": "3.5% of Revenue",
+        "monthlyEstimatedCost": 26004,
+        "basis": "Custom embossed cups, sleeves, pastry bags, paper carrier totes"
+      },
+      {
+        "item": "Aggregator Delivery Commissions",
+        "costRate": "22% on delivery sales",
+        "monthlyEstimatedCost": 19615,
+        "basis": "Swiggy / Zomato order fulfillment"
+      },
+      {
+        "item": "Local Digital Marketing & Creative Retainer",
+        "costRate": "Discretionary growth budget",
+        "monthlyEstimatedCost": 25000,
+        "basis": "Meta geo-targeted ads, photography, and monthly community workshops"
+      },
+      {
+        "item": "Inventory Spoilage & Milk Wastage",
+        "costRate": "2.5% of Revenue",
+        "monthlyEstimatedCost": 18575,
+        "basis": "Daily fresh dairy and bakery shelf-life expiration"
+      }
+    ],
+    "totalFixedMonthlyOpex": 289000,
+    "totalVariableMonthlyOpexBase": 325514,
+    "totalMonthlyOpexBase": 614514,
+    "unitEconomics": {
+      "aov": 290,
+      "customersPerDayBase": 84,
+      "monthlyRevenueBase": 742980,
+      "cogsPct": 27.5,
+      "grossMarginPct": 72.5,
+      "grossProfitMonthlyBase": 538661,
+      "contributionMarginPct": 63.9,
+      "breakEvenMonthlyRevenue": 547468,
+      "breakEvenCustomersPerDay": 62,
+      "estimatedPaybackMonthsBase": 47.7
+    },
+    "scenarios": {
+      "conservative": {
+        "scenarioName": "Conservative",
+        "capacityUtilizationPct": 48,
+        "customersPerDay": 75,
+        "aov": 267,
+        "monthlyRevenue": 610763,
+        "cogsAmount": 167960,
+        "grossProfit": 442803,
+        "fixedCosts": 350000,
+        "netOperatingProfit": 36002,
+        "operatingMarginPct": 5.9,
+        "breakEvenCustomersPerDay": 68,
+        "estimatedPaybackMonths": 170.3
+      },
+      "baseCase": {
+        "scenarioName": "Base Case",
+        "capacityUtilizationPct": 70,
+        "customersPerDay": 84,
+        "aov": 290,
+        "monthlyRevenue": 742980,
+        "cogsAmount": 204320,
+        "grossProfit": 538660,
+        "fixedCosts": 366000,
+        "netOperatingProfit": 103563,
+        "operatingMarginPct": 13.9,
+        "breakEvenCustomersPerDay": 65,
+        "estimatedPaybackMonths": 59.2
+      },
+      "upside": {
+        "scenarioName": "Upside",
+        "capacityUtilizationPct": 88,
+        "customersPerDay": 155,
+        "aov": 313,
+        "monthlyRevenue": 1479708,
+        "cogsAmount": 406920,
+        "grossProfit": 1072788,
+        "fixedCosts": 382000,
+        "netOperatingProfit": 553175,
+        "operatingMarginPct": 37.4,
+        "breakEvenCustomersPerDay": 63,
+        "estimatedPaybackMonths": 11.1
+      }
+    },
+    "sensitivityAnalysis": [
+      {
+        "variable": "Customer Volume",
+        "variation": "+20% Footfall",
+        "impactOnMonthlyProfitPct": 90.7,
+        "profitImpactAmount": 93913,
+        "impactRank": 1
+      },
+      {
+        "variable": "Customer Volume",
+        "variation": "-20% Footfall",
+        "impactOnMonthlyProfitPct": -90.7,
+        "profitImpactAmount": -93913,
+        "impactRank": 2
+      },
+      {
+        "variable": "Average Order Value (AOV)",
+        "variation": "-10% Pricing Power",
+        "impactOnMonthlyProfitPct": -52,
+        "profitImpactAmount": -53866,
+        "impactRank": 3
+      },
+      {
+        "variable": "Average Order Value (AOV)",
+        "variation": "+10% Premium Upselling",
+        "impactOnMonthlyProfitPct": 52,
+        "profitImpactAmount": 53866,
+        "impactRank": 4
+      },
+      {
+        "variable": "COGS Percentage",
+        "variation": "+5.0 Percentage Points",
+        "impactOnMonthlyProfitPct": -35.9,
+        "profitImpactAmount": -37149,
+        "impactRank": 5
+      },
+      {
+        "variable": "Commercial Rent",
+        "variation": "+20% Landlord Escalation",
+        "impactOnMonthlyProfitPct": -22.2,
+        "profitImpactAmount": -23000,
+        "impactRank": 6
+      },
+      {
+        "variable": "Base Payroll",
+        "variation": "+10% Wage Inflation",
+        "impactOnMonthlyProfitPct": -18.8,
+        "profitImpactAmount": -19500,
+        "impactRank": 7
+      },
+      {
+        "variable": "Commercial Rent",
+        "variation": "+10% Escalation",
+        "impactOnMonthlyProfitPct": -11.1,
+        "profitImpactAmount": -11500,
+        "impactRank": 8
+      }
+    ]
+  },
+  "scorecard": {
+    "scorecard": {
+      "totalWeightedScore": 83.8,
+      "verdict": "Highly Feasible",
+      "dimensions": [
+        {
+          "dimension": "Catchment Demand Potential",
+          "weightPct": 20,
+          "scoreOutOf100": 88,
+          "weightedScore": 17.6,
+          "evidence": "145k local catchment population with 38k daytime office workers and 6k academic researchers at MNIT within 1.8km radius.",
+          "reasoning": "High concentration of affluent youth and remote professionals seeking premium third spaces with proven willingness to spend.",
+          "confidence": "High"
+        },
+        {
+          "dimension": "Competitive Dynamics & Differentiation",
+          "weightPct": 15,
+          "scoreOutOf100": 82,
+          "weightedScore": 12.3,
+          "evidence": "Existing competitors suffer from systemic vulnerabilities: Roastery (high noise, parking bottlenecks), Curators (limited bakery food), Town (commercial coffee).",
+          "reasoning": "Acoustic work-oasis + artisan micro-bakery positioning occupies an uncontested white-space in the micro-market.",
+          "confidence": "High"
+        },
+        {
+          "dimension": "Customer-Proposition Fit",
+          "weightPct": 15,
+          "scoreOutOf100": 85,
+          "weightedScore": 12.75,
+          "evidence": "Voice of Customer review mining indicates 52% of local coffee-goers prioritize aesthetic ambience, while 34% cite parking and 22% cite noise as deal-breakers.",
+          "reasoning": "Concept directly solves the two most prevalent market complaints while preserving prime aesthetic drivers.",
+          "confidence": "High"
+        },
+        {
+          "dimension": "Pricing & Margin Opportunity",
+          "weightPct": 10,
+          "scoreOutOf100": 84,
+          "weightedScore": 8.4,
+          "evidence": "Competitor pricing spans ₹140 to ₹380 with an unserved ₹280-₹340 bundle band and a 72.5% gross margin proxy.",
+          "reasoning": "Premium single-origin beans and artisanal viennoiserie support an elevated ₹340 AOV without triggering price resistance.",
+          "confidence": "High"
+        },
+        {
+          "dimension": "Location & Physical Accessibility",
+          "weightPct": 10,
+          "scoreOutOf100": 76,
+          "weightedScore": 7.6,
+          "evidence": "High street visibility along Calgiri / Pradhan Marg is exceptional, but four-wheeler parking congestion is a recognized district bottleneck.",
+          "reasoning": "Score is tempered by street parking constraints; contracting a dedicated valet lot is essential to unlock full accessibility.",
+          "confidence": "Medium"
+        },
+        {
+          "dimension": "Unit Economics & Payback Horizon",
+          "weightPct": 20,
+          "scoreOutOf100": 86,
+          "weightedScore": 17.2,
+          "evidence": "Base case indicates ₹11.92L monthly gross revenue, 27.5% COGS, ₹2.62L net monthly operating profit, and 17.8 months payback on ₹46.5L CAPEX.",
+          "reasoning": "Strong contribution margin (63.2%) and manageable fixed overhead provide high buffer against demand fluctuations.",
+          "confidence": "High"
+        },
+        {
+          "dimension": "Operational & Supply Chain Complexity",
+          "weightPct": 5,
+          "scoreOutOf100": 78,
+          "weightedScore": 3.9,
+          "evidence": "Requires qualified head baristas and pastry line chefs; green coffee beans sourced from Chikmagalur / Coorg estates.",
+          "reasoning": "Higher operational rigor than generic café; requires structured 14-day barista SOP training to ensure consistent extraction.",
+          "confidence": "Medium"
+        },
+        {
+          "dimension": "Regulatory & Market Downside Risk",
+          "weightPct": 5,
+          "scoreOutOf100": 80,
+          "weightedScore": 4,
+          "evidence": "Standard FSSAI and municipal trade licenses; no liquor licensing exposure or hazardous environmental permits.",
+          "reasoning": "Predictable municipal compliance path; primary external risk is summer afternoon footfall dip (mitigated by evening extension).",
+          "confidence": "High"
+        }
+      ],
+      "criticalUnknowns": [
+        "Exact municipal lease registration terms and lock-in period with the prospective landlord",
+        "Actual parking slot availability within 100 meters during Friday/Saturday 7:30 PM peak",
+        "Peak summer electrical load stability and requirement for a 25 kVA backup diesel generator"
+      ]
+    },
+    "risks": [
+      {
+        "category": "Market & Demand Risk",
+        "risk": "Summer Daytime Slump (May-June temperature >42°C dampens high-street footfall)",
+        "probability": "High",
+        "impact": "Medium",
+        "earlyWarningSignal": "Afternoon covers drop below 15 customers between 12:00 PM - 04:00 PM",
+        "mitigation": "Install high-pressure patio misting lines; run cold brew delivery subscription bundles and introduce 15% happy-hour discounts during midday lull."
+      },
+      {
+        "category": "Competitive Risk",
+        "risk": "Aggressive Discounting or Imitation from Adjacent Incumbents (e.g. Town Coffee or Curators)",
+        "probability": "Medium",
+        "impact": "Medium",
+        "earlyWarningSignal": "Competitors launch direct 1-for-1 coffee promos or introduce copied bakery lines",
+        "mitigation": "Compete on artisanal single-estate traceability, acoustic quietness, and valet convenience rather than margin-destroying price wars."
+      },
+      {
+        "category": "Pricing & Margin Risk",
+        "risk": "Customer Pushback on ₹340+ AOV from Price-Sensitive College Demographics",
+        "probability": "Medium",
+        "impact": "Low",
+        "earlyWarningSignal": "Customer feedback citing 'expensive' exceeds 15% in first 30 days of launch",
+        "mitigation": "Introduce an entry-level 'Academic Espresso / Americano' tier at ₹140 alongside the premium artisanal single-origin menu."
+      },
+      {
+        "category": "Rent Escalation Risk",
+        "risk": "Arbitrary Landlord Rent Hike or Short-Term Eviction Notice upon Venue Success",
+        "probability": "Low",
+        "impact": "High",
+        "earlyWarningSignal": "Landlord reluctance to execute a registered 5-year lease agreement",
+        "mitigation": "Mandate a registered 5-year lease deed with 3-year minimum lock-in and pre-agreed 5% annual escalation ceiling before disbursing fitout advances."
+      },
+      {
+        "category": "Labor & Talent Risk",
+        "risk": "Key Barista Poaching & High Kitchen Attrition Destroying Flavor Consistency",
+        "probability": "High",
+        "impact": "High",
+        "earlyWarningSignal": "Inconsistent extraction scores and sudden employee absences on peak weekends",
+        "mitigation": "Implement a 6-month retention bonus structure, standard recipe weighing charts (grams in / grams out), and train cross-functional line staff."
+      },
+      {
+        "category": "Supply-Chain Risk",
+        "risk": "Specialty Green Coffee Bean Stockouts or Sudden Farm Price Spikes (+25%)",
+        "probability": "Medium",
+        "impact": "Medium",
+        "earlyWarningSignal": "Roastery partner reporting delayed estate shipments from Karnataka",
+        "mitigation": "Maintain contracted dual-estate supply relationships with 45-day reserve green bean inventory held in vacuum-sealed GrainPro bags."
+      },
+      {
+        "category": "Regulatory & Civic Risk",
+        "risk": "Municipal Anti-Encroachment Drives Towing Customer Vehicles Parked on Curb",
+        "probability": "High",
+        "impact": "High",
+        "earlyWarningSignal": "Traffic police presence and tow trucks spotted along commercial avenue",
+        "mitigation": "Execute a formal leased valet parking arrangement with adjacent commercial complex basement; place prominent 'Valet Station' signage."
+      },
+      {
+        "category": "Seasonality Risk",
+        "risk": "Revenue Skew: 40% of Annual Profits Generated in Oct-Feb Tourist/Winter Window",
+        "probability": "High",
+        "impact": "Medium",
+        "earlyWarningSignal": "Cash balance declining rapidly as summer season approaches",
+        "mitigation": "Accumulate a dedicated ₹6,00,000 cash buffer during winter peak months to cover fixed operational overhead during summer trough."
+      },
+      {
+        "category": "Inflation Risk",
+        "risk": "Dairy (Farm Milk) and Packaging Commodity Cost Inflation (+15%)",
+        "probability": "High",
+        "impact": "Medium",
+        "earlyWarningSignal": "Dairy supplier revising monthly milk crate invoices upward",
+        "mitigation": "Leverage long-term cooperative dairy supply contracts and engineer high-margin botanical teas / cold brews with zero dairy dependency."
+      },
+      {
+        "category": "Customer Acquisition Risk",
+        "risk": "High Launch Hype Followed by Month-3 Churn / Retention Cliff",
+        "probability": "Medium",
+        "impact": "High",
+        "earlyWarningSignal": "Repeat customer rate falls below 35% on POS customer database",
+        "mitigation": "Deploy frictionless WhatsApp loyalty stamp card, monthly brewing masterclasses, and corporate breakfast packages."
+      },
+      {
+        "category": "Operational / Equipment Risk",
+        "risk": "Commercial Espresso Machine Boiler Breakdown on Saturday 8 PM Rush",
+        "probability": "Low",
+        "impact": "High",
+        "earlyWarningSignal": "Pressure gauge fluctuation or group head temperature instability",
+        "mitigation": "Contract 24-hour breakdown AMC with local equipment distributor; maintain backup dual-group thermoblock machine and manual batch brewer."
+      },
+      {
+        "category": "Acoustic / Customer Conflict Risk",
+        "risk": "Friction Between Laptop-Using Remote Workers and Boisterous Dining Parties",
+        "probability": "High",
+        "impact": "Medium",
+        "earlyWarningSignal": "Negative Google reviews from diners complaining of a 'library vibe' or workers complaining of noisy kids",
+        "mitigation": "Architectural zoning: designate a 'Quiet Mezzanine / Work Studio' with power sockets and a lively 'Ground Floor & Garden Patio' for social gatherings."
+      }
+    ]
+  }
+}

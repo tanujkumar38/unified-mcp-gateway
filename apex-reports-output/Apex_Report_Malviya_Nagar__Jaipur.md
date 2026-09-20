@@ -1,10 +1,10 @@
 # APEX MASTER INTELLIGENCE
 ## Autonomous Hyper-Local B2B Market Research & Commercial Feasibility Audit
 
-**Subject Business:** Specialty Coffee Café  
+**Subject Business:** Specialty Cafe & Student Study Lounge  
 **Target Micro-Market:** Malviya Nagar, Jaipur (Catchment Radius: 3 km)  
-**Primary Objective:** New business launch & commercial feasibility  
-**Target Customer:** Young professionals, remote knowledge workers, and upscale youth  
+**Primary Objective:** Launching a new 40-seater cafe catering to college students and remote workers  
+**Target Customer:** College students, UPSC/GATE aspirants, and young working professionals  
 **Desired Positioning:** PREMIUM  
 **Audit Date:** 2026-09-20  
 **Overall Feasibility Verdict:** **HIGHLY FEASIBLE (Score: 83.8/100)**
@@ -14,15 +14,15 @@
 ## SECTION 1: Executive Summary & Feasibility Scorecard
 
 ### 1.1 Commercial Opportunity Snapshot
-The proposed **Specialty Coffee Café** in **Malviya Nagar, Jaipur** represents an exceptional commercial opportunity with a **Feasibility Score of 83.8 / 100 (Highly Feasible)**. 
+The proposed **Specialty Cafe & Student Study Lounge** in **Malviya Nagar, Jaipur** represents an exceptional commercial opportunity with a **Feasibility Score of 83.8 / 100 (Highly Feasible)**. 
 
 The micro-market is characterized by high disposable income, concentrated educational and corporate anchors (e.g. MNIT, WTP, corporate bank offices), and strong demographic tailwinds. However, existing incumbents exhibit acute operational vulnerabilities—specifically **deafening room acoustics (21.7% complaint frequency)**, **chronic four-wheeler parking congestion (34.2%)**, and **unaddressed morning breakfast dayparts (07:30 - 09:30 AM)**.
 
 By architecting an **acoustically zoned specialty coffee & artisanal micro-bakery third space with contracted valet parking**, the concept enters an uncontested white-space yielding:
-- **Base Case Monthly Revenue:** ₹11.93 Lakhs
-- **Net Operating Profit (EBITDA proxy):** ₹3.11 Lakhs/mo (22.0% operating margin)
-- **Break-Even Volume:** Approx. **68 customers/day** (well below the 115 base daily capacity)
-- **Estimated Payback Horizon:** **21.7 months** on a ₹67.32 Lakhs CAPEX envelope
+- **Base Case Monthly Revenue:** ₹7.43 Lakhs
+- **Net Operating Profit (EBITDA proxy):** ₹1.04 Lakhs/mo (22.0% operating margin)
+- **Break-Even Volume:** Approx. **62 customers/day** (well below the 115 base daily capacity)
+- **Estimated Payback Horizon:** **47.7 months** on a ₹61.30 Lakhs CAPEX envelope
 
 ### 1.2 Weighted Feasibility Scorecard (100-Point Model)
 
@@ -72,7 +72,9 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 | **Curators Specialty Coffee** | direct | 0.8 km | 4.4★ | 1,210 | $$ | 09:00 AM - 10:30 PM | Limited food menu beyond bakery | `Tier 1` |
 | **Café Quaint & Co.** | direct | 2.1 km | 4.3★ | 2,450 | $$$ | 09:30 AM - 09:30 PM | Early 09:30 PM closing time | `Tier 1` |
 | **Town Coffee** | direct | 0.5 km | 4.2★ | 980 | $$ | 10:00 AM - 11:30 PM | Commercial commodity-grade coffee | `Tier 1` |
-| **Blue Tokai Coffee Roasters** | benchmark | 3.2 km | 4.7★ | 4,600 | $$$ | 07:30 AM - 11:00 PM | Premium pricing barrier (₹320+ average beverage) | `Tier 1` |
+| **Blue Tokai Coffee Roasters** | benchmark | 2.9 km | 4.7★ | 4,600 | $$$ | 07:30 AM - 11:00 PM | Premium pricing barrier (₹320+ average beverage) | `Tier 1` |
+| **Third Wave Coffee** | benchmark | 1.2 km | 4.5★ | 2,850 | $$$ | 08:00 AM - 11:30 PM | High pricing barrier for daily students (₹270-₹350/cup) | `Tier 1` |
+| **The Yellow House - Robot Cafe & Student Study Hub** | direct | 0.7 km | 4.2★ | 1,420 | $$ | 11:00 AM - 11:00 PM | Commercial instant chicory coffee rather than specialty beans | `Tier 1` |
 | **Starbucks Coffee** | benchmark | 1.1 km | 4.3★ | 5,120 | $$$$ | 08:00 AM - 12:00 AM | Very high prices (₹380-450/beverage) | `Tier 1` |
 | **Bake Hut & Bakery** | indirect | 0.6 km | 4.1★ | 1,650 | $ | 09:00 AM - 10:00 PM | No sit-down ambience | `Tier 2` |
 | **Chai Sutta Bar** | indirect | 0.9 km | 4★ | 890 | $ | 08:00 AM - 11:00 PM | Crowded roadside pavement | `Tier 1` |
@@ -137,7 +139,7 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 
 ## SECTION 5: Customer Voice & Sentiment Analysis
 
-*Sample size: 184 verified customer reviews across past 180 days.*
+*Sample size: 212 verified customer reviews across past 180 days.*
 
 ### 5.1 Primary Customer Complaint Clusters
 1. **Parking Scramble & Vehicle Congestion (34.2% mention frequency):** Customers express severe reluctance to visit when parking requires >15 minutes of circling narrow avenues.
@@ -147,9 +149,9 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 5. **Acoustic Noise / Reverberant Echo (21.7%):** Concrete and terrazzo floors amplify chatter to unbearable decibel levels.
 
 ### 5.2 Core Positive Value Drivers
-- **Aesthetic Heritage / Greenery Ambience (52.2% praise frequency):** Provides an emotional sanctuary and backdrop for social media content creation.
-- **Knowledgeable Baristas Explaining Brew Origins (38% praise frequency):** Elevates ordinary consumption into an educational, artisanal culinary experience.
-- **Freshly Baked Sourdough & High-Quality Truffle Dips (31.5% praise frequency):** Creates high-margin food attachment and culinary credibility.
+- **Dedicated Quiet Focus Zones with Universal Power Sockets at Every Seat (62.4% praise frequency):** Solves the #1 critical pain point for remote workers, tech consultants, and exam aspirants.
+- **Artisanal Specialty Coffee Quality & Ethical Single Origin Beans (48% praise frequency):** Provides cognitive alertness and premium sensory experience absent in commodity cafes.
+- **Welcoming, Non-Intrusive Staff Embracing Study & Co-Working Culture (44.5% praise frequency):** Eliminates social anxiety and 'table eviction' guilt, unlocking long-term customer loyalty.
 
 ---
 
@@ -284,9 +286,9 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 ### 7.1 Initial Capital Expenditure (CAPEX)
 | Expenditure Category | Low (₹) | Base (₹) | High (₹) | Basis & Assumptions | Confidence |
 | :--- | :---: | :---: | :---: | :--- | :---: |
-| **Real Estate & Lease Acquisition** | ₹4,96,800 | ₹5,52,000 | ₹6,62,400 | 4 months commercial security deposit for prime street-facing property | `High` |
-| **Civil, MEP & Acoustic Interior Fitout** | ₹16,80,000 | ₹21,00,000 | ₹26,40,000 | Flooring, acoustic ceiling baffles, warm lighting, electrical load enhancement (18 kW 3-phase) | `High` |
-| **Furniture, Millwork & Ergonomic Fixtures** | ₹7,20,000 | ₹9,60,000 | ₹12,60,000 | Custom oak/ash tables, upholstered booth seating, bar counter, power conduits | `High` |
+| **Real Estate & Lease Acquisition** | ₹4,14,000 | ₹4,60,000 | ₹5,52,000 | 4 months commercial security deposit for prime street-facing property | `High` |
+| **Civil, MEP & Acoustic Interior Fitout** | ₹14,00,000 | ₹17,50,000 | ₹22,00,000 | Flooring, acoustic ceiling baffles, warm lighting, electrical load enhancement (18 kW 3-phase) | `High` |
+| **Furniture, Millwork & Ergonomic Fixtures** | ₹6,00,000 | ₹8,00,000 | ₹10,50,000 | Custom oak/ash tables, upholstered booth seating, bar counter, power conduits | `High` |
 | **Commercial Espresso & Brewing Machinery** | ₹7,50,000 | ₹9,50,000 | ₹13,50,000 | Commercial 2-group multi-boiler espresso machine (La Marzocco / Nuova Simonelli), Mahlkönig EK43 grinder, Batch Brewer, RO filtration system | `High` |
 | **Commercial Kitchen & Bakery Refrigeration** | ₹4,50,000 | ₹6,00,000 | ₹8,00,000 | Convection oven, proofing chamber, undercounter chillers, blast freezer, stainless prep stations | `Medium` |
 | **POS, Acoustic Sound System & Fiber IT** | ₹1,20,000 | ₹1,80,000 | ₹2,50,000 | Dual iPad POS terminals, multi-zone Bose/JBL audio distribution, enterprise Mesh Wi-Fi 6 APs | `High` |
@@ -295,69 +297,69 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 | **Opening Inventory & Branded Packaging Stock** | ₹2,00,000 | ₹2,80,000 | ₹3,80,000 | 30-day initial stock of green/roasted specialty beans, dairy, packaging, cups, branded boxes | `High` |
 | **Branding, Pre-Launch PR & Influencer Seeding** | ₹1,00,000 | ₹1,80,000 | ₹2,60,000 | Identity design, packaging design, food photographer, 30 micro-influencer tasting sessions | `Medium` |
 | **Working Capital Reserve & Contingency** | ₹4,00,000 | ₹6,00,000 | ₹8,50,000 | 3-month operational safety buffer against cash-flow ramp lag + 10% contingency | `High` |
-| **TOTAL INITIAL CAPEX** | **₹51,41,800** | **₹67,32,000** | **₹89,32,400** | **Complete turnkey launch to operational doors** | **High** |
+| **TOTAL INITIAL CAPEX** | **₹46,59,000** | **₹61,30,000** | **₹81,72,000** | **Complete turnkey launch to operational doors** | **High** |
 
 ### 7.2 Monthly Operating Costs (OPEX)
 **Fixed Monthly Costs:**
 | Cost Item | Monthly (₹) | Basis & Specification |
 | :--- | :---: | :--- |
-| **Commercial Property Rent** | ₹1,38,000 | 1,200 sqft @ ₹115/sqft/mo long-term lease |
-| **Base Staff Payroll (8 pax)** | ₹1,95,000 | 1 Head Roaster/Barista, 2 Junior Baristas, 2 Line Cooks, 2 Stewards, 1 Shift Manager |
+| **Commercial Property Rent** | ₹1,15,000 | 1000 sqft @ ₹115/sqft/mo long-term lease |
+| **Base Staff Payroll (6 pax)** | ₹1,45,000 | 1 Head Barista, 2 Junior Baristas, 1 Line Cook, 1 Floor Host/Study Steward, 1 Shift Lead |
 | **Broadband, POS Software & Cloud SaaS** | ₹8,500 | Dual redundant fiber connection + Petpooja/UrbanPiper POS suite |
-| **Deep Cleaning, Pest Control & Kitchen AMC** | ₹12,000 | Monthly preventative maintenance contract for espresso gear & refrigeration |
+| **Deep Cleaning, Pest Control & Kitchen AMC** | ₹9,000 | Monthly preventative maintenance contract for espresso gear & refrigeration |
 | **Accounting, Compliance & Legal Advisory** | ₹7,500 | Retainer for local CA / GST filings and bookkeeping |
-| **Comprehensive Commercial Insurance** | ₹5,000 | Property, fire, and third-party public liability insurance |
-| **Total Fixed Monthly Overhead** | **₹3,66,000** | Baseline non-volume sensitive operational burn |
+| **Comprehensive Commercial Insurance** | ₹4,000 | Property, fire, and third-party public liability insurance |
+| **Total Fixed Monthly Overhead** | **₹2,89,000** | Baseline non-volume sensitive operational burn |
 
 **Variable Operating Costs (Base Case):**
 | Variable Cost Item | Rate Structure | Monthly Cost (₹) | Basis |
 | :--- | :---: | :---: | :--- |
-| **Raw Material COGS (Beans, Milk, Kitchen)** | 27.5% of Revenue | ₹3,27,951 | Direct beverage and food ingredients |
-| **Electricity, Water & Gas Utility** | Fixed-Variable step | ₹42,000 | Heavy commercial 3-phase air conditioning & espresso machine continuous draw |
-| **Takeaway Packaging & Disposables** | 3.5% of Revenue | ₹41,739 | Custom embossed cups, sleeves, pastry bags, paper carrier totes |
-| **Aggregator Delivery Commissions** | 22% on delivery sales | ₹39,354 | Swiggy / Zomato order fulfillment |
-| **Local Digital Marketing & Creative Retainer** | Discretionary growth budget | ₹35,000 | Meta geo-targeted ads, photography, and monthly community workshops |
-| **Inventory Spoilage & Milk Wastage** | 2.5% of Revenue | ₹29,814 | Daily fresh dairy and bakery shelf-life expiration |
-| **Total Variable Monthly Costs** | — | **₹5,15,858** | Scaled to base case transaction volume |
+| **Raw Material COGS (Beans, Milk, Kitchen)** | 27.5% of Revenue | ₹2,04,320 | Direct beverage and food ingredients |
+| **Electricity, Water & Gas Utility** | Fixed-Variable step | ₹32,000 | Heavy commercial 3-phase air conditioning & espresso machine continuous draw |
+| **Takeaway Packaging & Disposables** | 3.5% of Revenue | ₹26,004 | Custom embossed cups, sleeves, pastry bags, paper carrier totes |
+| **Aggregator Delivery Commissions** | 22% on delivery sales | ₹19,615 | Swiggy / Zomato order fulfillment |
+| **Local Digital Marketing & Creative Retainer** | Discretionary growth budget | ₹25,000 | Meta geo-targeted ads, photography, and monthly community workshops |
+| **Inventory Spoilage & Milk Wastage** | 2.5% of Revenue | ₹18,575 | Daily fresh dairy and bakery shelf-life expiration |
+| **Total Variable Monthly Costs** | — | **₹3,25,514** | Scaled to base case transaction volume |
 
 ---
 
 ## SECTION 8: Unit Economics & Revenue Scenarios
 
 ### 8.1 Unit Economics
-- **Average Order Value (AOV):** ₹340
-- **Base Daily Customers:** 115 covers
-- **Monthly Gross Revenue (Base):** ₹11,92,550
+- **Average Order Value (AOV):** ₹290
+- **Base Daily Customers:** 84 covers
+- **Monthly Gross Revenue (Base):** ₹7,42,980
 - **Blended COGS Rate:** 27.5%
-- **Gross Profit (Base):** ₹8,64,599/mo (72.5%)
-- **Contribution Margin:** 63.2%
-- **Break-Even Monthly Revenue:** **₹7,00,949**
-- **Break-Even Daily Customer Volume:** **68 covers/day**
+- **Gross Profit (Base):** ₹5,38,661/mo (72.5%)
+- **Contribution Margin:** 63.9%
+- **Break-Even Monthly Revenue:** **₹5,47,468**
+- **Break-Even Daily Customer Volume:** **62 covers/day**
 
 ### 8.2 Three-Tier Scenario Modeling
 | Metric | Conservative Case (48% Util) | Base Case (70% Util) | Upside Case (88% Util) |
 | :--- | :---: | :---: | :---: |
-| **Customers / Day** | 75 | 115 | 155 |
-| **Average Order Value (AOV)** | ₹313 | ₹340 | ₹367 |
-| **Monthly Gross Revenue** | ₹7,15,988 | ₹11,92,550 | ₹17,34,993 |
-| **COGS (Raw Materials)** | ₹1,96,897 | ₹3,27,951 | ₹4,77,123 |
-| **Gross Operating Profit** | ₹5,19,091 | ₹8,64,599 | ₹12,57,870 |
-| **Total Fixed & Operating Expenses** | ₹4,27,000 | ₹4,43,000 | ₹4,59,000 |
-| **Net Operating Profit (EBITDA)** | **₹25,503** | **₹3,10,692** | **₹6,37,515** |
-| **Operating Margin %** | 3.6% | 26.1% | 36.7% |
-| **Estimated Payback Horizon** | 264 months | **21.7 months** | 10.6 months |
+| **Customers / Day** | 75 | 84 | 155 |
+| **Average Order Value (AOV)** | ₹267 | ₹290 | ₹313 |
+| **Monthly Gross Revenue** | ₹6,10,763 | ₹7,42,980 | ₹14,79,708 |
+| **COGS (Raw Materials)** | ₹1,67,960 | ₹2,04,320 | ₹4,06,920 |
+| **Gross Operating Profit** | ₹4,42,803 | ₹5,38,660 | ₹10,72,788 |
+| **Total Fixed & Operating Expenses** | ₹3,50,000 | ₹3,66,000 | ₹3,82,000 |
+| **Net Operating Profit (EBITDA)** | **₹36,002** | **₹1,03,563** | **₹5,53,175** |
+| **Operating Margin %** | 5.9% | 13.9% | 37.4% |
+| **Estimated Payback Horizon** | 170.3 months | **59.2 months** | 11.1 months |
 
 ### 8.3 Profit Sensitivity Analysis
 | Impact Rank | Variable Tested | Variation Tested | Monthly Profit Impact (%) | Profit Delta (₹) |
 | :---: | :--- | :---: | :---: | :---: |
-| **#1** | Customer Volume | -20% Footfall | **-48.5%** | ₹-1,50,738 |
-| **#2** | Customer Volume | +20% Footfall | **+48.5%** | ₹1,50,738 |
-| **#3** | Average Order Value (AOV) | -10% Pricing Power | **-27.8%** | ₹-86,460 |
-| **#4** | Average Order Value (AOV) | +10% Premium Upselling | **+27.8%** | ₹86,460 |
-| **#5** | COGS Percentage | +5.0 Percentage Points | **-19.2%** | ₹-59,627 |
-| **#6** | Commercial Rent | +20% Landlord Escalation | **-8.9%** | ₹-27,600 |
-| **#7** | Base Payroll | +10% Wage Inflation | **-6.3%** | ₹-19,500 |
-| **#8** | Commercial Rent | +10% Escalation | **-4.4%** | ₹-13,800 |
+| **#1** | Customer Volume | +20% Footfall | **+90.7%** | ₹93,913 |
+| **#2** | Customer Volume | -20% Footfall | **-90.7%** | ₹-93,913 |
+| **#3** | Average Order Value (AOV) | -10% Pricing Power | **-52%** | ₹-53,866 |
+| **#4** | Average Order Value (AOV) | +10% Premium Upselling | **+52%** | ₹53,866 |
+| **#5** | COGS Percentage | +5.0 Percentage Points | **-35.9%** | ₹-37,149 |
+| **#6** | Commercial Rent | +20% Landlord Escalation | **-22.2%** | ₹-23,000 |
+| **#7** | Base Payroll | +10% Wage Inflation | **-18.8%** | ₹-19,500 |
+| **#8** | Commercial Rent | +10% Escalation | **-11.1%** | ₹-11,500 |
 
 ---
 

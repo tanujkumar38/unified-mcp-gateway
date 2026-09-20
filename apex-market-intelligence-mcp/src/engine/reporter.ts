@@ -1103,8 +1103,6 @@ export async function renderExecutivePdf(
 ): Promise<{ success: boolean; outputPath: string; sizeBytes: number; pageCount: number; error?: string }> {
   try {
     const html = generateMasterHtmlDocument(audit);
-    const tempHtmlPath = path.join(path.dirname(outputPdfPath), `temp_${Date.now()}.html`);
-    fs.writeFileSync(tempHtmlPath, html, "utf-8");
 
     // Locate Chrome binary
     const chromePaths = [
@@ -1157,11 +1155,6 @@ export async function renderExecutivePdf(
     });
 
     await browser.close();
-
-    // Clean up temp HTML
-    if (fs.existsSync(tempHtmlPath)) {
-      fs.unlinkSync(tempHtmlPath);
-    }
 
     const stats = fs.statSync(outputPdfPath);
 

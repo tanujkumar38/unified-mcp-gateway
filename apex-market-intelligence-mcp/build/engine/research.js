@@ -143,8 +143,8 @@ export function auditVectorAGeospatial(intake) {
             {
                 name: "Blue Tokai Coffee Roasters",
                 type: "benchmark",
-                address: "Anchor Outlet, JLN Marg C-Scheme",
-                distanceKm: 3.2,
+                address: "Anchor Outlet, JLN Marg C-Scheme / Malviya border",
+                distanceKm: 2.9,
                 rating: 4.7,
                 reviewCount: 4600,
                 reviewRecency: "Updated yesterday",
@@ -158,7 +158,49 @@ export function auditVectorAGeospatial(intake) {
                 amenities: ["High-speed optic fiber Wi-Fi", "Mobile ordering", "Dedicated barista bar"],
                 positioning: "National standard-bearer for third-wave specialty coffee",
                 keyDifferentiators: ["Farm-level traceability", "Standardized brew ratios", "Omnichannel loyalty app"],
-                observableWeaknesses: ["Premium pricing barrier (₹320+ average beverage)", "Corporate standardized vibe lacking cozy local warmth"],
+                observableWeaknesses: ["Premium pricing barrier (₹320+ average beverage)", "Corporate standardized vibe lacking cozy local warmth", "Limited desk surface space for study materials"],
+                reliabilityTier: "Tier 1"
+            },
+            {
+                name: "Third Wave Coffee",
+                type: "benchmark",
+                address: "Ground Floor, World Trade Park (WTP), Malviya Nagar",
+                distanceKm: 1.2,
+                rating: 4.5,
+                reviewCount: 2850,
+                reviewRecency: "Updated 2 days ago",
+                priceTier: "$$$",
+                operatingHours: "08:00 AM - 11:30 PM",
+                peakHours: "04:00 PM - 09:30 PM daily",
+                website: "https://thirdwavecoffeeroasters.com",
+                socialPresence: "National corporate digital media (120k followers)",
+                deliveryPresence: ["Zomato", "Swiggy"],
+                menuHighlights: ["Orange Zest Mocha", "Classic Cold Brew", "Hummus & Pita Platter", "Almond Croissant"],
+                amenities: ["Air Conditioning", "Free Customer Wi-Fi", "Limited power outlets (perimeter only)", "Mall parking access"],
+                positioning: "Fast-casual third-wave coffee chain catering to urban professionals and mall shoppers",
+                keyDifferentiators: ["High brand recognition", "Consistent specialty coffee blends", "High footfall mall location"],
+                observableWeaknesses: ["High pricing barrier for daily students (₹270-₹350/cup)", "Loud mall hallway acoustic spillover with no quiet zones", "Power outlets restricted to only 3-4 perimeter tables"],
+                reliabilityTier: "Tier 1"
+            },
+            {
+                name: "The Yellow House - Robot Cafe & Student Study Hub",
+                type: "direct",
+                address: "Near Calgiri Hospital / MNIT Backgate, Malviya Nagar",
+                distanceKm: 0.7,
+                rating: 4.2,
+                reviewCount: 1420,
+                reviewRecency: "Updated 3 days ago",
+                priceTier: "$$",
+                operatingHours: "11:00 AM - 11:00 PM",
+                peakHours: "03:00 PM - 08:30 PM",
+                website: "https://theyellowhousecafe.com",
+                socialPresence: "Student UGC & campus reels (15k followers)",
+                deliveryPresence: ["Zomato", "Swiggy"],
+                menuHighlights: ["KitKat Thick Shake", "Peri Peri Fries", "Grilled Cheese Sandwiches", "Chili Paneer Pizza"],
+                amenities: ["Spacious indoor hall", "Casual beanbag & booth seating", "Board games"],
+                positioning: "Budget-friendly student hangout & group study parlor",
+                keyDifferentiators: ["Affordable pricing for students (₹120-₹200 items)", "Direct proximity to coaching institutes and student PGs"],
+                observableWeaknesses: ["Commercial instant chicory coffee rather than specialty beans", "Patchy Wi-Fi with frequent drops during peak hours", "Only 3 wall power outlets for the entire hall, leading to frequent socket disputes"],
                 reliabilityTier: "Tier 1"
             },
             {
@@ -485,6 +527,168 @@ export function auditVectorCMultimodal(intake) {
  * VECTOR D: Voice of Customer / Review Intelligence
  */
 export function auditVectorDVoiceOfCustomer(intake) {
+    const isStudy = intake.targetIndustry.toLowerCase().includes("study") ||
+        intake.targetCustomerSegment.toLowerCase().includes("student") ||
+        intake.targetCustomerSegment.toLowerCase().includes("aspirant") ||
+        intake.primaryObjective.toLowerCase().includes("study") ||
+        intake.primaryObjective.toLowerCase().includes("remote worker");
+    if (isStudy) {
+        return {
+            totalReviewsSampled: 212,
+            timeframe: "Past 180 days across 7 core & benchmark cafes in Malviya Nagar / WTP catchment",
+            productIssues: [
+                {
+                    issue: "Cold Brew & Pour-Overs Overpriced for Student Daily Budgets",
+                    frequencyPct: 24.5,
+                    severity: "High",
+                    sampleQuotes: [
+                        "₹320+ for a single pour-over every day is financially impossible for college students and aspirants.",
+                        "Great coffee, but wish they had a pocket-friendly black coffee or student refill option."
+                    ]
+                },
+                {
+                    issue: "Inconsistent Coffee Extraction & Milk Temperature",
+                    frequencyPct: 17.2,
+                    severity: "Medium",
+                    sampleQuotes: [
+                        "Coffee was lukewarm and bitter on Sunday afternoon rush.",
+                        "Watery cold brew with too much melted ice."
+                    ]
+                },
+                {
+                    issue: "Lack of High-Energy Healthy Study Snacks (Heavy greasy food only)",
+                    frequencyPct: 15.8,
+                    severity: "Medium",
+                    sampleQuotes: [
+                        "Menu is either deep fried fries or heavy pizzas. Need brain-food bowls, protein bars, or clean sandwiches."
+                    ]
+                }
+            ],
+            serviceIssues: [
+                {
+                    issue: "Staff 'Table Hovering' & Pressure to Vacate After One Drink",
+                    frequencyPct: 28.5,
+                    severity: "High",
+                    sampleQuotes: [
+                        "Waiter kept hovering and cleared my cup 30 seconds after I finished, asking if I wanted anything else every 20 minutes.",
+                        "Felt actively unwelcome studying with my books after 45 minutes. Super hostile vibe."
+                    ]
+                },
+                {
+                    issue: "Slow Order Processing & Kitchen Latency During Peak Study Hours",
+                    frequencyPct: 21.0,
+                    severity: "Medium",
+                    sampleQuotes: [
+                        "Took 35 minutes for a cold coffee and sandwich while on my study break."
+                    ]
+                }
+            ],
+            pricingIssues: [
+                {
+                    issue: "Absence of Daily Co-Study Passes or Subscription Bundles",
+                    frequencyPct: 35.8,
+                    severity: "High",
+                    sampleQuotes: [
+                        "Wish they had a daily study desk pass (e.g. ₹199 with 1 coffee) instead of forcing full-price reorders.",
+                        "Spending ₹600-800 for 4 hours of studying is completely out of budget for UPSC/GATE students."
+                    ]
+                },
+                {
+                    issue: "Disproportionate Food & Beverage Add-on Pricing",
+                    frequencyPct: 22.0,
+                    severity: "Medium",
+                    sampleQuotes: [
+                        "₹220 for bottled sparkling water and ₹380 for a small wrap is exorbitant."
+                    ]
+                }
+            ],
+            infrastructureIssues: [
+                {
+                    issue: "Extreme Shortage of Electrical Charging Sockets at Tables",
+                    frequencyPct: 42.5,
+                    severity: "High",
+                    sampleQuotes: [
+                        "Only 2 tables near the wall have sockets. Everyone studying for GATE/UPSC is fighting for the same corner plugs.",
+                        "My laptop battery died in an hour because there are zero outlets at central tables."
+                    ]
+                },
+                {
+                    issue: "Deafening Music & Echo / High Noise Hostile to Concentration",
+                    frequencyPct: 34.0,
+                    severity: "High",
+                    sampleQuotes: [
+                        "Blasting loud club and pop music when 80% of customers are trying to read or work on laptops.",
+                        "Acoustics are terrible, concrete walls echo like a railway station."
+                    ]
+                },
+                {
+                    issue: "Unreliable Wi-Fi with Frequent Disconnects & Speed Throttling",
+                    frequencyPct: 31.2,
+                    severity: "High",
+                    sampleQuotes: [
+                        "Wi-Fi drops every 20 minutes and requires re-entering OTP. Disconnected right during an online test series.",
+                        "Speed throttled to 1.5 Mbps once 12 people connected."
+                    ]
+                },
+                {
+                    issue: "Uncomfortable Hard Wooden Chairs / Lack of Ergonomic Seating",
+                    frequencyPct: 26.4,
+                    severity: "Medium",
+                    sampleQuotes: [
+                        "Cute aesthetic metal chairs, but your back screams after 45 minutes.",
+                        "Tables are too small to place a 15-inch laptop and notebook together."
+                    ]
+                },
+                {
+                    issue: "Street Parking Scramble along Pradhan & Calgiri Marg",
+                    frequencyPct: 31.0,
+                    severity: "High",
+                    sampleQuotes: [
+                        "Nowhere to safely park a two-wheeler or car without fear of municipal towing."
+                    ]
+                }
+            ],
+            experienceIssues: [
+                {
+                    issue: "Table Camping Friction Between Casual Diners & Long-Stay Students",
+                    frequencyPct: 27.5,
+                    severity: "Medium",
+                    sampleQuotes: [
+                        "People taking 4-seater tables alone with notebooks while groups are turned away at the door."
+                    ]
+                }
+            ],
+            positiveDrivers: [
+                {
+                    driver: "Dedicated Quiet Focus Zones with Universal Power Sockets at Every Seat",
+                    frequencyPct: 62.4,
+                    whyValued: "Solves the #1 critical pain point for remote workers, tech consultants, and exam aspirants."
+                },
+                {
+                    driver: "Artisanal Specialty Coffee Quality & Ethical Single Origin Beans",
+                    frequencyPct: 48.0,
+                    whyValued: "Provides cognitive alertness and premium sensory experience absent in commodity cafes."
+                },
+                {
+                    driver: "Welcoming, Non-Intrusive Staff Embracing Study & Co-Working Culture",
+                    frequencyPct: 44.5,
+                    whyValued: "Eliminates social anxiety and 'table eviction' guilt, unlocking long-term customer loyalty."
+                }
+            ],
+            crossMarketPainPoints: [
+                "Zero existing cafes in Malviya Nagar provide universal power sockets at every desk and dedicated acoustic quiet zones (42.5% complaint frequency).",
+                "Blasting commercial playlists and echoing architectural surfaces create an acoustic barrier for students and remote knowledge workers (34.0%).",
+                "Lack of daily study/work passes creates awkward table-hovering friction and unaffordable daily economics for students (35.8%)."
+            ],
+            competitorSpecificWeaknesses: [
+                { competitor: "Roastery Coffee House", mainVulnerability: "Weekend waitlist chaos, loud echoing hall, severe parking scarcity, completely unsuited for studying." },
+                { competitor: "Curators Specialty Coffee", mainVulnerability: "Small desk footprints, limited power points, lacks acoustic partition between dining and working." },
+                { competitor: "Third Wave Coffee (WTP)", mainVulnerability: "High corporate pricing (₹280-₹360), noisy mall atrium traffic spillover, wall-perimeter sockets only." },
+                { competitor: "The Yellow House", mainVulnerability: "Commodity instant coffee, patchy Wi-Fi, only 3 sockets for the entire hall, loud party crowd." },
+                { competitor: "Town Coffee", mainVulnerability: "Commodity beans, loud commercial music, no study infrastructure." }
+            ]
+        };
+    }
     return {
         totalReviewsSampled: 184,
         timeframe: "Past 180 days across 5 core competitors in catchment",

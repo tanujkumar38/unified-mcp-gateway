@@ -1,5 +1,4 @@
 import fs from "fs";
-import path from "path";
 import puppeteer from "puppeteer-core";
 import { generateRatingVsReviewsSvg, generateCustomerComplaintSvg, generateRevenueScenarioSvg, generateSensitivityAnalysisSvg, generateRiskHeatmapSvg, generateTreeOfThoughtsSvg } from "./visualizer.js";
 /**
@@ -1081,8 +1080,6 @@ export function generateMasterHtmlDocument(audit) {
 export async function renderExecutivePdf(audit, outputPdfPath) {
     try {
         const html = generateMasterHtmlDocument(audit);
-        const tempHtmlPath = path.join(path.dirname(outputPdfPath), `temp_${Date.now()}.html`);
-        fs.writeFileSync(tempHtmlPath, html, "utf-8");
         // Locate Chrome binary
         const chromePaths = [
             "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
@@ -1128,10 +1125,6 @@ export async function renderExecutivePdf(audit, outputPdfPath) {
             }
         });
         await browser.close();
-        // Clean up temp HTML
-        if (fs.existsSync(tempHtmlPath)) {
-            fs.unlinkSync(tempHtmlPath);
-        }
         const stats = fs.statSync(outputPdfPath);
         // Visual QA verification
         if (stats.size < 50000) {

@@ -101,29 +101,35 @@ export function buildFinancialModel(intake) {
     const totalCapexLow = capexItems.reduce((acc, c) => acc + c.low, 0);
     const totalCapexBase = capexItems.reduce((acc, c) => acc + c.base, 0);
     const totalCapexHigh = capexItems.reduce((acc, c) => acc + c.high, 0);
+    const estimatedSeats = Math.round(sqft / 25); // e.g. ~40 seats for 1000 sqft
+    const staffCount = estimatedSeats <= 45 ? 6 : 8;
+    const staffPayroll = estimatedSeats <= 45 ? 145000 : 195000;
+    const staffBasis = estimatedSeats <= 45
+        ? "1 Head Barista, 2 Junior Baristas, 1 Line Cook, 1 Floor Host/Study Steward, 1 Shift Lead"
+        : "1 Head Roaster/Barista, 2 Junior Baristas, 2 Line Cooks, 2 Stewards, 1 Shift Manager";
     // OPEX Fixed Costs
     const opexFixed = [
-        { item: "Commercial Property Rent", monthlyCost: baseMonthlyRent, basis: `1,200 sqft @ ₹115/sqft/mo long-term lease` },
-        { item: "Base Staff Payroll (8 pax)", monthlyCost: 195000, basis: "1 Head Roaster/Barista, 2 Junior Baristas, 2 Line Cooks, 2 Stewards, 1 Shift Manager" },
+        { item: "Commercial Property Rent", monthlyCost: baseMonthlyRent, basis: `${sqft} sqft @ ₹115/sqft/mo long-term lease` },
+        { item: `Base Staff Payroll (${staffCount} pax)`, monthlyCost: staffPayroll, basis: staffBasis },
         { item: "Broadband, POS Software & Cloud SaaS", monthlyCost: 8500, basis: "Dual redundant fiber connection + Petpooja/UrbanPiper POS suite" },
-        { item: "Deep Cleaning, Pest Control & Kitchen AMC", monthlyCost: 12000, basis: "Monthly preventative maintenance contract for espresso gear & refrigeration" },
+        { item: "Deep Cleaning, Pest Control & Kitchen AMC", monthlyCost: estimatedSeats <= 45 ? 9000 : 12000, basis: "Monthly preventative maintenance contract for espresso gear & refrigeration" },
         { item: "Accounting, Compliance & Legal Advisory", monthlyCost: 7500, basis: "Retainer for local CA / GST filings and bookkeeping" },
-        { item: "Comprehensive Commercial Insurance", monthlyCost: 5000, basis: "Property, fire, and third-party public liability insurance" }
+        { item: "Comprehensive Commercial Insurance", monthlyCost: estimatedSeats <= 45 ? 4000 : 5000, basis: "Property, fire, and third-party public liability insurance" }
     ];
     const totalFixedMonthlyOpex = opexFixed.reduce((acc, o) => acc + o.monthlyCost, 0);
     // Baseline Unit Economics Assumptions
-    const baseAov = intake.existingAov || 340; // ₹340 blended ticket (beverage + food attachment)
-    const baseCustomersPerDay = 115; // ~70% peak utilization across 55 seats
-    const monthlyRevenueBase = Math.round(baseCustomersPerDay * baseAov * 30.5); // ~₹11,92,550/mo
+    const baseAov = intake.existingAov || (intake.targetIndustry.toLowerCase().includes("study") ? 290 : 340);
+    const baseCustomersPerDay = Math.round(estimatedSeats * 2.1); // ~84 covers/day across 40 seats
+    const monthlyRevenueBase = Math.round(baseCustomersPerDay * baseAov * 30.5);
     const cogsPct = 27.5; // 27.5% COGS
     const grossMarginPct = 72.5;
     const grossProfitMonthlyBase = Math.round(monthlyRevenueBase * (grossMarginPct / 100));
     // Variable Costs at Base Case
     const cogsMonthlyBase = Math.round(monthlyRevenueBase * (cogsPct / 100));
-    const electricityUtilitiesBase = 42000; // Heavy commercial HVAC and espresso boiler load
+    const electricityUtilitiesBase = estimatedSeats <= 45 ? 32000 : 42000;
     const packagingDisposablesBase = Math.round(monthlyRevenueBase * 0.035); // 3.5%
-    const deliveryCommissionsBase = Math.round(monthlyRevenueBase * 0.15 * 0.22); // 15% delivery mix @ 22% commission
-    const performanceMarketingBase = 35000; // Local geo-targeted ads & events
+    const deliveryCommissionsBase = Math.round(monthlyRevenueBase * 0.12 * 0.22); // 12% delivery mix
+    const performanceMarketingBase = estimatedSeats <= 45 ? 25000 : 35000;
     const wastageShrinkageBase = Math.round(monthlyRevenueBase * 0.025); // 2.5% wastage
     const opexVariable = [
         { item: "Raw Material COGS (Beans, Milk, Kitchen)", costRate: "27.5% of Revenue", monthlyEstimatedCost: cogsMonthlyBase, basis: "Direct beverage and food ingredients" },
