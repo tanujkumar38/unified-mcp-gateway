@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 
 async function main() {
-  console.log("=== APEX MASTER INTELLIGENCE: EXECUTING FULL AUDIT VIA MCP ===");
+  console.log("=== APEX MARKET INTELLIGENCE: EXECUTING FULL AUDIT VIA MCP ===");
   
   const transport = new StdioClientTransport({
     command: "node",

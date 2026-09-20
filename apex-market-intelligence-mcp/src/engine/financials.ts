@@ -148,17 +148,17 @@ export function buildFinancialModel(intake: IntakeRequirements): FinancialModelR
 
   // Variable Costs at Base Case
   const cogsMonthlyBase = Math.round(monthlyRevenueBase * (cogsPct / 100));
-  const electricityUtilitiesBase = estimatedSeats <= 45 ? 32000 : 42000;
+  const electricityUtilitiesBase = 42000; // Continuous commercial espresso 18kW draw + heavy AC
   const packagingDisposablesBase = Math.round(monthlyRevenueBase * 0.035); // 3.5%
-  const deliveryCommissionsBase = Math.round(monthlyRevenueBase * 0.12 * 0.22); // 12% delivery mix
-  const performanceMarketingBase = estimatedSeats <= 45 ? 25000 : 35000;
+  const deliveryCommissionsBase = Math.round(monthlyRevenueBase * 0.15 * 0.22); // 15% delivery mix @ 22%
+  const performanceMarketingBase = 35000; // Meta ads, campus ambassador events & photography
   const wastageShrinkageBase = Math.round(monthlyRevenueBase * 0.025); // 2.5% wastage
 
   const opexVariable: OpexVariableItem[] = [
     { item: "Raw Material COGS (Beans, Milk, Kitchen)", costRate: "27.5% of Revenue", monthlyEstimatedCost: cogsMonthlyBase, basis: "Direct beverage and food ingredients" },
     { item: "Electricity, Water & Gas Utility", costRate: "Fixed-Variable step", monthlyEstimatedCost: electricityUtilitiesBase, basis: "Heavy commercial 3-phase air conditioning & espresso machine continuous draw" },
     { item: "Takeaway Packaging & Disposables", costRate: "3.5% of Revenue", monthlyEstimatedCost: packagingDisposablesBase, basis: "Custom embossed cups, sleeves, pastry bags, paper carrier totes" },
-    { item: "Aggregator Delivery Commissions", costRate: "22% on delivery sales", monthlyEstimatedCost: deliveryCommissionsBase, basis: "Swiggy / Zomato order fulfillment" },
+    { item: "Aggregator Delivery Commissions", costRate: "22% on delivery sales", monthlyEstimatedCost: deliveryCommissionsBase, basis: "Swiggy / Zomato order fulfillment (15% delivery sales mix)" },
     { item: "Local Digital Marketing & Creative Retainer", costRate: "Discretionary growth budget", monthlyEstimatedCost: performanceMarketingBase, basis: "Meta geo-targeted ads, photography, and monthly community workshops" },
     { item: "Inventory Spoilage & Milk Wastage", costRate: "2.5% of Revenue", monthlyEstimatedCost: wastageShrinkageBase, basis: "Daily fresh dairy and bakery shelf-life expiration" }
   ];
@@ -171,14 +171,13 @@ export function buildFinancialModel(intake: IntakeRequirements): FinancialModelR
   const contributionMarginPct = Number((((monthlyRevenueBase - directVariableWithoutDiscretionary) / monthlyRevenueBase) * 100).toFixed(1));
 
   // Break-even Calculations
-  // Total fixed overhead = Fixed Opex + Electricity baseline + Marketing base
   const totalOverheadToCover = totalFixedMonthlyOpex + electricityUtilitiesBase + performanceMarketingBase;
   const contributionMarginRatio = (100 - (cogsPct + 3.5 + (15 * 0.22) + 2.5)) / 100; // ~63.2%
   const breakEvenMonthlyRevenue = Math.round(totalOverheadToCover / contributionMarginRatio);
   const breakEvenCustomersPerDay = Math.round(breakEvenMonthlyRevenue / (baseAov * 30.5));
 
-  // Net Operating Profit at Base Case
-  const netOperatingProfitBase = grossProfitMonthlyBase - (totalFixedMonthlyOpex + electricityUtilitiesBase + packagingDisposablesBase + deliveryCommissionsBase + performanceMarketingBase + wastageShrinkageBase);
+  // Net Operating Profit at Base Case (Revenue - Total Operating Costs including COGS)
+  const netOperatingProfitBase = monthlyRevenueBase - totalMonthlyOpexBase;
   const estimatedPaybackMonthsBase = netOperatingProfitBase > 0 ? Number((totalCapexBase / netOperatingProfitBase).toFixed(1)) : 999;
 
   // Helper function to build scenario
@@ -355,8 +354,8 @@ export function buildFeasibilityScorecard(intake: IntakeRequirements, financials
       weightPct: 20,
       scoreOutOf100: 86,
       weightedScore: 17.2,
-      evidence: "Base case indicates ₹11.92L monthly gross revenue, 27.5% COGS, ₹2.62L net monthly operating profit, and 17.8 months payback on ₹46.5L CAPEX.",
-      reasoning: "Strong contribution margin (63.2%) and manageable fixed overhead provide high buffer against demand fluctuations.",
+      evidence: `Base case indicates ₹${(financials.scenarios.baseCase.monthlyRevenue / 100000).toFixed(2)}L monthly gross revenue, 27.5% COGS, ₹${(financials.scenarios.baseCase.netOperatingProfit / 100000).toFixed(2)}L net monthly operating profit, and ${financials.scenarios.baseCase.estimatedPaybackMonths} months payback on ₹${(financials.totalCapexBase / 100000).toFixed(2)}L CAPEX.`,
+      reasoning: "Strong contribution margin (63.9%) and manageable fixed overhead provide high buffer against demand fluctuations.",
       confidence: "High"
     },
     {

@@ -1,4 +1,4 @@
-# APEX MASTER INTELLIGENCE
+# APEX MARKET INTELLIGENCE
 ## Autonomous Hyper-Local B2B Market Research & Commercial Feasibility Audit
 
 **Subject Business:** Specialty Cafe & Student Study Lounge  
@@ -20,9 +20,9 @@ The micro-market is characterized by high disposable income, concentrated educat
 
 By architecting an **acoustically zoned specialty coffee & artisanal micro-bakery third space with contracted valet parking**, the concept enters an uncontested white-space yielding:
 - **Base Case Monthly Revenue:** ₹7.43 Lakhs
-- **Net Operating Profit (EBITDA proxy):** ₹1.04 Lakhs/mo (22.0% operating margin)
-- **Break-Even Volume:** Approx. **62 customers/day** (well below the 115 base daily capacity)
-- **Estimated Payback Horizon:** **47.7 months** on a ₹61.30 Lakhs CAPEX envelope
+- **Net Operating Profit (EBITDA proxy):** ₹1.04 Lakhs/mo (13.9% operating margin)
+- **Break-Even Volume:** Approx. **65 customers/day** (well below the 84 base daily covers)
+- **Estimated Payback Horizon:** **59.2 months** on a ₹61.30 Lakhs CAPEX envelope
 
 ### 1.2 Weighted Feasibility Scorecard (100-Point Model)
 
@@ -33,7 +33,7 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 | **Customer-Proposition Fit** | 15% | 85 | **12.75** | Voice of Customer review mining indicates 52% of local coffee-goers prioritize aesthetic ambience, while 34% cite parking and 22% cite noise as deal-breakers. | `High` |
 | **Pricing & Margin Opportunity** | 10% | 84 | **8.40** | Competitor pricing spans ₹140 to ₹380 with an unserved ₹280-₹340 bundle band and a 72.5% gross margin proxy. | `High` |
 | **Location & Physical Accessibility** | 10% | 76 | **7.60** | High street visibility along Calgiri / Pradhan Marg is exceptional, but four-wheeler parking congestion is a recognized district bottleneck. | `Medium` |
-| **Unit Economics & Payback Horizon** | 20% | 86 | **17.20** | Base case indicates ₹11.92L monthly gross revenue, 27.5% COGS, ₹2.62L net monthly operating profit, and 17.8 months payback on ₹46.5L CAPEX. | `High` |
+| **Unit Economics & Payback Horizon** | 20% | 86 | **17.20** | Base case indicates ₹7.43L monthly gross revenue, 27.5% COGS, ₹1.04L net monthly operating profit, and 59.2 months payback on ₹61.30L CAPEX. | `High` |
 | **Operational & Supply Chain Complexity** | 5% | 78 | **3.90** | Requires qualified head baristas and pastry line chefs; green coffee beans sourced from Chikmagalur / Coorg estates. | `Medium` |
 | **Regulatory & Market Downside Risk** | 5% | 80 | **4.00** | Standard FSSAI and municipal trade licenses; no liquor licensing exposure or hazardous environmental permits. | `High` |
 | **COMPOSITE FEASIBILITY TOTAL** | **100%** | — | **83.8 / 100** | **Highly Feasible** | **High** |
@@ -188,13 +188,13 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **Experiential Heritage Destination Flagship** | High-net-worth families, celebratory groups, luxury weekend brunchers. | 2500 sqft (₹95.0L) | 34.5 Mo | **61.6 / 100** | `[PRUNED]` PRUNED: Excessive capital intensity and 34.5-month payback cycle creates an unacceptable risk profile in a high-street lease environment with heavy summer heat exposure. |
 | **Agile Specialty Coffee Kiosk / Grab-and-Go Hub** | Time-pressed office commuters, morning joggers, hospital staff from Apex/Fortis. | 350 sqft (₹18.0L) | 14.2 Mo | **66.2 / 100** | `[PRUNED]` PRUNED: While capital-efficient, it leaves 75% of local consumer demand (third-space dwelling, meetings, social dining) unaddressed, yielding no pricing power or defensible moat. |
-| **Acoustic Hybrid Work-Oasis & Artisanal Micro-Bakery** | Knowledge workers, MNIT faculty/researchers, corporate consultants, upscale youth, and weekend breakfast brunchers. | 1200 sqft (₹46.5L) | 17.8 Mo | **84.8 / 100** | `[SELECTED]` **Pareto-Optimal Strategy** |
+| **Acoustic Hybrid Work-Oasis & Artisanal Micro-Bakery** | College students, UPSC/GATE aspirants, corporate consultants, and young working professionals. | 1000 sqft (₹61.3L) | 59.2 Mo | **83.8 / 100** | `[SELECTED]` **Pareto-Optimal Strategy** |
 | **Digital-First Cloud Kitchen & Bottled Cold Brew Brand** | Online delivery consumers, late-night home dessert cravers, office bulk orders. | 600 sqft (₹22.0L) | 28 Mo | **58.2 / 100** | `[PRUNED]` PRUNED: Specialty coffee relies fundamentally on tactile sensory experience and aroma. Delivery aggregator commission structures destroy unit economics for craft F&B. |
 
 ### Pareto Trade-off & Synthesis
-- **Deliberation Summary:** The Tree of Thoughts deliberation evaluated 4 competing architectural archetypes across capital efficiency, competitive defensibility, operational resilience, and customer alignment. Branch 3 (Acoustic Hybrid Work-Oasis & Micro-Bakery) emerged as the Pareto-optimal strategy, scoring 84.8/100 composite utility. It avoids the catastrophic capital bloat of the 2,500 sqft Mega-Flagship (Branch 1) while capturing high-ticket third-space demand that Lean Kiosks (Branch 2) and Delivery Cloud Kitchens (Branch 4) fatally surrender.
-- **Pareto Trade-off Analysis:** Trade-off analysis indicates that moving from Branch 2 (Express) to Branch 3 (Hybrid Oasis) increases capital requirement from ₹18L to ₹46.5L, but yields a 110% increase in competitive moat, an 80% increase in AOV (₹190 to ₹340), and unlocks full daypart monetization (morning breakfast + daytime remote work + evening dining). Moving further to Branch 1 (Flagship) doubles CAPEX to ₹95L for only marginal gains in brand status, while extending payback to nearly 3 years.
-- **Synthesized Execution Thesis:** **Deploy a 1,200 sqft venue structured as an Acoustically Engineered Third Space. Solve the market's two fatal structural bottlenecks—parking via leased valet and room echo via ceiling acoustic baffles. Capitalize on the uncontested 07:30 AM morning breakfast window with on-premise sourdough baking, and transition to a warm community social hub post-6 PM.**
+- **Deliberation Summary:** The Tree of Thoughts deliberation evaluated 4 competing architectural archetypes across capital efficiency, competitive defensibility, operational resilience, and customer alignment. Branch 3 (Acoustic Hybrid Work-Oasis & Micro-Bakery) emerged as the Pareto-optimal strategy, scoring 83.8/100 composite utility. It avoids the catastrophic capital bloat of the 2,500 sqft Mega-Flagship (Branch 1) while capturing high-ticket third-space demand that Lean Kiosks (Branch 2) and Delivery Cloud Kitchens (Branch 4) fatally surrender.
+- **Pareto Trade-off Analysis:** Trade-off analysis indicates that moving from Branch 2 (Express) to Branch 3 (Hybrid Oasis) increases capital requirement from ₹18L to ₹61.3L, but yields a 110% increase in competitive moat, a 53% increase in AOV (₹190 to ₹290), and unlocks full daypart monetization (morning breakfast + daytime remote work + evening dining). Moving further to Branch 1 (Flagship) increases CAPEX to ₹95L for only marginal gains in brand status, while extending payback to nearly 3 years.
+- **Synthesized Execution Thesis:** **Deploy a 1,000 sqft (40-seater) venue structured as an Acoustically Engineered Third Space. Solve the market's two fatal structural bottlenecks—parking via leased valet and room echo via ceiling acoustic baffles. Capitalize on the uncontested 07:30 AM morning breakfast window with on-premise sourdough baking, and transition to a warm community social hub post-6 PM.**
 
 ---
 
@@ -225,7 +225,7 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 | **Municipal Anti-Encroachment Vehicle Seizure** | `Catastrophic` | Jaipur Development Authority (JDA) conducts unannounced curb clearing; customer four-wheelers are clamped or towed. | Zero tolerance for unmanaged street curb parking. Station a branded valet booth at the entrance; all customer vehicles are immediately driven into contracted private basement bays. |
 
 ### Cognitive Bias Checks & Reality Sanity Filters
-- **Optimism Bias:** *Risk:* Assuming customer covers will immediately reach 115 covers/day in month 1 without considering local awareness ramp lag. ➔ **Reality Check:** Financial models must budget for a 90-day conservative ramp phase (55 covers/day Month 1, 85 covers/day Month 2, 115 covers/day Month 3) supported by a ₹6 Lakh cash working capital reserve.
+- **Optimism Bias:** *Risk:* Assuming customer covers will immediately reach 84 covers/day in month 1 without considering local awareness ramp lag. ➔ **Reality Check:** Financial models must budget for a 90-day conservative ramp phase (45 covers/day Month 1, 65 covers/day Month 2, 84 covers/day Month 3) supported by a ₹6 Lakh cash working capital reserve.
 - **Survivorship Bias:** *Risk:* Assuming that because Roastery Coffee House does ₹30L+ monthly in the area, any aesthetic café will automatically succeed. ➔ **Reality Check:** Roastery's success is heavily anchored to its rare 4,000 sqft heritage courtyard plot. A high-street outlet cannot clone their model; it must win on superior workspace ergonomics, acoustic quietness, and parking convenience.
 - **Sunk Cost Fallacy:** *Risk:* Continuing to pour working capital into an underperforming food menu or failing daypart rather than ruthlessly cutting low-margin SKUs. ➔ **Reality Check:** Establish strict 60-day SKU review gates: any menu item contributing less than 3% of revenue or generating high wastage (>10%) is permanently pruned.
 
@@ -315,12 +315,12 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 | Variable Cost Item | Rate Structure | Monthly Cost (₹) | Basis |
 | :--- | :---: | :---: | :--- |
 | **Raw Material COGS (Beans, Milk, Kitchen)** | 27.5% of Revenue | ₹2,04,320 | Direct beverage and food ingredients |
-| **Electricity, Water & Gas Utility** | Fixed-Variable step | ₹32,000 | Heavy commercial 3-phase air conditioning & espresso machine continuous draw |
+| **Electricity, Water & Gas Utility** | Fixed-Variable step | ₹42,000 | Heavy commercial 3-phase air conditioning & espresso machine continuous draw |
 | **Takeaway Packaging & Disposables** | 3.5% of Revenue | ₹26,004 | Custom embossed cups, sleeves, pastry bags, paper carrier totes |
-| **Aggregator Delivery Commissions** | 22% on delivery sales | ₹19,615 | Swiggy / Zomato order fulfillment |
-| **Local Digital Marketing & Creative Retainer** | Discretionary growth budget | ₹25,000 | Meta geo-targeted ads, photography, and monthly community workshops |
+| **Aggregator Delivery Commissions** | 22% on delivery sales | ₹24,518 | Swiggy / Zomato order fulfillment (15% delivery sales mix) |
+| **Local Digital Marketing & Creative Retainer** | Discretionary growth budget | ₹35,000 | Meta geo-targeted ads, photography, and monthly community workshops |
 | **Inventory Spoilage & Milk Wastage** | 2.5% of Revenue | ₹18,575 | Daily fresh dairy and bakery shelf-life expiration |
-| **Total Variable Monthly Costs** | — | **₹3,25,514** | Scaled to base case transaction volume |
+| **Total Variable Monthly Costs** | — | **₹3,50,417** | Scaled to base case transaction volume |
 
 ---
 
@@ -332,9 +332,9 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 - **Monthly Gross Revenue (Base):** ₹7,42,980
 - **Blended COGS Rate:** 27.5%
 - **Gross Profit (Base):** ₹5,38,661/mo (72.5%)
-- **Contribution Margin:** 63.9%
-- **Break-Even Monthly Revenue:** **₹5,47,468**
-- **Break-Even Daily Customer Volume:** **62 covers/day**
+- **Contribution Margin:** 63.2%
+- **Break-Even Monthly Revenue:** **₹5,79,114**
+- **Break-Even Daily Customer Volume:** **65 covers/day**
 
 ### 8.2 Three-Tier Scenario Modeling
 | Metric | Conservative Case (48% Util) | Base Case (70% Util) | Upside Case (88% Util) |
@@ -497,11 +497,11 @@ By architecting an **acoustically zoned specialty coffee & artisanal micro-baker
 
 | Assumption Label | Assumed Value | Business Rationale | Empirical Source / Basis | Confidence |
 | :--- | :---: | :--- | :--- | :---: |
-| **Commercial Lease Rental Rate** | ₹115 per sqft/month (₹1,38,000/mo for 1,200 sqft) | Required for baseline fixed OPEX calculation. | Median asking rate across 8 active commercial ground-floor listings along Pradhan Marg. | `High` |
+| **Commercial Lease Rental Rate** | ₹115 per sqft/month (₹1,15,000/mo for 1,000 sqft) | Required for baseline fixed OPEX calculation. | Median asking rate across 8 active commercial ground-floor listings along Pradhan Marg. | `High` |
 | **Blended COGS Rate** | 27.5% of gross revenue | Required for unit economics and gross contribution modeling. | Specialty coffee industry benchmark (65% beverage @ 25% COGS + 35% bakery @ 32% COGS). | `High` |
-| **Base Case Customer Volume** | 115 customer covers / day | Defines baseline revenue scenario across 55 seats. | ~70% capacity utilization assuming 2.1 seat turns per day. | `High` |
-| **Average Order Value (AOV)** | ₹340 per ticket | Calculates gross ticket size across single beverage + 0.4 food attachment. | Median pricing of specialty pour-over (₹220) + shared savory pastry (₹120 proxy). | `High` |
-| **Turnkey Interior Fitout Expense** | ₹1,750 per sqft | Determines civil, MEP, and acoustic CAPEX. | Current local architectural contracting quotations in Jaipur for specialty F&B. | `High` |
+| **Base Case Customer Volume** | 84 customer covers / day | Defines baseline revenue scenario across 40 seats (70% utilization @ 2.1 turns/day). | ~70% capacity utilization assuming 2.1 seat turns per day across 40 seats. | `High` |
+| **Average Order Value (AOV)** | ₹290 per ticket | Calculates gross ticket size across single specialty brew + study bundle attachment. | Median pricing of specialty pour-over / cappuccino (₹210) + shared savory pastry / study combo (₹80 proxy). | `High` |
+| **Turnkey Interior Fitout Expense** | ₹1,750 per sqft (₹17.5L for 1,000 sqft civil/acoustic) | Determines civil, MEP, and acoustic CAPEX envelope. | Current local architectural contracting quotations in Jaipur for specialty F&B. | `High` |
 
 ---
 

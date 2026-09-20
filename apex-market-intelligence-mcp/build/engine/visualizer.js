@@ -3,11 +3,11 @@
  */
 export function generateRatingVsReviewsSvg(competitors) {
     const width = 640;
-    const height = 300;
-    const padLeft = 60;
+    const height = 210;
+    const padLeft = 55;
     const padRight = 30;
-    const padTop = 30;
-    const padBottom = 40;
+    const padTop = 22;
+    const padBottom = 30;
     const chartW = width - padLeft - padRight;
     const chartH = height - padTop - padBottom;
     const minRating = 3.8;
@@ -18,12 +18,12 @@ export function generateRatingVsReviewsSvg(competitors) {
     const gridLines = [4.0, 4.2, 4.4, 4.6, 4.8, 5.0].map(r => {
         const x = getX(r);
         return `<line x1="${x}" y1="${padTop}" x2="${x}" y2="${padTop + chartH}" stroke="#e2e8f0" stroke-dasharray="3,3" />
-            <text x="${x}" y="${padTop + chartH + 18}" fill="#64748b" font-size="11" text-anchor="middle" font-family="system-ui">${r.toFixed(1)}★</text>`;
+            <text x="${x}" y="${padTop + chartH + 16}" fill="#64748b" font-size="10" text-anchor="middle" font-family="system-ui">${r.toFixed(1)}★</text>`;
     }).join("\n");
-    const yLines = [0, 1500, 3000, 4500, 6000].map(cnt => {
+    const yLines = [0, 2000, 4000, 6000].map(cnt => {
         const y = getY(cnt);
         return `<line x1="${padLeft}" y1="${y}" x2="${padLeft + chartW}" y2="${y}" stroke="#e2e8f0" stroke-dasharray="3,3" />
-            <text x="${padLeft - 10}" y="${y + 4}" fill="#64748b" font-size="10" text-anchor="end" font-family="system-ui">${cnt.toLocaleString()}</text>`;
+            <text x="${padLeft - 8}" y="${y + 4}" fill="#64748b" font-size="9.5" text-anchor="end" font-family="system-ui">${cnt.toLocaleString()}</text>`;
     }).join("\n");
     const dots = competitors.map(c => {
         const cx = getX(c.rating);
@@ -162,35 +162,48 @@ export function generateRevenueScenarioSvg(financials) {
 }
 export function generateSensitivityAnalysisSvg(financials) {
     const width = 640;
-    const height = 260;
-    const padLeft = 190;
-    const padRight = 80;
-    const padTop = 35;
-    const barHeight = 18;
-    const gap = 9;
+    const height = 230;
+    const padTop = 38;
+    const barHeight = 16;
+    const gap = 12;
     const topItems = financials.sensitivityAnalysis.slice(0, 6);
-    const maxImpact = 45;
-    const zeroX = padLeft + (width - padLeft - padRight) / 2;
-    const halfW = (width - padLeft - padRight) / 2;
+    // Dynamically calculate scale based on maximum absolute profit impact (with 20% margin)
+    const maxVal = Math.max(...topItems.map(item => Math.abs(item.impactOnMonthlyProfitPct)), 10);
+    const maxImpact = maxVal * 1.25;
+    const labelX = 14;
+    const chartLeft = 240;
+    const chartWidth = 375;
+    const zeroX = chartLeft + Math.round(chartWidth / 2); // 427
+    const halfW = Math.round(chartWidth / 2); // 187
     const bars = topItems.map((item, idx) => {
         const y = padTop + idx * (barHeight + gap);
         const isNeg = item.impactOnMonthlyProfitPct < 0;
-        const barW = Math.abs((item.impactOnMonthlyProfitPct / maxImpact) * halfW);
+        const barW = Math.min(Math.round((Math.abs(item.impactOnMonthlyProfitPct) / maxImpact) * halfW), halfW - 25);
         const startX = isNeg ? zeroX - barW : zeroX;
         const color = isNeg ? "#dc2626" : "#059669";
+        const valText = `${item.impactOnMonthlyProfitPct > 0 ? '+' : ''}${item.impactOnMonthlyProfitPct}%`;
+        // Clean label text
+        const labelText = `${item.variable} (${item.variation})`;
         return `
-      <text x="${padLeft - 10}" y="${y + 14}" fill="#334155" font-size="10.5" font-weight="600" text-anchor="end" font-family="system-ui">${item.variable} (${item.variation})</text>
+      <!-- Category Label with ample 220px width on left, start-anchored so never clipped -->
+      <text x="${labelX}" y="${y + 12}" fill="#1e293b" font-size="9.5" font-weight="600" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">${labelText}</text>
+      
+      <!-- Sensitivity Bar -->
       <rect x="${startX}" y="${y}" width="${barW}" height="${barHeight}" rx="3" fill="${color}" />
-      <text x="${isNeg ? startX - 6 : startX + barW + 6}" y="${y + 14}" fill="${color}" font-size="10.5" font-weight="700" text-anchor="${isNeg ? 'end' : 'start'}" font-family="system-ui">${item.impactOnMonthlyProfitPct > 0 ? '+' : ''}${item.impactOnMonthlyProfitPct}%</text>
+      
+      <!-- Value Text (never overlapping label or bar) -->
+      <text x="${isNeg ? startX - 5 : startX + barW + 5}" y="${y + 12}" fill="${color}" font-size="9.5" font-weight="700" text-anchor="${isNeg ? 'end' : 'start'}" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">${valText}</text>
     `;
     }).join("\n");
     return `
-    <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border-radius:8px; border:1px solid #e2e8f0;">
-      <text x="${width / 2}" y="18" fill="#475569" font-size="11" font-weight="700" text-anchor="middle" font-family="system-ui">Profit Sensitivity to Key Operating Variables (% Change in Monthly Operating Profit)</text>
+    <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border-radius:8px; border:1px solid #e2e8f0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+      <!-- Title -->
+      <text x="${width / 2}" y="16" fill="#334155" font-size="10.5" font-weight="700" text-anchor="middle">Profit Sensitivity to Key Operating Variables (% Change in Operating Profit)</text>
+      
       <!-- Center Zero Line -->
-      <line x1="${zeroX}" y1="${padTop - 5}" x2="${zeroX}" y2="${height - 20}" stroke="#94a3b8" stroke-width="1.5" />
-      <text x="${zeroX - 40}" y="${padTop - 8}" fill="#dc2626" font-size="9.5" font-weight="600" text-anchor="middle" font-family="system-ui">◄ Negative Impact</text>
-      <text x="${zeroX + 40}" y="${padTop - 8}" fill="#059669" font-size="9.5" font-weight="600" text-anchor="middle" font-family="system-ui">Positive Impact ►</text>
+      <line x1="${zeroX}" y1="${padTop - 8}" x2="${zeroX}" y2="${padTop + 6 * (barHeight + gap) - 4}" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="${zeroX - 45}" y="${padTop - 12}" fill="#dc2626" font-size="9" font-weight="700" text-anchor="middle">◄ Negative Impact</text>
+      <text x="${zeroX + 45}" y="${padTop - 12}" fill="#059669" font-size="9" font-weight="700" text-anchor="middle">Positive Impact ►</text>
       ${bars}
     </svg>
   `;

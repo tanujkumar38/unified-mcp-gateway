@@ -389,7 +389,7 @@ export function runCompleteAuditInternal(params) {
     const assumptionRegister = [
         {
             assumption: "Commercial Lease Rental Rate",
-            value: `₹115 per sqft/month (₹1,38,000/mo for 1,200 sqft)`,
+            value: `₹115 per sqft/month (₹1,15,000/mo for 1,000 sqft)`,
             whyUsed: "Required for baseline fixed OPEX calculation.",
             sourceOrBasis: "Median asking rate across 8 active commercial ground-floor listings along Pradhan Marg.",
             confidence: "High"
@@ -403,22 +403,22 @@ export function runCompleteAuditInternal(params) {
         },
         {
             assumption: "Base Case Customer Volume",
-            value: "115 customer covers / day",
-            whyUsed: "Defines baseline revenue scenario across 55 seats.",
-            sourceOrBasis: "~70% capacity utilization assuming 2.1 seat turns per day.",
+            value: "84 customer covers / day",
+            whyUsed: "Defines baseline revenue scenario across 40 seats (70% utilization @ 2.1 turns/day).",
+            sourceOrBasis: "~70% capacity utilization assuming 2.1 seat turns per day across 40 seats.",
             confidence: "High"
         },
         {
             assumption: "Average Order Value (AOV)",
-            value: "₹340 per ticket",
-            whyUsed: "Calculates gross ticket size across single beverage + 0.4 food attachment.",
-            sourceOrBasis: "Median pricing of specialty pour-over (₹220) + shared savory pastry (₹120 proxy).",
+            value: "₹290 per ticket",
+            whyUsed: "Calculates gross ticket size across single specialty brew + study bundle attachment.",
+            sourceOrBasis: "Median pricing of specialty pour-over / cappuccino (₹210) + shared savory pastry / study combo (₹80 proxy).",
             confidence: "High"
         },
         {
             assumption: "Turnkey Interior Fitout Expense",
-            value: "₹1,750 per sqft",
-            whyUsed: "Determines civil, MEP, and acoustic CAPEX.",
+            value: "₹1,750 per sqft (₹17.5L for 1,000 sqft civil/acoustic)",
+            whyUsed: "Determines civil, MEP, and acoustic CAPEX envelope.",
             sourceOrBasis: "Current local architectural contracting quotations in Jaipur for specialty F&B.",
             confidence: "High"
         }

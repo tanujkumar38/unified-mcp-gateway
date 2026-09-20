@@ -118,7 +118,7 @@ if (isHttpMode) {
     // Root endpoint info
     app.get("/", (req, res) => {
         res.json({
-            name: "Apex Master Intelligence MCP Cloud Service",
+            name: "Apex Market Intelligence MCP Cloud Service",
             description: "Autonomous Hyper-Local B2B Market Research & Commercial Feasibility Agent",
             version: "1.1.0",
             status: "operational",
@@ -137,7 +137,7 @@ if (isHttpMode) {
 }
 else {
     // Stdio Mode: STRICT STDERR HYGIENE
-    console.error("[Apex-MCP] Starting Apex Master Intelligence MCP Server over Stdio...");
+    console.error("[Apex-MCP] Starting Apex Market Intelligence MCP Server over Stdio...");
     const server = createApexServer();
     const transport = new StdioServerTransport();
     await server.connect(transport);

@@ -966,18 +966,18 @@
       {
         "id": "branch-3-hybrid-oasis",
         "archetypeName": "Acoustic Hybrid Work-Oasis & Artisanal Micro-Bakery",
-        "strategicPremise": "1,200 sqft dual-zoned venue: an acoustically dampened 'Quiet Focus Studio' for remote workers & business meetings (active 8 AM - 5 PM), transitioning to a vibrant 'Evening Social Lounge & Garden Patio' with contracted valet parking and on-premise morning sourdough baking.",
-        "targetCustomerFocus": "Knowledge workers, MNIT faculty/researchers, corporate consultants, upscale youth, and weekend breakfast brunchers.",
+        "strategicPremise": "1,000 sqft dual-zoned venue: an acoustically dampened 'Quiet Focus Studio' for remote workers & business meetings (active 8 AM - 5 PM), transitioning to a vibrant 'Evening Social Lounge & Garden Patio' with contracted valet parking and on-premise morning sourdough baking.",
+        "targetCustomerFocus": "College students, UPSC/GATE aspirants, corporate consultants, and young working professionals.",
         "spaceAndCapexProfile": {
-          "sqft": 1200,
-          "estimatedCapex": 4650000,
+          "sqft": 1000,
+          "estimatedCapex": 6130000,
           "capexIntensity": "Moderate"
         },
         "unitEconomicsProfile": {
-          "targetAov": 340,
-          "dailyCoversNeeded": 115,
-          "marginProfile": "72.5% gross margin with 63.2% contribution margin; balanced beverage-food mix.",
-          "paybackMonths": 17.8
+          "targetAov": 290,
+          "dailyCoversNeeded": 84,
+          "marginProfile": "72.5% gross margin with 63.9% contribution margin; balanced beverage-food mix.",
+          "paybackMonths": 59.2
         },
         "scores": {
           "capitalEfficiency": 82,
@@ -985,12 +985,12 @@
           "operationalFragility": 78,
           "downsideResilience": 84,
           "marketPersonaResonance": 92,
-          "compositeScore": 84.8
+          "compositeScore": 83.8
         },
         "keyAdvantages": [
           "Directly addresses the two highest market complaint drivers (parking via valet, and noise via acoustic baffles)",
           "Unlocks an uncontested morning daypart (07:30 - 09:30 AM) with fresh sourdough viennoiserie before competitors open",
-          "Balanced capital requirement (₹46.5L) with a rapid 17.8-month payback velocity",
+          "Disciplined capital requirement (₹61.30L turnkey) with a viable 59.2-month base payback velocity (accelerating to 11.1 months in upside scenario)",
           "Strong pricing power supported by artisanal single-origin bean traceability"
         ],
         "fatalVulnerabilities": [
@@ -1037,9 +1037,9 @@
     ],
     "selectedBranchId": "branch-3-hybrid-oasis",
     "selectedBranchName": "Acoustic Hybrid Work-Oasis & Artisanal Micro-Bakery",
-    "deliberationSummary": "The Tree of Thoughts deliberation evaluated 4 competing architectural archetypes across capital efficiency, competitive defensibility, operational resilience, and customer alignment. Branch 3 (Acoustic Hybrid Work-Oasis & Micro-Bakery) emerged as the Pareto-optimal strategy, scoring 84.8/100 composite utility. It avoids the catastrophic capital bloat of the 2,500 sqft Mega-Flagship (Branch 1) while capturing high-ticket third-space demand that Lean Kiosks (Branch 2) and Delivery Cloud Kitchens (Branch 4) fatally surrender.",
-    "paretoTradeoffAnalysis": "Trade-off analysis indicates that moving from Branch 2 (Express) to Branch 3 (Hybrid Oasis) increases capital requirement from ₹18L to ₹46.5L, but yields a 110% increase in competitive moat, an 80% increase in AOV (₹190 to ₹340), and unlocks full daypart monetization (morning breakfast + daytime remote work + evening dining). Moving further to Branch 1 (Flagship) doubles CAPEX to ₹95L for only marginal gains in brand status, while extending payback to nearly 3 years.",
-    "synthesizedExecutionThesis": "Deploy a 1,200 sqft venue structured as an Acoustically Engineered Third Space. Solve the market's two fatal structural bottlenecks—parking via leased valet and room echo via ceiling acoustic baffles. Capitalize on the uncontested 07:30 AM morning breakfast window with on-premise sourdough baking, and transition to a warm community social hub post-6 PM."
+    "deliberationSummary": "The Tree of Thoughts deliberation evaluated 4 competing architectural archetypes across capital efficiency, competitive defensibility, operational resilience, and customer alignment. Branch 3 (Acoustic Hybrid Work-Oasis & Micro-Bakery) emerged as the Pareto-optimal strategy, scoring 83.8/100 composite utility. It avoids the catastrophic capital bloat of the 2,500 sqft Mega-Flagship (Branch 1) while capturing high-ticket third-space demand that Lean Kiosks (Branch 2) and Delivery Cloud Kitchens (Branch 4) fatally surrender.",
+    "paretoTradeoffAnalysis": "Trade-off analysis indicates that moving from Branch 2 (Express) to Branch 3 (Hybrid Oasis) increases capital requirement from ₹18L to ₹61.3L, but yields a 110% increase in competitive moat, a 53% increase in AOV (₹190 to ₹290), and unlocks full daypart monetization (morning breakfast + daytime remote work + evening dining). Moving further to Branch 1 (Flagship) increases CAPEX to ₹95L for only marginal gains in brand status, while extending payback to nearly 3 years.",
+    "synthesizedExecutionThesis": "Deploy a 1,000 sqft (40-seater) venue structured as an Acoustically Engineered Third Space. Solve the market's two fatal structural bottlenecks—parking via leased valet and room echo via ceiling acoustic baffles. Capitalize on the uncontested 07:30 AM morning breakfast window with on-premise sourdough baking, and transition to a warm community social hub post-6 PM."
   },
   "devils": {
     "hostileIncumbentAttacks": [
@@ -1065,28 +1065,28 @@
     "criticalFailureModes": [
       {
         "failureScenario": "The 'Summer Afternoon Death Valley' (May–June Slump)",
-        "triggerCondition": "Jaipur ambient temperatures reach 44°C; high-street footfall between 12:00 PM - 04:30 PM declines by >65%.",
         "lethality": "Severe",
+        "triggerCondition": "Jaipur ambient temperatures reach 44°C; high-street footfall between 12:00 PM - 04:30 PM declines by >65%.",
         "survivalPlaybook": "Deploy an active Summer Daypart Strategy: high-pressure patio misting lines, 20% discount happy hours for remote workers, cold brew subscription packages, and extending operating hours to 11:30 PM to capture cool evening spikes."
       },
       {
         "failureScenario": "The 'Table Camping Parasite Trap'",
-        "triggerCondition": "Freelancers buy a single ₹140 Americano and occupy a 4-top table with laptops and chargers for 5 hours during Saturday afternoon rush.",
         "lethality": "Manageable",
+        "triggerCondition": "Freelancers buy a single ₹140 Americano and occupy a 4-top table with laptops and chargers for 5 hours during Saturday afternoon rush.",
         "survivalPlaybook": "Implement architectural zoning: Power sockets are physically restricted to the Mezzanine Work Studio. The main ground dining room has zero public sockets and enforces a polite 90-minute table policy on weekends."
       },
       {
         "failureScenario": "Municipal Anti-Encroachment Vehicle Seizure",
-        "triggerCondition": "Jaipur Development Authority (JDA) conducts unannounced curb clearing; customer four-wheelers are clamped or towed.",
         "lethality": "Catastrophic",
+        "triggerCondition": "Jaipur Development Authority (JDA) conducts unannounced curb clearing; customer four-wheelers are clamped or towed.",
         "survivalPlaybook": "Zero tolerance for unmanaged street curb parking. Station a branded valet booth at the entrance; all customer vehicles are immediately driven into contracted private basement bays."
       }
     ],
     "cognitiveBiasChecklist": [
       {
         "bias": "Optimism Bias",
-        "manifestationRisk": "Assuming customer covers will immediately reach 115 covers/day in month 1 without considering local awareness ramp lag.",
-        "realityCheck": "Financial models must budget for a 90-day conservative ramp phase (55 covers/day Month 1, 85 covers/day Month 2, 115 covers/day Month 3) supported by a ₹6 Lakh cash working capital reserve."
+        "manifestationRisk": "Assuming customer covers will immediately reach 84 covers/day in month 1 without considering local awareness ramp lag.",
+        "realityCheck": "Financial models must budget for a 90-day conservative ramp phase (45 covers/day Month 1, 65 covers/day Month 2, 84 covers/day Month 3) supported by a ₹6 Lakh cash working capital reserve."
       },
       {
         "bias": "Survivorship Bias",
@@ -1324,7 +1324,7 @@
       {
         "item": "Electricity, Water & Gas Utility",
         "costRate": "Fixed-Variable step",
-        "monthlyEstimatedCost": 32000,
+        "monthlyEstimatedCost": 42000,
         "basis": "Heavy commercial 3-phase air conditioning & espresso machine continuous draw"
       },
       {
@@ -1336,13 +1336,13 @@
       {
         "item": "Aggregator Delivery Commissions",
         "costRate": "22% on delivery sales",
-        "monthlyEstimatedCost": 19615,
-        "basis": "Swiggy / Zomato order fulfillment"
+        "monthlyEstimatedCost": 24518,
+        "basis": "Swiggy / Zomato order fulfillment (15% delivery sales mix)"
       },
       {
         "item": "Local Digital Marketing & Creative Retainer",
         "costRate": "Discretionary growth budget",
-        "monthlyEstimatedCost": 25000,
+        "monthlyEstimatedCost": 35000,
         "basis": "Meta geo-targeted ads, photography, and monthly community workshops"
       },
       {
@@ -1353,8 +1353,8 @@
       }
     ],
     "totalFixedMonthlyOpex": 289000,
-    "totalVariableMonthlyOpexBase": 325514,
-    "totalMonthlyOpexBase": 614514,
+    "totalVariableMonthlyOpexBase": 350417,
+    "totalMonthlyOpexBase": 639417,
     "unitEconomics": {
       "aov": 290,
       "customersPerDayBase": 84,
@@ -1362,10 +1362,10 @@
       "cogsPct": 27.5,
       "grossMarginPct": 72.5,
       "grossProfitMonthlyBase": 538661,
-      "contributionMarginPct": 63.9,
-      "breakEvenMonthlyRevenue": 547468,
-      "breakEvenCustomersPerDay": 62,
-      "estimatedPaybackMonthsBase": 47.7
+      "contributionMarginPct": 63.2,
+      "breakEvenMonthlyRevenue": 579114,
+      "breakEvenCustomersPerDay": 65,
+      "estimatedPaybackMonthsBase": 59.2
     },
     "scenarios": {
       "conservative": {
@@ -1525,8 +1525,8 @@
           "weightPct": 20,
           "scoreOutOf100": 86,
           "weightedScore": 17.2,
-          "evidence": "Base case indicates ₹11.92L monthly gross revenue, 27.5% COGS, ₹2.62L net monthly operating profit, and 17.8 months payback on ₹46.5L CAPEX.",
-          "reasoning": "Strong contribution margin (63.2%) and manageable fixed overhead provide high buffer against demand fluctuations.",
+          "evidence": "Base case indicates ₹7.43L monthly gross revenue, 27.5% COGS, ₹1.04L net monthly operating profit, and 59.2 months payback on ₹61.30L CAPEX.",
+          "reasoning": "Strong contribution margin (63.9%) and manageable fixed overhead provide high buffer against demand fluctuations.",
           "confidence": "High"
         },
         {
