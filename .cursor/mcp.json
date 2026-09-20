@@ -5,6 +5,12 @@
       "args": [
         "C:\\Users\\tanuj\\Documents\\antigravity\\zealous-brahmagupta\\tickertape-mcp\\build\\index.js"
       ]
+    },
+    "lead-scout": {
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\tanuj\\Documents\\antigravity\\zealous-brahmagupta\\lead-scout-mcp\\build\\index.js"
+      ]
     }
   }
 }

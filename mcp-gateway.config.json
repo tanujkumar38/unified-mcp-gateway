@@ -20,6 +20,30 @@
   },
   "upstreams": [
     {
+      "id": "lead-scout",
+      "name": "LeadScout MCP Lead Discovery",
+      "description": "Discover and qualify B2B and local leads across LinkedIn, Google Maps, and Justdial",
+      "category": "marketing",
+      "transport": "stdio",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\tanuj\\Documents\\antigravity\\zealous-brahmagupta\\lead-scout-mcp\\build\\index.js"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "apex-market-intelligence",
+      "name": "Apex Master Intelligence B2B Market Research",
+      "description": "Autonomous hyper-local B2B market research, competitive intelligence, and commercial feasibility engine",
+      "category": "business-intelligence",
+      "transport": "stdio",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\tanuj\\Documents\\antigravity\\zealous-brahmagupta\\apex-market-intelligence-mcp\\build\\index.js"
+      ],
+      "enabled": true
+    },
+    {
       "id": "sample-external-stdio",
       "name": "Sample External Stdio MCP Server",
       "description": "Example demonstrating how to plug any future external MCP server into this gateway",

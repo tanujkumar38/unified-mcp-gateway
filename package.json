@@ -9,10 +9,11 @@
     "google-flow-mcp": "dist/index.js"
   },
   "workspaces": [
-    "tickertape-mcp"
+    "tickertape-mcp",
+    "apex-market-intelligence-mcp"
   ],
   "scripts": {
-    "build": "npm --prefix tickertape-mcp install && npm --prefix tickertape-mcp run build && tsc",
+    "build": "npm --prefix tickertape-mcp install && npm --prefix tickertape-mcp run build && npm --prefix apex-market-intelligence-mcp install && npm --prefix apex-market-intelligence-mcp run build && tsc",
     "start": "node dist/gateway/index.js",
     "gateway": "node dist/gateway/index.js",
     "gateway:stdio": "node dist/gateway/index.js --stdio",
@@ -20,6 +21,9 @@
     "flow:stdio": "node dist/index.js",
     "tickertape:http": "npm --prefix tickertape-mcp start -- --http",
     "tickertape:stdio": "npm --prefix tickertape-mcp start",
+    "apex:http": "npm --prefix apex-market-intelligence-mcp run start:http",
+    "apex:stdio": "npm --prefix apex-market-intelligence-mcp start",
+    "apex:build": "npm --prefix apex-market-intelligence-mcp run build",
     "dev": "tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest",

@@ -1,0 +1,42 @@
+{
+  "name": "apex-market-intelligence-mcp",
+  "version": "1.0.0",
+  "description": "Apex Master Intelligence: Autonomous Hyper-Local B2B Market Research & Commercial Intelligence MCP Server",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "apex-market-intelligence": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "start:http": "node build/index.js --http",
+    "dev": "tsc --watch",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "market-research",
+    "competitive-intelligence",
+    "feasibility-study",
+    "commercial-strategy",
+    "financial-modeling",
+    "hyper-local"
+  ],
+  "author": "Apex Intelligence Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "puppeteer-core": "^25.11.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}
