@@ -44,6 +44,15 @@
       "enabled": true
     },
     {
+      "id": "apex-market-intelligence-cloud",
+      "name": "Apex Master Intelligence Cloud (Render)",
+      "description": "Hosted cloud instance of Apex Master Intelligence running on Render",
+      "category": "business-intelligence",
+      "transport": "sse",
+      "url": "https://apex-market-intelligence.onrender.com/sse",
+      "enabled": true
+    },
+    {
       "id": "sample-external-stdio",
       "name": "Sample External Stdio MCP Server",
       "description": "Example demonstrating how to plug any future external MCP server into this gateway",
