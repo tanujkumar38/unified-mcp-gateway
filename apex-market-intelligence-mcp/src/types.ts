@@ -407,6 +407,155 @@ export interface BayesianFeasibilityResult {
   probabilisticVerdict: string;
 }
 
+// --- 1. Critical Thinking Audit ---
+export interface SocraticInterrogation {
+  underlyingPremise: string;
+  socraticChallenge: string;
+  empiricalEvidenceTest: string;
+  robustnessVerdict: "Validated" | "Fragile" | "Refuted";
+}
+
+export interface LogicalFallacyAlert {
+  fallacyName: string;
+  observedPattern: string;
+  correctionAction: string;
+}
+
+export interface CognitiveBiasAssessment {
+  bias: string;
+  riskManifestation: string;
+  counterMeasure: string;
+}
+
+export interface CriticalThinkingAudit {
+  socraticInterrogations: SocraticInterrogation[];
+  logicalFallaciesIdentified: LogicalFallacyAlert[];
+  cognitiveBiasesMitigated: CognitiveBiasAssessment[];
+  epistemicConfidenceScore: number; // 0 - 100
+  criticalThinkingSynthesis: string;
+}
+
+// --- 2. First-Principles Deconstruction ---
+export interface PhysicalEconomicAxiom {
+  resource: string;
+  physicalInput: string;
+  unitCostAxiom: string;
+  benchmarkAnalogyCost: string;
+  firstPrinciplesArbitrage: string;
+}
+
+export interface FirstPrinciplesDeconstruction {
+  foundationalTruths: string[];
+  physicalEconomicAxioms: PhysicalEconomicAxiom[];
+  zeroBasedCostReconstruction: {
+    theoreticalFloorCogsPct: number;
+    laborEfficiencyHoursPerCover: number;
+    spatialYieldMonthlyPerSqft: number;
+  };
+  analogyVsFirstPrinciplesSynthesis: string;
+}
+
+// --- 3. Inversion & Pre-Mortem Thinking ---
+export interface PreMortemAutopsyItem {
+  fatalMechanism: string;
+  rootCauseTrajectory: string;
+  preventativeInoculation: string;
+}
+
+export interface InversionPreMortem {
+  prospectiveHindsightHorizon: string; // "24 Months Post-Launch"
+  catastrophicFailurePremise: string;
+  autopsyForensicFindings: PreMortemAutopsyItem[];
+  antiGoalsRegister: string[];
+  mandatoryKillSwitches: {
+    metric: string;
+    threshold: string;
+    enforcementAction: string;
+  }[];
+  inversionSynthesis: string;
+}
+
+// --- 4. Lateral & Divergent Thinking ---
+export interface ProvocationOperation {
+  dogmaChallenged: string;
+  provocativeHypothesis: string;
+  lateralCommercialModel: string;
+  viabilityTier: "Breakthrough" | "High Value Niche" | "Speculative";
+}
+
+export interface LateralThinkingExploration {
+  provocations: ProvocationOperation[];
+  crossIndustryTransfers: {
+    donorIndustry: string;
+    transferredMechanism: string;
+    localApplication: string;
+  }[];
+  asymmetricRevenueVectors: string[];
+  lateralThinkingSynthesis: string;
+}
+
+// --- 5. Strategic Game Theory War Room ---
+export interface CompetitorReaction {
+  competitorGroup: string;
+  likelyMove: string;
+  payoffToCompetitor: string;
+  impactOnApex: string;
+  dominantCounterStrategy: string;
+}
+
+export interface GameTheoreticWarRoom {
+  gameFormulation: string;
+  competitorReactions: CompetitorReaction[];
+  nashEquilibriumPosture: string;
+  minimaxDefensiveStrategy: string;
+  moatAndLockinMechanisms: string[];
+}
+
+// --- 6. Dialectical Thinking ---
+export interface DialecticalTension {
+  thesis: string;
+  antithesis: string;
+  underlyingConflict: string;
+  higherOrderSynthesis: string;
+}
+
+export interface DialecticalSynthesis {
+  coreTensions: DialecticalTension[];
+  overarchingStrategicSynthesis: string;
+}
+
+// --- 7. Counterfactual Simulation ---
+export interface CounterfactualScenario {
+  scenarioId: string;
+  name: string;
+  counterfactualShock: string;
+  projectedProfitVariancePct: number;
+  businessSurvivalProbabilityPct: number;
+  resiliencePlaybook: string;
+}
+
+export interface CounterfactualSimulation {
+  baselineReference: string;
+  branches: CounterfactualScenario[];
+  systemicAntifragilityScore: number; // 0 - 100
+  counterfactualSynthesis: string;
+}
+
+// --- Omni-Cognitive Architecture Container (All 10 Paradigms) ---
+export interface OmniCognitiveAuditResult {
+  criticalThinking: CriticalThinkingAudit;
+  firstPrinciples: FirstPrinciplesDeconstruction;
+  inversionPreMortem: InversionPreMortem;
+  lateralThinking: LateralThinkingExploration;
+  gameTheory: GameTheoreticWarRoom;
+  dialectics: DialecticalSynthesis;
+  counterfactuals: CounterfactualSimulation;
+  secondOrderDynamics: SecondOrderEffect[];
+  treeOfThoughts: TreeOfThoughtsResult;
+  bayesianFeasibility: BayesianFeasibilityResult;
+  omniCognitiveSummary: string;
+}
+
 // --- Master Full Audit Result ---
 export interface MasterMarketAuditResult {
   intake: IntakeRequirements;
@@ -430,5 +579,7 @@ export interface MasterMarketAuditResult {
   devilsAdvocate: DevilsAdvocateAudit;
   secondOrderEffects: SecondOrderEffect[];
   bayesianFeasibility: BayesianFeasibilityResult;
+  omniCognitive: OmniCognitiveAuditResult;
 }
+
 

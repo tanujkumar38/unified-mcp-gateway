@@ -256,15 +256,15 @@ export function generateRiskHeatmapSvg(risks) {
 }
 export function generateTreeOfThoughtsSvg(tot) {
     const width = 640;
-    const height = 280;
-    const rootX = 20;
-    const rootY = 110;
-    const rootW = 140;
-    const rootH = 60;
-    const branchX = 220;
-    const branchW = 390;
-    const branchH = 50;
-    const branchYs = [18, 78, 138, 204];
+    const height = 220;
+    const rootX = 16;
+    const rootY = 80;
+    const rootW = 135;
+    const rootH = 55;
+    const branchX = 210;
+    const branchW = 410;
+    const branchH = 44;
+    const branchYs = [10, 60, 110, 162];
     const connectors = branchYs.map((by, i) => {
         const isSelected = !tot.branches[i]?.pruned;
         const startX = rootX + rootW;
@@ -274,7 +274,7 @@ export function generateTreeOfThoughtsSvg(tot) {
         const stroke = isSelected ? "#059669" : "#94a3b8";
         const strokeW = isSelected ? "2.5" : "1.5";
         const dash = isSelected ? "" : 'stroke-dasharray="3,3"';
-        return `<path d="M ${startX} ${startY} C ${startX + 35} ${startY}, ${endX - 35} ${endY}, ${endX} ${endY}" fill="none" stroke="${stroke}" stroke-width="${strokeW}" ${dash} />`;
+        return `<path d="M ${startX} ${startY} C ${startX + 30} ${startY}, ${endX - 30} ${endY}, ${endX} ${endY}" fill="none" stroke="${stroke}" stroke-width="${strokeW}" ${dash} />`;
     }).join("\n");
     const branchCards = tot.branches.map((b, i) => {
         const by = branchYs[i];
@@ -286,28 +286,25 @@ export function generateTreeOfThoughtsSvg(tot) {
         const badgeText = isSelected ? `SELECTED: ${b.scores.compositeScore.toFixed(1)} / 100` : `PRUNED: ${b.scores.compositeScore.toFixed(1)}`;
         return `
       <g transform="translate(${branchX}, ${by})">
-        <rect width="${branchW}" height="${branchH}" rx="6" fill="${bg}" stroke="${border}" stroke-width="${isSelected ? 2 : 1}" />
-        <text x="12" y="20" fill="#0f172a" font-size="11" font-weight="${isSelected ? 700 : 600}" font-family="system-ui">${b.archetypeName}</text>
-        <text x="12" y="38" fill="#64748b" font-size="9" font-family="system-ui">${b.spaceAndCapexProfile.sqft} sqft | CAPEX: ₹${(b.spaceAndCapexProfile.estimatedCapex / 100000).toFixed(1)}L | Payback: ${b.unitEconomicsProfile.paybackMonths} Mo</text>
+        <rect width="${branchW}" height="${branchH}" rx="5" fill="${bg}" stroke="${border}" stroke-width="${isSelected ? 2 : 1}" />
+        <text x="10" y="18" fill="#0f172a" font-size="10.5" font-weight="${isSelected ? 700 : 600}" font-family="system-ui">${b.archetypeName}</text>
+        <text x="10" y="34" fill="#64748b" font-size="8.5" font-family="system-ui">${b.spaceAndCapexProfile.sqft} sqft | CAPEX: ₹${(b.spaceAndCapexProfile.estimatedCapex / 100000).toFixed(1)}L | Payback: ${b.unitEconomicsProfile.paybackMonths} Mo</text>
         
-        <rect x="${branchW - 130}" y="12" width="120" height="24" rx="4" fill="${badgeBg}" />
-        <text x="${branchW - 70}" y="28" fill="${badgeColor}" font-size="9.5" font-weight="700" text-anchor="middle" font-family="system-ui">${badgeText}</text>
+        <rect x="${branchW - 130}" y="10" width="120" height="22" rx="4" fill="${badgeBg}" />
+        <text x="${branchW - 70}" y="25" fill="${badgeColor}" font-size="9" font-weight="700" text-anchor="middle" font-family="system-ui">${badgeText}</text>
       </g>
     `;
     }).join("\n");
     return `
     <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border-radius:8px; border:1px solid #e2e8f0;">
-      <!-- Title -->
-      <text x="${width / 2}" y="14" fill="#475569" font-size="10" font-weight="700" text-anchor="middle" font-family="system-ui">Tree of Thoughts (ToT) Multi-Branch Evaluation &amp; Strategic Pruning</text>
-
       <!-- Connectors -->
       ${connectors}
 
       <!-- Root Problem Node -->
       <g transform="translate(${rootX}, ${rootY})">
         <rect width="${rootW}" height="${rootH}" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
-        <text x="${rootW / 2}" y="24" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle" font-family="system-ui">STRATEGIC ENTRY</text>
-        <text x="${rootW / 2}" y="42" fill="#94a3b8" font-size="8.5" text-anchor="middle" font-family="system-ui">4 Competing Models</text>
+        <text x="${rootW / 2}" y="23" fill="#ffffff" font-size="9.5" font-weight="700" text-anchor="middle" font-family="system-ui">STRATEGIC ENTRY</text>
+        <text x="${rootW / 2}" y="39" fill="#94a3b8" font-size="8" text-anchor="middle" font-family="system-ui">4 Competing Models</text>
       </g>
 
       <!-- Branch Cards -->

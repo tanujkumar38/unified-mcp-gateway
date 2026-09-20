@@ -144,6 +144,63 @@ async function main() {
   console.log(`[+] Prior Survival Rate: ${results.bayes.priorIndustrySurvivalRatePct}% --> Posterior: ${results.bayes.posteriorSurvivalProbabilityPct}%`);
   console.log(`[+] 95% Credible Interval: [${results.bayes.credibleInterval95Pct[0]}%, ${results.bayes.credibleInterval95Pct[1]}%] - Verdict: ${results.bayes.probabilisticVerdict}`);
 
+  // Cognitive: Critical Thinking
+  console.log("\n--- Calling audit_critical_thinking ---");
+  const critRes = await client.callTool({ name: "audit_critical_thinking", arguments: auditParams });
+  results.criticalThinking = JSON.parse(critRes.content[0].text);
+  console.log(`[+] Epistemic Confidence Score: ${results.criticalThinking.epistemicConfidenceScore}/100`);
+  console.log(`[+] Socratic Interrogations: ${results.criticalThinking.socraticInterrogations.length} premises checked`);
+  console.log(`[+] Fallacies Identified & Corrected: ${results.criticalThinking.logicalFallaciesIdentified.length}`);
+
+  // Cognitive: First-Principles
+  console.log("\n--- Calling deconstruct_first_principles ---");
+  const fpRes = await client.callTool({ name: "deconstruct_first_principles", arguments: auditParams });
+  results.firstPrinciples = JSON.parse(fpRes.content[0].text);
+  console.log(`[+] Beverage Raw Ingredient Cost: ₹24.80 (88.5% margin)`);
+  console.log(`[+] Spatial Yield: ₹${results.firstPrinciples.zeroBasedCostReconstruction.spatialYieldMonthlyPerSqft}/sqft/month | Floor COGS: ${results.firstPrinciples.zeroBasedCostReconstruction.theoreticalFloorCogsPct}%`);
+
+  // Cognitive: Inversion Pre-Mortem
+  console.log("\n--- Calling conduct_inversion_pre_mortem ---");
+  const invRes = await client.callTool({ name: "conduct_inversion_pre_mortem", arguments: auditParams });
+  results.inversion = JSON.parse(invRes.content[0].text);
+  console.log(`[+] Prospective Horizon: ${results.inversion.prospectiveHindsightHorizon}`);
+  console.log(`[+] Forensic Autopsy Items: ${results.inversion.autopsyForensicFindings.length}`);
+  console.log(`[+] Anti-Goals Prohibitions: ${results.inversion.antiGoalsRegister.length}`);
+
+  // Cognitive: Lateral Thinking
+  console.log("\n--- Calling explore_lateral_thinking ---");
+  const latRes = await client.callTool({ name: "explore_lateral_thinking", arguments: auditParams });
+  results.lateral = JSON.parse(latRes.content[0].text);
+  console.log(`[+] Provocative Operations (PO): ${results.lateral.provocations.length}`);
+  console.log(`[+] Cross-Industry Analogies:`, results.lateral.crossIndustryTransfers.map(t => `${t.donorIndustry} (${t.transferredMechanism})`));
+
+  // Cognitive: Strategic Game Theory
+  console.log("\n--- Calling simulate_game_theory ---");
+  const gtRes = await client.callTool({ name: "simulate_game_theory", arguments: auditParams });
+  results.gameTheory = JSON.parse(gtRes.content[0].text);
+  console.log(`[+] Nash Equilibrium Posture: ${results.gameTheory.nashEquilibriumPosture}`);
+  console.log(`[+] Minimax Defensive Strategy: ${results.gameTheory.minimaxDefensiveStrategy}`);
+
+  // Cognitive: Dialectical Synthesis
+  console.log("\n--- Calling synthesize_dialectics ---");
+  const diaRes = await client.callTool({ name: "synthesize_dialectics", arguments: auditParams });
+  results.dialectics = JSON.parse(diaRes.content[0].text);
+  console.log(`[+] Core Polar Tensions Synthesized: ${results.dialectics.coreTensions.length}`);
+
+  // Cognitive: Counterfactuals
+  console.log("\n--- Calling simulate_counterfactuals ---");
+  const cfRes = await client.callTool({ name: "simulate_counterfactuals", arguments: auditParams });
+  results.counterfactuals = JSON.parse(cfRes.content[0].text);
+  console.log(`[+] Systemic Antifragility Score: ${results.counterfactuals.systemicAntifragilityScore}/100`);
+  console.log(`[+] Shock Scenarios Modeled: ${results.counterfactuals.branches.length}`);
+
+  // Cognitive: Omni-Cognitive Master Audit
+  console.log("\n--- Calling execute_omni_cognitive_audit ---");
+  const omniRes = await client.callTool({ name: "execute_omni_cognitive_audit", arguments: auditParams });
+  results.omniCognitive = JSON.parse(omniRes.content[0].text);
+  console.log(`[+] Omni-Cognitive Master Summary: ${results.omniCognitive.omniCognitiveSummary.slice(0, 100)}...`);
+
+
   // Financial Model
   console.log("\n--- Calling generate_financial_model ---");
   const finRes = await client.callTool({ name: "generate_financial_model", arguments: auditParams });

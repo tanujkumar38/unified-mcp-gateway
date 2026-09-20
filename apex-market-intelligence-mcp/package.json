@@ -1,6 +1,6 @@
 {
   "name": "apex-market-intelligence-mcp",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Apex Market Intelligence: Autonomous Hyper-Local B2B Market Research & Commercial Intelligence MCP Server",
   "type": "module",
   "main": "build/index.js",

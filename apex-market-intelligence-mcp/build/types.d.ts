@@ -415,6 +415,130 @@ export interface BayesianFeasibilityResult {
     credibleInterval95Pct: [number, number];
     probabilisticVerdict: string;
 }
+export interface SocraticInterrogation {
+    underlyingPremise: string;
+    socraticChallenge: string;
+    empiricalEvidenceTest: string;
+    robustnessVerdict: "Validated" | "Fragile" | "Refuted";
+}
+export interface LogicalFallacyAlert {
+    fallacyName: string;
+    observedPattern: string;
+    correctionAction: string;
+}
+export interface CognitiveBiasAssessment {
+    bias: string;
+    riskManifestation: string;
+    counterMeasure: string;
+}
+export interface CriticalThinkingAudit {
+    socraticInterrogations: SocraticInterrogation[];
+    logicalFallaciesIdentified: LogicalFallacyAlert[];
+    cognitiveBiasesMitigated: CognitiveBiasAssessment[];
+    epistemicConfidenceScore: number;
+    criticalThinkingSynthesis: string;
+}
+export interface PhysicalEconomicAxiom {
+    resource: string;
+    physicalInput: string;
+    unitCostAxiom: string;
+    benchmarkAnalogyCost: string;
+    firstPrinciplesArbitrage: string;
+}
+export interface FirstPrinciplesDeconstruction {
+    foundationalTruths: string[];
+    physicalEconomicAxioms: PhysicalEconomicAxiom[];
+    zeroBasedCostReconstruction: {
+        theoreticalFloorCogsPct: number;
+        laborEfficiencyHoursPerCover: number;
+        spatialYieldMonthlyPerSqft: number;
+    };
+    analogyVsFirstPrinciplesSynthesis: string;
+}
+export interface PreMortemAutopsyItem {
+    fatalMechanism: string;
+    rootCauseTrajectory: string;
+    preventativeInoculation: string;
+}
+export interface InversionPreMortem {
+    prospectiveHindsightHorizon: string;
+    catastrophicFailurePremise: string;
+    autopsyForensicFindings: PreMortemAutopsyItem[];
+    antiGoalsRegister: string[];
+    mandatoryKillSwitches: {
+        metric: string;
+        threshold: string;
+        enforcementAction: string;
+    }[];
+    inversionSynthesis: string;
+}
+export interface ProvocationOperation {
+    dogmaChallenged: string;
+    provocativeHypothesis: string;
+    lateralCommercialModel: string;
+    viabilityTier: "Breakthrough" | "High Value Niche" | "Speculative";
+}
+export interface LateralThinkingExploration {
+    provocations: ProvocationOperation[];
+    crossIndustryTransfers: {
+        donorIndustry: string;
+        transferredMechanism: string;
+        localApplication: string;
+    }[];
+    asymmetricRevenueVectors: string[];
+    lateralThinkingSynthesis: string;
+}
+export interface CompetitorReaction {
+    competitorGroup: string;
+    likelyMove: string;
+    payoffToCompetitor: string;
+    impactOnApex: string;
+    dominantCounterStrategy: string;
+}
+export interface GameTheoreticWarRoom {
+    gameFormulation: string;
+    competitorReactions: CompetitorReaction[];
+    nashEquilibriumPosture: string;
+    minimaxDefensiveStrategy: string;
+    moatAndLockinMechanisms: string[];
+}
+export interface DialecticalTension {
+    thesis: string;
+    antithesis: string;
+    underlyingConflict: string;
+    higherOrderSynthesis: string;
+}
+export interface DialecticalSynthesis {
+    coreTensions: DialecticalTension[];
+    overarchingStrategicSynthesis: string;
+}
+export interface CounterfactualScenario {
+    scenarioId: string;
+    name: string;
+    counterfactualShock: string;
+    projectedProfitVariancePct: number;
+    businessSurvivalProbabilityPct: number;
+    resiliencePlaybook: string;
+}
+export interface CounterfactualSimulation {
+    baselineReference: string;
+    branches: CounterfactualScenario[];
+    systemicAntifragilityScore: number;
+    counterfactualSynthesis: string;
+}
+export interface OmniCognitiveAuditResult {
+    criticalThinking: CriticalThinkingAudit;
+    firstPrinciples: FirstPrinciplesDeconstruction;
+    inversionPreMortem: InversionPreMortem;
+    lateralThinking: LateralThinkingExploration;
+    gameTheory: GameTheoreticWarRoom;
+    dialectics: DialecticalSynthesis;
+    counterfactuals: CounterfactualSimulation;
+    secondOrderDynamics: SecondOrderEffect[];
+    treeOfThoughts: TreeOfThoughtsResult;
+    bayesianFeasibility: BayesianFeasibilityResult;
+    omniCognitiveSummary: string;
+}
 export interface MasterMarketAuditResult {
     intake: IntakeRequirements;
     timestamp: string;
@@ -437,4 +561,5 @@ export interface MasterMarketAuditResult {
     devilsAdvocate: DevilsAdvocateAudit;
     secondOrderEffects: SecondOrderEffect[];
     bayesianFeasibility: BayesianFeasibilityResult;
+    omniCognitive: OmniCognitiveAuditResult;
 }

@@ -10,7 +10,7 @@ dotenv.config();
 export function createApexServer() {
     const server = new McpServer({
         name: "apex-market-intelligence",
-        version: "1.1.0",
+        version: "1.2.0",
     });
     registerApexTools(server);
     return server;
@@ -41,10 +41,10 @@ if (isHttpMode) {
         res.json({
             status: "healthy",
             server: "apex-market-intelligence",
-            version: "1.1.0",
+            version: "1.2.0",
             transport: "http",
             uptime: process.uptime(),
-            toolsCount: 17,
+            toolsCount: 25,
             activeSseSessions: activeSseTransports.size,
             endpoints: {
                 health: "/health",

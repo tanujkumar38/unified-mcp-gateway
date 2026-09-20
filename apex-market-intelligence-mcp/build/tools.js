@@ -3,7 +3,7 @@ import path from "path";
 import { z } from "zod";
 import { IntakeRequirementsSchema } from "./types.js";
 import { validateAndEnforceIntake, auditVectorAGeospatial, auditVectorBMenuPricing, auditVectorCMultimodal, auditVectorDVoiceOfCustomer, auditVectorEMarketDemand, auditVectorFDigitalDemand, analyzeMarketGaps } from "./engine/research.js";
-import { executeTreeOfThoughts, conductDevilsAdvocateStressTest, simulateSecondOrderDynamics, calculateBayesianPosterior } from "./engine/reasoning.js";
+import { executeTreeOfThoughts, conductDevilsAdvocateStressTest, simulateSecondOrderDynamics, calculateBayesianPosterior, conductCriticalThinkingAudit, deconstructFirstPrinciples, conductInversionPreMortem, exploreLateralThinking, simulateGameTheoryWarRoom, synthesizeDialectics, simulateCounterfactuals, executeOmniCognitiveAudit } from "./engine/reasoning.js";
 import { buildFinancialModel, buildFeasibilityScorecard, buildRiskMatrix, buildExecutionRoadmap, buildStrategicRecommendations } from "./engine/financials.js";
 import { generateMasterMarkdownReport, renderExecutivePdf } from "./engine/reporter.js";
 /**
@@ -195,7 +195,141 @@ export function registerApexTools(server) {
             ]
         };
     });
-    // 13. Financial Engineering Tool
+    // 13. Critical Thinking & Socratic Auditing Tool
+    server.tool("audit_critical_thinking", "Cognitive Layer: Conducts rigorous Socratic interrogation of core business assumptions, exposes logical fallacies, mitigates cognitive biases (optimism, survivorship, anchoring), and rates epistemic credibility.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const voc = auditVectorDVoiceOfCustomer(intake);
+        const financials = buildFinancialModel(intake);
+        const result = conductCriticalThinkingAudit(intake, geo, voc, financials);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 14. First-Principles Deconstruction Tool
+    server.tool("deconstruct_first_principles", "Cognitive Layer: Deconstructs the business down to fundamental thermodynamic, spatial, and economic truths (raw coffee extraction yield, seat-hour yield physics, zero-based cost reconstruction) rather than reasoning by analogy.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const pricing = auditVectorBMenuPricing(intake, geo.competitors);
+        const financials = buildFinancialModel(intake);
+        const result = deconstructFirstPrinciples(intake, pricing, financials);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 15. Inversion & Pre-Mortem Thinking Tool
+    server.tool("conduct_inversion_pre_mortem", "Cognitive Layer: Charlie Munger style prospective hindsight autopsy assuming 100% capital loss at Month 24, forensic analysis of failure mechanisms, 5 Anti-Goals, and mandatory operational kill-switches.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const pricing = auditVectorBMenuPricing(intake, geo.competitors);
+        const voc = auditVectorDVoiceOfCustomer(intake);
+        const demand = auditVectorEMarketDemand(intake);
+        const tot = executeTreeOfThoughts(intake, geo, pricing, voc, demand);
+        const financials = buildFinancialModel(intake);
+        const result = conductInversionPreMortem(intake, tot, financials);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 16. Lateral & Divergent Thinking Tool
+    server.tool("explore_lateral_thinking", "Cognitive Layer: Edward de Bono Provocative Operations (PO), cross-industry innovation transfers (gym subscriptions, airline yield management), and asymmetric revenue discovery.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const pricing = auditVectorBMenuPricing(intake, geo.competitors);
+        const voc = auditVectorDVoiceOfCustomer(intake);
+        const marketGaps = analyzeMarketGaps(intake, geo.competitors, pricing, voc);
+        const result = exploreLateralThinking(intake, marketGaps);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 17. Strategic Game Theory War Room Tool
+    server.tool("simulate_game_theory", "Cognitive Layer: Evaluates competitor reaction functions across specialty roasteries, mass kiosks, and local diners, solves for Nash equilibrium defensibility, and formulates minimax moats.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const pricing = auditVectorBMenuPricing(intake, geo.competitors);
+        const result = simulateGameTheoryWarRoom(intake, geo, pricing);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 18. Dialectical Synthesis Tool
+    server.tool("synthesize_dialectics", "Cognitive Layer: Resolves core commercial polarities (Student Affordability vs Specialty Margin, Dwell Time vs Seat Turnover, Silence vs Hospitality) via Hegelian Thesis-Antithesis-Synthesis.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const pricing = auditVectorBMenuPricing(intake, geo.competitors);
+        const voc = auditVectorDVoiceOfCustomer(intake);
+        const demand = auditVectorEMarketDemand(intake);
+        const tot = executeTreeOfThoughts(intake, geo, pricing, voc, demand);
+        const result = synthesizeDialectics(intake, tot);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 19. Counterfactual Simulation Tool
+    server.tool("simulate_counterfactuals", "Cognitive Layer: Simulates alternate branch realities, macro/micro shock stresses (academic disruption, commodity inflation, hostile landlord escalation), and scores systemic antifragility.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const financials = buildFinancialModel(intake);
+        const result = simulateCounterfactuals(intake, financials);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 20. Omni-Cognitive Master Orchestrator Tool
+    server.tool("execute_omni_cognitive_audit", "Cognitive Layer Master: Executes all 10 thinking paradigms (Critical Thinking, First-Principles, Inversion, Lateral Thinking, Game Theory, Dialectics, Counterfactuals, System Dynamics, Tree of Thoughts, and Bayesian Updating) in a unified multi-angle cognitive audit.", IntakeRequirementsSchema.shape, async (params) => {
+        const { intake } = validateAndEnforceIntake(params);
+        const geo = auditVectorAGeospatial(intake);
+        const pricing = auditVectorBMenuPricing(intake, geo.competitors);
+        const voc = auditVectorDVoiceOfCustomer(intake);
+        const demand = auditVectorEMarketDemand(intake);
+        const marketGaps = analyzeMarketGaps(intake, geo.competitors, pricing, voc);
+        const financials = buildFinancialModel(intake);
+        const result = executeOmniCognitiveAudit(intake, geo, pricing, voc, demand, marketGaps, financials);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: JSON.stringify(result, null, 2)
+                }
+            ]
+        };
+    });
+    // 21. Financial Engineering Tool
     server.tool("generate_financial_model", "Builds location-specific CAPEX (Low/Base/High/Basis/Confidence), OPEX breakdown (Fixed vs Variable), Unit Economics, 3 Scenarios (Conservative, Base, Upside), and 8-factor Sensitivity Analysis.", IntakeRequirementsSchema.shape, async (params) => {
         const { intake } = validateAndEnforceIntake(params);
         const result = buildFinancialModel(intake);
@@ -339,6 +473,7 @@ export function runCompleteAuditInternal(params) {
     const devilsAdvocate = conductDevilsAdvocateStressTest(intake, selectedBranch, voiceOfCustomer, geospatial);
     const secondOrderEffects = simulateSecondOrderDynamics(selectedBranch);
     const bayesianFeasibility = calculateBayesianPosterior(intake, geospatial, voiceOfCustomer, marketDemand);
+    const omniCognitive = executeOmniCognitiveAudit(intake, geospatial, pricing, voiceOfCustomer, marketDemand, marketGaps, financials);
     const sourceRegister = [
         {
             sourceName: "Google Business Profiles & Google Maps Local Index",
@@ -463,7 +598,8 @@ export function runCompleteAuditInternal(params) {
         treeOfThoughts,
         devilsAdvocate,
         secondOrderEffects,
-        bayesianFeasibility
+        bayesianFeasibility,
+        omniCognitive
     };
 }
 //# sourceMappingURL=tools.js.map
